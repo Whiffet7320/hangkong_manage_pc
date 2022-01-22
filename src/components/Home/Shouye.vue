@@ -9,7 +9,7 @@
         </div>
         <div class="tit">
           <div class="txt1">{{wait_send}}</div>
-          <div class="txt2">待发货订单数</div>
+          <div class="txt2">总注册用户数量</div>
         </div>
       </div>
       <div class="box">
@@ -20,10 +20,10 @@
         </div>
         <div class="tit">
           <div class="txt1">{{wait_check}}</div>
-          <div class="txt2">待售后订单数</div>
+          <div class="txt2">今日注册用户数量</div>
         </div>
       </div>
-      <div class="box">
+      <!-- <div class="box">
         <div class="icon1 i1-3">
           <div class="icon2 i1-3">
             <i class="el-icon-s-release"></i>
@@ -33,11 +33,11 @@
           <div class="txt1">{{wait_refund}}</div>
           <div class="txt2">待退款订单数</div>
         </div>
-      </div>
+      </div> -->
     </div>
-    <div id="main1"></div>
+    <!-- <div id="main1"></div> -->
     <div id="main2"></div>
-    <div id="main3"></div>
+    <!-- <div id="main3"></div> -->
   </div>
 </template>
 
@@ -58,15 +58,15 @@ export default {
     async getData() {
       const res = await this.$api.dashboard();
       console.log(res);
-      this.wait_send = res.data.wait_send;
-      this.wait_check = res.data.wait_check;
+      this.wait_send = res.data.result.total_register;
+      this.wait_check = res.data.result.today_register;
       this.wait_refund = res.data.wait_refund;
-      var chartDom1 = document.getElementById("main1");
-      var myChart1 = echarts.init(chartDom1);
+      // var chartDom1 = document.getElementById("main1");
+      // var myChart1 = echarts.init(chartDom1);
       var chartDom2 = document.getElementById("main2");
       var myChart2 = echarts.init(chartDom2);
-      var chartDom3 = document.getElementById("main3");
-      var myChart3 = echarts.init(chartDom3);
+      // var chartDom3 = document.getElementById("main3");
+      // var myChart3 = echarts.init(chartDom3);
       var option1 = {
         title: {
           x: "20",
@@ -207,18 +207,18 @@ export default {
       };
       let week_orderKeyArr = [];
       let week_orderZhiArr = [];
-      for (const key in res.data.week_order) {
+      for (const key in res.data.zhexian) {
         week_orderKeyArr.push(key);
-        week_orderZhiArr.push(res.data.week_order[key]);
+        week_orderZhiArr.push(res.data.zhexian[key]);
       }
       option1.xAxis.data = week_orderKeyArr;
       option1.series[0].data = week_orderZhiArr;
-      option1 && myChart1.setOption(option1);
+      // option1 && myChart1.setOption(option1);
       let week_new_userKeyArr = [];
       let week_new_userZhiArr = [];
-      for (const key in res.data.week_new_user) {
+      for (const key in res.data.zhexian) {
         week_new_userKeyArr.push(key);
-        week_new_userZhiArr.push(res.data.week_new_user[key]);
+        week_new_userZhiArr.push(res.data.zhexian[key]);
       }
       option2.xAxis.data = week_new_userKeyArr;
       option2.series[0].data = week_new_userZhiArr;
@@ -231,7 +231,7 @@ export default {
       }
       option3.xAxis.data = week_activity_userKeyArr;
       option3.series[0].data = week_activity_userZhiArr;
-      option3 && myChart3.setOption(option3);
+      // option3 && myChart3.setOption(option3);
     }
   }
 };

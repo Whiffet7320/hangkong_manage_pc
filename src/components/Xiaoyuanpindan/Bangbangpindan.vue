@@ -4,16 +4,27 @@
       <div class="tit1">帮帮拼单</div>
     </div>
     <div class="nav2">
-      <!-- <div class="myForm">
+      <div class="myForm">
         <el-form :inline="true" :model="formInline" class="demo-form-inline">
           <el-form-item label="关键词搜索：">
             <el-input size="small" v-model="formInline.name"></el-input>
+          </el-form-item>
+           <el-form-item label="发布时间：">
+            <el-date-picker
+              size="small"
+              v-model="formInline.time"
+              type="daterange"
+              range-separator="至"
+              start-placeholder="开始日期"
+              end-placeholder="结束日期"
+              value-format='timestamp'
+            ></el-date-picker>
           </el-form-item>
           <el-form-item>
             <el-button size="small" type="primary" @click="onSubmit">查询</el-button>
           </el-form-item>
         </el-form>
-      </div> -->
+      </div>
       <!-- <div class="tit1">
         <el-button @click="toAddShop" size="small" type="primary" icon="el-icon-plus">添加商品</el-button>
       </div>-->
@@ -90,7 +101,16 @@
             </template>
           </vxe-table-column>-->
           <vxe-table-column field="comment_count" title="评论数"></vxe-table-column>
-          <vxe-table-column field="read_count" title="浏览量"></vxe-table-column>
+         <vxe-table-column field="read_count" title="浏览量">
+            <template slot-scope="scope">
+              <el-input size="small" @change='xgLL(scope.row,$event)' v-model="scope.row.read_count" placeholder></el-input>
+            </template>
+          </vxe-table-column>
+          <vxe-table-column field="zan_num" title="获赞">
+            <template slot-scope="scope">
+              <el-input size="small" @change='xgZ(scope.row,$event)' v-model="scope.row.zan_num" placeholder></el-input>
+            </template>
+          </vxe-table-column>
           <vxe-table-column field="add_time" title="发布时间"></vxe-table-column>
           <vxe-table-column field="myStatus" width="120" title="状态(是否通过)">
             <template slot-scope="scope">
@@ -235,7 +255,10 @@ export default {
       const res = await this.$api.getpindan({
         limit: this.pindanPageSize,
         page: this.pindanPage,
-        type: 2
+        type: 2,
+        keyword:this.formInline.name,
+        stime: this.formInline.time ? this.formInline.time[0]/1000 : '',
+        etime: this.formInline.time ? this.formInline.time[1]/1000 : '',
       });
       console.log(res.data.data);
       this.total = res.data.total;
@@ -247,10 +270,38 @@ export default {
         if (ele.img_paths) {
           ele.myImg_paths = ele.img_paths.split(",");
           ele.myImg_paths.forEach((img, i) => {
-            this.$set(ele.myImg_paths, i, `${this.$url}/${img}`);
+            this.$set(ele.myImg_paths, i, `${img}`);
           });
         }
       });
+    },
+    async xgLL(row,e){
+      const res = await this.$api.update_read_num({
+        id:row.id,
+        type: "pindan",
+        num:e
+      })
+      if (res.code == 200) {
+        this.$message({
+          message: res.msg,
+          type: "success"
+        });
+        this.getData();
+      }
+    },
+    async xgZ(row,e){
+      const res = await this.$api.update_zan_num({
+        id:row.id,
+        type: "pindan",
+        num:e
+      })
+      if (res.code == 200) {
+        this.$message({
+          message: res.msg,
+          type: "success"
+        });
+        this.getData();
+      }
     },
     async getPinlunData() {
       const res = await this.$api.comment_list({

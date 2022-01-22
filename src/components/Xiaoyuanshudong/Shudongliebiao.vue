@@ -27,12 +27,26 @@
           </el-form-item>
           <el-form-item>
             <el-button size="small" type="primary" @click="onSubmit">查询</el-button>
-          </el-form-item>-->
-          <el-form-item label="音乐台链接：">
+          </el-form-item> -->
+          <el-form-item label="音乐台ID：">
             <el-input size="small" v-model="formInline.music" placeholder="输入网络地址"></el-input>
           </el-form-item>
           <el-form-item>
             <el-button size="small" type="primary" @click="onMusicSubmit">保存</el-button>
+          </el-form-item>
+          <el-form-item label="发布时间：">
+            <el-date-picker
+              size="small"
+              v-model="formInline.time"
+              type="daterange"
+              range-separator="至"
+              start-placeholder="开始日期"
+              end-placeholder="结束日期"
+              value-format='timestamp'
+            ></el-date-picker>
+          </el-form-item>
+          <el-form-item>
+            <el-button size="small" type="primary" @click="onSubmit">查询</el-button>
           </el-form-item>
         </el-form>
       </div>
@@ -73,7 +87,7 @@
               </template>
             </template>
           </vxe-table-column>
-          <vxe-table-column field="id" title="ID"></vxe-table-column>
+          <vxe-table-column field="louceng" title="楼层"></vxe-table-column>
           <vxe-table-column field="mySender_name" title="发布者"></vxe-table-column>
           <vxe-table-column field="avatar_url" title="发布者头像">
             <template slot-scope="scope">
@@ -108,8 +122,16 @@
             </template>
           </vxe-table-column>-->
           <vxe-table-column field="comment_count" title="评论数"></vxe-table-column>
-          <vxe-table-column field="read_count" title="浏览量"></vxe-table-column>
-          <vxe-table-column field="zan_count" title="获赞"></vxe-table-column>
+           <vxe-table-column field="read_count" title="浏览量">
+            <template slot-scope="scope">
+              <el-input size="small" @change='xgLL(scope.row,$event)' v-model="scope.row.read_count" placeholder></el-input>
+            </template>
+          </vxe-table-column>
+          <vxe-table-column field="zan_num" title="获赞">
+            <template slot-scope="scope">
+              <el-input size="small" @change='xgZ(scope.row,$event)' v-model="scope.row.zan_num" placeholder></el-input>
+            </template>
+          </vxe-table-column>
           <vxe-table-column field="add_time" title="发布时间"></vxe-table-column>
           <vxe-table-column field="myStatus" width="120" title="状态(是否通过)">
             <template slot-scope="scope">
@@ -126,7 +148,7 @@
               <div class="flex">
                 <el-button size="small" @click="toSeeXiangqin(scope.row)" type="text">查看评论</el-button>
                 <!-- <el-button size="small" @click="toEditShop(scope.row)" type="text">查看评论</el-button> -->
-                <!-- <el-button size="small" @click="toDelShop(scope.row)" type="text">删除</el-button> -->
+                <el-button size="small" @click="toDelShop(scope.row)" type="text">删除</el-button>
               </div>
             </template>
           </vxe-table-column>
@@ -257,19 +279,49 @@ export default {
     this.getData();
   },
   methods: {
+    async xgLL(row,e){
+      const res = await this.$api.update_read_num({
+        id:row.id,
+        type: "shudong",
+        num:e
+      })
+      if (res.code == 200) {
+        this.$message({
+          message: res.msg,
+          type: "success"
+        });
+        this.getData();
+      }
+    },
+    async xgZ(row,e){
+      const res = await this.$api.update_zan_num({
+        id:row.id,
+        type: "shudong",
+        num:e
+      })
+      if (res.code == 200) {
+        this.$message({
+          message: res.msg,
+          type: "success"
+        });
+        this.getData();
+      }
+    },
     async getData() {
       const res2 = await this.$api.video_list();
-      console.log(res2);
-      this.formInline.music = res2.data.path;
+      this.formInline.music = res2.data.path.split("?id=")[1].split(".mp3")[0];
       const res = await this.$api.shudong({
         limit: this.shudongPageSize,
         page: this.shudongPage,
-        keyword: this.formInline.name
+        keyword: this.formInline.name,
+        stime: this.formInline.time ?  this.formInline.time[0]/1000 : '',
+        etime: this.formInline.time ?  this.formInline.time[1]/1000 : '',
       });
       console.log(res.data.data);
       this.total = res.data.total;
       this.tableData = res.data.data;
-      this.tableData.forEach(ele => {
+      this.tableData.forEach((ele,i) => {
+        ele.louceng = this.total - (this.shudongPageSize * (this.shudongPage - 1)) - i
         ele.mySender_name =
           ele.sender_name == "" ? "匿名用户" : ele.sender_name;
         ele.myStatus = ele.status == "0" ? true : false;
@@ -278,14 +330,15 @@ export default {
         if (ele.img_paths) {
           ele.myImg_paths = ele.img_paths.split(",");
           ele.myImg_paths.forEach((img, i) => {
-            this.$set(ele.myImg_paths, i, `${this.$url}/${img}`);
+            this.$set(ele.myImg_paths, i, `${img}`);
           });
         }
       });
     },
     async onMusicSubmit() {
+      const music = `http://music.163.com/song/media/outer/url?id=${this.formInline.music}.mp3`
       const res = await this.$api.add_video({
-        path: this.formInline.music,
+        path: music,
         is_default: 1
       });
       console.log(res);
@@ -375,7 +428,7 @@ export default {
     },
     async toDelShop(row) {
       console.log(row);
-      const res = await this.$api.deleteItems(row.id);
+      const res = await this.$api.delShudong(row.id);
       if (res.code == 200) {
         this.$message({
           message: res.msg,

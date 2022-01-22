@@ -278,6 +278,11 @@ export default {
             }
         })
     },
+    delGaobai(id) {
+        return myDelete({
+            url: `${urls.gaobai}/${id}`,
+        })
+    },
     gaobaiXiangqin(id) {
         return myGet({
             url: `${urls.gaobai}/${id}`,
@@ -291,6 +296,35 @@ export default {
             }
         })
     },
+    update_admin(obj) {
+        return myPost({
+            url: `${urls.update_admin}`,
+            data: {
+                ...obj
+            }
+        })
+    },
+    admin_list(obj) {
+        return myGet({
+            url: urls.admin_list,
+            params: {
+                ...obj
+            }
+        })
+    },
+    add_admin(obj) {
+        return myPost({
+            url: `${urls.add_admin}`,
+            data: {
+                ...obj
+            }
+        })
+    },
+    menu() {
+        return myGet({
+            url: urls.menu,
+        })
+    },
     getjishi(obj) {
         return myGet({
             url: urls.jishi,
@@ -299,6 +333,12 @@ export default {
             }
         })
     },
+    delJishi(id) {
+        return myDelete({
+            url: `${urls.jishi}/${id}`,
+        })
+    },
+    
     shudong(obj) {
         return myGet({
             url: `${urls.shudong}`,
@@ -307,12 +347,30 @@ export default {
             }
         })
     },
+    delShudong(id) {
+        return myDelete({
+            url: `${urls.shudong}/${id}`,
+        })
+    },
     article(obj) {
         return myGet({
             url: `${urls.article}`,
             params: {
                 ...obj
             }
+        })
+    },
+    addArticle(obj) {
+        return myPost({
+            url: `${urls.article}`,
+            data: {
+                ...obj
+            }
+        })
+    },
+    delArticle( id) {
+        return myDelete({
+            url: `${urls.article}/${id}`,
         })
     },
     upLoadArticle(obj, id) {
@@ -387,6 +445,11 @@ export default {
             }
         })
     },
+    delBaoxiu(id) {
+        return myDelete({
+            url: `${urls.baoxiu}/${id}`,
+        })
+    },
     getfengjing(obj) {
         return myGet({
             url: urls.fengjing,
@@ -395,12 +458,22 @@ export default {
             }
         })
     },
+    delFengjing(id) {
+        return myDelete({
+            url: `${urls.fengjing}/${id}`,
+        })
+    },
     getshougou(obj) {
         return myGet({
             url: urls.shougou,
             params: {
                 ...obj
             }
+        })
+    },
+    delShougou(id) {
+        return myDelete({
+            url: `${urls.shougou}/${id}`,
         })
     },
     getpinche(obj) {
@@ -635,6 +708,38 @@ export default {
         return myGet({
             url: urls.areas,
             params: {
+                ...obj
+            }
+        })
+    },
+    delete_admin(obj) {
+        return myPost({
+            url: urls.delete_admin,
+            data: {
+                ...obj
+            }
+        })
+    },
+    admin_log_list(obj) {
+        return myGet({
+            url: urls.admin_log_list,
+            params: {
+                ...obj
+            }
+        })
+    },
+    update_read_num(obj) {
+        return myPost({
+            url: urls.update_read_num,
+            data: {
+                ...obj
+            }
+        })
+    },
+    update_zan_num(obj) {
+        return myPost({
+            url: urls.update_zan_num,
+            data: {
                 ...obj
             }
         })
@@ -1187,6 +1292,17 @@ export default {
         };
         const res = await axios
             .post(`${urls.baseUrl}/admin/upload_pic`, image, configs)
+        return res.data
+    },
+    async upload_banner(image) {
+        var configs = {
+            headers: {
+                "Content-Type": "multipart/form-data;charse=UTF-8",
+                'token': sessionStorage.getItem("token"),
+            },
+        };
+        const res = await axios
+            .post(`${urls.baseUrl}/admin/upload_banner`, image, configs)
         return res.data
     },
     banner_add(obj) {

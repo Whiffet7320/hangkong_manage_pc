@@ -4,9 +4,23 @@
       <div class="tit1">文章列表</div>
     </div>
     <div class="nav2">
-      <!-- <div class="tit1">
+      <div class="myForm">
+        <el-form :inline="true" :model="formInline" class="demo-form-inline">
+          <el-row>
+            <el-col :span="20">
+              <el-form-item label="类型：">
+                <el-radio-group @change="changeRad" v-model="formInline.rad1" size="small">
+                  <el-radio-button label="news">新闻</el-radio-button>
+                  <el-radio-button label="advice">咨询</el-radio-button>
+                </el-radio-group>
+              </el-form-item>
+            </el-col>
+          </el-row>
+        </el-form>
+      </div>
+      <div class="tit1">
         <el-button @click="addWenzhang" size="small" type="primary" icon="el-icon-plus">添加文章</el-button>
-      </div> -->
+      </div>
       <div class="myTable">
         <vxe-table :data="tableData">
           <vxe-table-column field="id" title="ID"></vxe-table-column>
@@ -21,8 +35,8 @@
           <vxe-table-column title="操作状态" width="160">
             <template slot-scope="scope">
               <div class="flex">
-                <el-button size="small" @click="tabEdit(scope.row)" type="text">查看详情</el-button>
-                <!-- <el-button size="small" @click="tabDel(scope.row)" type="text">删除</el-button> -->
+                <el-button size="small" @click="tabEdit(scope.row)" type="text">查看详情 / 修改</el-button>
+                <el-button size="small" @click="tabDel(scope.row)" type="text">删除</el-button>
               </div>
             </template>
           </vxe-table-column>
@@ -72,7 +86,7 @@ export default {
       imgFile: null,
       isAdd: true,
       formInline: {
-        rad1: ""
+        rad1: "news"
       },
       radioArr: []
     };
@@ -85,7 +99,7 @@ export default {
       const res = await this.$api.article({
         limit: this.wenzhangPageSize,
         page: this.wenzhangPage,
-        type: this.formInline.rad1
+        tag: this.formInline.rad1
       });
       this.tableData = res.data.data;
       this.total = res.data.total;
@@ -126,7 +140,7 @@ export default {
     },
     // 删除
     async tabDel(row) {
-      const res = await this.$api.deleteArticles(row.id);
+      const res = await this.$api.delArticle(row.id);
       if (res.code == 200) {
         this.$message({
           message: res.msg,

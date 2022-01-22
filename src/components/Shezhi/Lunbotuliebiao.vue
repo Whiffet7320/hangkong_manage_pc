@@ -4,7 +4,7 @@
       <div class="tit1">轮播图列表</div>
     </div>
     <div class="nav2">
-      <div class="myForm">
+      <!-- <div class="myForm">
         <el-form :inline="true" :model="formInline" class="demo-form-inline">
           <el-row>
             <el-col :span="20">
@@ -16,26 +16,26 @@
             </el-col>
           </el-row>
         </el-form>
-      </div>
+      </div>-->
       <div class="tit1">
         <el-button @click="AddLunbotu" size="small" type="primary" icon="el-icon-plus">添加轮播图</el-button>
       </div>
       <div class="myTable">
         <vxe-table :data="tableData">
           <vxe-table-column field="id" title="ID"></vxe-table-column>
-          <vxe-table-column field="name" title="轮播图名称"></vxe-table-column>
+          <!-- <vxe-table-column field="name" title="轮播图名称"></vxe-table-column> -->
           <vxe-table-column field="image" title="轮播图">
             <template slot-scope="scope">
-              <el-image :src="scope.row.image" fit="fill" style="width: 40px; height: 40px">
+              <el-image :src="scope.row.img_url" fit="fill" style="width: 40px; height: 40px">
                 <div slot="error" class="image-slot">
                   <i class="el-icon-picture-outline"></i>
                 </div>
               </el-image>
             </template>
           </vxe-table-column>
-          <vxe-table-column field="jump" title="跳转链接"></vxe-table-column>
-          <vxe-table-column field="tag" title="标签名"></vxe-table-column>
-          <vxe-table-column field="created_at" title="添加时间"></vxe-table-column>
+          <!-- <vxe-table-column field="jump" title="跳转链接"></vxe-table-column>
+          <vxe-table-column field="tag" title="标签名"></vxe-table-column> -->
+          <vxe-table-column field="add_time" title="添加时间"></vxe-table-column>
           <vxe-table-column title="操作状态" width="180">
             <template slot-scope="scope">
               <div class="flex">
@@ -45,7 +45,7 @@
             </template>
           </vxe-table-column>
         </vxe-table>
-        <el-pagination
+        <!-- <el-pagination
           class="fenye"
           @size-change="this.handleSizeChange"
           @current-change="this.handleCurrentChange"
@@ -54,11 +54,16 @@
           :page-sizes="[10, 15, 20, 30]"
           layout="total,sizes, prev, pager, next, jumper"
           :total="this.total"
-        ></el-pagination>
+        ></el-pagination>-->
       </div>
     </div>
     <!-- 编辑轮播图 -->
-    <el-dialog title="编辑轮播图" :visible.sync="dialogVisible" width="700px" :before-close="handleClose">
+    <el-dialog
+      title="编辑轮播图"
+      :visible.sync="dialogVisible"
+      width="700px"
+      :before-close="handleClose"
+    >
       <div class="nav2">
         <div class="myForm">
           <el-form :model="ruleForm" ref="ruleForm" label-width="100px" class="demo-ruleForm">
@@ -66,7 +71,7 @@
               <el-col :span="18">
                 <el-form-item label="设置轮播图：">
                   <div @click="companyList" class="myImg">
-                    <el-image :src="ruleForm.image" fit="fill" style="width: 200px; height: 200px">
+                    <el-image :src="ruleForm.image" fit="fill" style="width: 202px; height: 202px">
                       <div slot="error" class="image-slot">
                         <i class="el-icon-picture-outline"></i>
                       </div>
@@ -75,45 +80,6 @@
                       <el-button circle>×</el-button>
                     </div>
                   </div>
-                </el-form-item>
-              </el-col>
-            </el-row>
-            <el-row>
-              <el-col :span="18">
-                <el-form-item label="轮播图类型：">
-                  <el-select size="small" v-model="ruleForm.position" placeholder="请选择">
-                    <el-option v-for="(item,i) in radioArr" :key="i" :label="item" :value="i"></el-option>
-                  </el-select>
-                </el-form-item>
-              </el-col>
-            </el-row>
-            <el-row>
-              <el-col :span="18">
-                <el-form-item label="轮播图名称：">
-                  <el-input size="small" v-model="ruleForm.name"></el-input>
-                </el-form-item>
-              </el-col>
-            </el-row>
-            <el-row>
-              <el-col :span="18">
-                <el-form-item label="跳转类型：">
-                  <el-select size="small" v-model="ruleForm.jump_type" placeholder="请选择">
-                    <el-option v-for="(item,i) in radioArr2" :key="i" :label="item" :value="i"></el-option>
-                  </el-select>
-                </el-form-item>
-              </el-col>
-            </el-row>
-            <el-row>
-              <el-col :span="18">
-                <el-form-item label="跳转地址：">
-                  <el-input size="small" v-model="ruleForm.jump"></el-input>
-                </el-form-item>
-              </el-col>
-            </el-row>
-            <el-row>
-              <el-col :span="18">
-                <el-form-item label="标签名：">
-                  <el-input size="small" v-model="ruleForm.tag"></el-input>
                 </el-form-item>
               </el-col>
             </el-row>
@@ -161,7 +127,7 @@ export default {
     return {
       isAdd: false,
       radioArr: [],
-      radioArr2:[],
+      radioArr2: [],
       formInline: {
         rad1: ""
       },
@@ -175,7 +141,7 @@ export default {
         jump: "",
         jump_type: "",
         position: "",
-        tag:'',
+        tag: ""
       },
       id: ""
     };
@@ -187,18 +153,10 @@ export default {
     async getData() {
       const res = await this.$api.banners({
         limit: this.lunbotuliebiaoPageSize,
-        page: this.lunbotuliebiaoPage,
-        position: this.formInline.rad1
+        page: this.lunbotuliebiaoPage
       });
       console.log(res.data);
-      this.tableData = res.data.data;
-      this.total = res.data.total;
-      const res2 = await this.$api.bannersPositions();
-      console.log(res2.data);
-      this.radioArr = res2.data;
-      const res3 = await this.$api.bannersJumpTypes();
-      console.log(res3.data);
-      this.radioArr2 = res3.data;
+      this.tableData = res.data;
     },
     AddLunbotu() {
       for (const key in this.ruleForm) {
@@ -216,12 +174,7 @@ export default {
       console.log(row);
       this.isAdd = false;
       this.id = row.id;
-      this.ruleForm.jump_type = row.jump_type;
-      this.ruleForm.image = row.image;
-      this.ruleForm.jump = row.jump;
-      this.ruleForm.name = row.name;
-      this.ruleForm.position = row.position;
-      this.ruleForm.tag = row.tag;
+      this.ruleForm.image = row.img_url;
       this.dialogVisible = true;
     },
     // 删除
@@ -240,12 +193,7 @@ export default {
       if (this.isAdd) {
         // 添加
         const res = await this.$api.addBanners({
-          jump: this.ruleForm.jump,
-          name: this.ruleForm.name,
-          image: this.ruleForm.image,
-          position: this.ruleForm.position,
-          jump_type:this.ruleForm.jump_type,
-          tag:this.ruleForm.tag,
+          img_url: this.ruleForm.image,
         });
         console.log(res);
         if (res.code == 200) {
@@ -260,12 +208,7 @@ export default {
         // 编辑
         const res = await this.$api.upDateBanners(
           {
-            jump: this.ruleForm.jump,
-            name: this.ruleForm.name,
-            image: this.ruleForm.image,
-            position: this.ruleForm.position,
-            jump_type:this.ruleForm.jump_type,
-            tag:this.ruleForm.tag,
+            img_url: this.ruleForm.image,
           },
           this.id
         );
@@ -326,12 +269,15 @@ export default {
     },
     // 删除图片
     delImg() {
-      this.$set(this.lhForm, "pic", "");
+      this.$set(this.ruleForm, "image", "");
     },
-    companyLogo(event) {
+    async companyLogo(event) {
       var file = event.target.files[0];
-      this.imgFile = file;
-      this.uploading(true);
+      this.imgFile = new FormData();
+      this.imgFile.append("img", file);
+      const res = await this.$api.upload_banner(this.imgFile);
+      this.$set(this.ruleForm,'image',res.data.path)
+      // this.uploading(true);
       this.$refs.fileInputList.value = "";
     },
     handleClose() {
@@ -387,8 +333,8 @@ export default {
       margin-bottom: 0;
     }
     /deep/ .el-select {
-        width: 100%;
-      }
+      width: 100%;
+    }
     .search {
       /deep/ .el-select {
         width: 100px;

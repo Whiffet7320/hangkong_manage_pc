@@ -1,6 +1,6 @@
 export default {
     // 校园帮帮
-    baseUrl: 'https://schoolhelp.5laoye.com', //https://schoolhelp.5laoye.com  http://192.168.50.142:9004
+    baseUrl: 'https://guangke.bjxinzeyuan.cn', //https://beikeyuan.bjxinzeyuan.cn  http://192.168.50.142:9004
     login: '/admin/login', //登录
     gaobai: '/admin/gaobai', //告白
     jishi: "/admin/jishi", //集市
@@ -17,6 +17,14 @@ export default {
     add_video:'/admin/add_video',//上传音乐
     video_list:'/admin/video_list',//
     is_best:'/admin/is_best',// 树洞设为精选
+    update_admin:'/admin/update_admin',//
+    admin_list:'/admin/admin_list',//
+    add_admin:'/admin/add_admin',
+    menu:'/admin/menu',//
+    delete_admin:'/admin/delete_admin',//
+    admin_log_list:'/admin/admin_log_list',//
+    update_zan_num:'/admin/update_zan_num',//
+    update_read_num:'/admin/update_read_num',//
     // 
     users:'/admin/users',//用户列表
     usersIdMoneyRecords:'/admin/users',//用户积分列表
@@ -30,7 +38,7 @@ export default {
     ordersId:'/admin/orders',//修改订单信息
     articles:'/admin/articles',//文章列表
     articlesTypes:'/admin/articles-types',//文章类型
-    banners:'/admin/banners',//banner列表
+    banners:'/admin/banner',//banner列表
     bannersPositions:'/admin/banners-positions',//banner位置列表
     bannersJumpTypes:'/admin/banners-jump-types',//banner跳转类型
     globalConfigs:'/admin/global-configs',//全局变量

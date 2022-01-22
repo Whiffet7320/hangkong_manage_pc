@@ -19,31 +19,47 @@
         text-color="#fff"
         router
       >
-        <!-- <el-menu-item :route="{ name: 'Shouye' }" index="1-1">
+        <el-menu-item v-if="userName=='admin'" :route="{ name: 'Shouye' }" index="1-1">
           <i class="el-icon-s-home"></i>
-          <span slot="title">首页</span>
-        </el-menu-item>-->
-        <el-submenu index="2">
-          <template slot="title">
-            <i class="el-icon-s-promotion"></i>
-            <span>校园表白</span>
-          </template>
-          <el-menu-item :route="{ name: 'Biaobaiqiang' }" index="2-1">表白墙</el-menu-item>
-          <!-- <el-menu-item :route="{ name: 'Shangpingfenlei' }" index="2-2">商品分类</el-menu-item> -->
-          <!-- <el-menu-item :route="{ name: 'Shangpingpinglun' }" index="2-3"
+          <span slot="title">数据</span>
+        </el-menu-item>
+        <template v-if="true">
+          <el-submenu v-for="item in menu" :key="item.id" :index="item.menu_index">
+            <template slot="title">
+              <i :class="item.icon"></i>
+              <span>{{item.title}}</span>
+            </template>
+            <el-menu-item
+              v-for="item2 in item.sub_menu"
+              :key="item2.id"
+              :route="{ name: item2.url }"
+              :index="item2.menu_index"
+            >{{item2.title}}</el-menu-item>
+          </el-submenu>
+        </template>
+
+        <template v-if="false">
+          <el-submenu index="2">
+            <template slot="title">
+              <i class="el-icon-s-promotion"></i>
+              <span>校园表白</span>
+            </template>
+            <el-menu-item :route="{ name: 'Biaobaiqiang' }" index="2-1">表白墙</el-menu-item>
+            <!-- <el-menu-item :route="{ name: 'Shangpingfenlei' }" index="2-2">商品分类</el-menu-item> -->
+            <!-- <el-menu-item :route="{ name: 'Shangpingpinglun' }" index="2-3"
             >商品评论</el-menu-item
-          >-->
-          <!-- <el-menu-item :route="{ name: 'Yunfeimoban' }" index="2-4">运费模板</el-menu-item> -->
-        </el-submenu>
-        <el-submenu index="3">
-          <template slot="title">
-            <i class="el-icon-s-shop"></i>
-            <span>校园集市</span>
-          </template>
-          <el-menu-item :route="{ name: 'Bangbangzhuanmai' }" index="3-1">帮帮转卖</el-menu-item>
-          <el-menu-item :route="{ name: 'Bangbangshougou' }" index="3-2">帮帮收购</el-menu-item>
-        </el-submenu>
-        <!-- <el-submenu index="4">
+            >-->
+            <!-- <el-menu-item :route="{ name: 'Yunfeimoban' }" index="2-4">运费模板</el-menu-item> -->
+          </el-submenu>
+          <el-submenu index="3">
+            <template slot="title">
+              <i class="el-icon-s-shop"></i>
+              <span>校园集市</span>
+            </template>
+            <el-menu-item :route="{ name: 'Bangbangzhuanmai' }" index="3-1">帮帮转卖</el-menu-item>
+            <el-menu-item :route="{ name: 'Bangbangshougou' }" index="3-2">帮帮收购</el-menu-item>
+          </el-submenu>
+          <!-- <el-submenu index="4">
           <template slot="title">
             <i class="el-icon-s-ticket"></i>
             <span>营销</span>
@@ -59,23 +75,37 @@
             <span slot="title">卖场活动</span>
             <el-menu-item :route="{ name: 'Maichanghuodong' }" index="4-2-1">活动列表</el-menu-item>
           </el-submenu>
-        </el-submenu>-->
-        <el-submenu index="5">
-          <template slot="title">
-            <i class="el-icon-s-help"></i>
-            <span>校园树洞</span>
-          </template>
-          <el-menu-item :route="{ name: 'Shudongliebiao' }" index="5-1">树洞列表</el-menu-item>
-        </el-submenu>
-        <el-submenu index="6">
-          <template slot="title">
-            <i class="el-icon-share"></i>
-            <span>校园一角</span>
-          </template>
-          <el-menu-item :route="{ name: 'Xiaoyuanfengjing' }" index="6-1">校园风景</el-menu-item>
-          <el-menu-item :route="{ name: 'Bangbangbaoxiu' }" index="6-2">帮帮报修</el-menu-item>
-        </el-submenu>
-        <!-- <el-submenu index="7">
+          </el-submenu>-->
+          <el-submenu index="5">
+            <template slot="title">
+              <i class="el-icon-s-help"></i>
+              <span>校园树洞</span>
+            </template>
+            <el-menu-item :route="{ name: 'Shudongliebiao' }" index="5-1">树洞列表</el-menu-item>
+          </el-submenu>
+          <!-- <el-submenu index="6">
+            <template slot="title">
+              <i class="el-icon-share"></i>
+              <span>校园一角</span>
+            </template>
+            <el-menu-item :route="{ name: 'Xiaoyuanfengjing' }" index="6-1">校园风景</el-menu-item>
+            <el-menu-item :route="{ name: 'Bangbangbaoxiu' }" index="6-2">帮帮报修</el-menu-item>
+          </el-submenu>-->
+          <el-submenu index="21">
+            <template slot="title">
+              <i class="el-icon-share"></i>
+              <span>校园一角</span>
+            </template>
+            <el-menu-item :route="{ name: 'Xiaoyuanfengjing' }" index="21-1">校园风景</el-menu-item>
+          </el-submenu>
+          <el-submenu index="31">
+            <template slot="title">
+              <i class="el-icon-s-open"></i>
+              <span>校园报修</span>
+            </template>
+            <el-menu-item :route="{ name: 'Bangbangbaoxiu' }" index="31-1">帮帮报修</el-menu-item>
+          </el-submenu>
+          <!-- <el-submenu index="7">
           <template slot="title">
             <i class="el-icon-s-check"></i>
             <span>财务</span>
@@ -92,43 +122,44 @@
               >佣金记录</el-menu-item
             >
           </el-submenu>
-        </el-submenu>-->
-         <el-submenu index="8">
-          <template slot="title">
-            <i class="el-icon-s-claim"></i>
-            <span>失物招领</span>
-          </template>
-          <el-menu-item :route="{ name: 'Bangbangxunzhu' }" index="8-1">帮帮寻主</el-menu-item>
-          <el-menu-item :route="{ name: 'Bangbangxunwu' }" index="8-2">帮帮寻物</el-menu-item>
-        </el-submenu>
-        <el-submenu index="11">
-          <template slot="title">
-            <i class="el-icon-s-grid"></i>
-            <span>校园拼单</span>
-          </template>
-          <el-menu-item :route="{ name: 'Bangbangpinche' }" index="11-1">帮帮拼车</el-menu-item>
-          <el-menu-item :route="{ name: 'Bangbangpindan' }" index="11-2">帮帮拼单</el-menu-item>
-        </el-submenu>
-        <el-submenu index="9">
-          <template slot="title">
-            <i class="el-icon-s-finance"></i>
-            <span>文章</span>
-          </template>
-          <el-menu-item :route="{ name: 'Wenzhangliebiao' }" index="9-1">文章列表</el-menu-item>
-        </el-submenu>
-        <!-- <el-submenu index="8">
-          <template slot="title">
-            <i class="el-icon-s-tools"></i>
-            <span>设置</span>
-          </template>
-          <el-menu-item :route="{ name: 'Xiaoxiguanli' }" index="8-1">消息管理</el-menu-item>
+          </el-submenu>-->
+          <el-submenu index="18">
+            <template slot="title">
+              <i class="el-icon-s-claim"></i>
+              <span>失物招领</span>
+            </template>
+            <el-menu-item :route="{ name: 'Bangbangxunzhu' }" index="18-1">帮帮寻主</el-menu-item>
+            <el-menu-item :route="{ name: 'Bangbangxunwu' }" index="18-2">帮帮寻物</el-menu-item>
+          </el-submenu>
+          <el-submenu index="11">
+            <template slot="title">
+              <i class="el-icon-s-grid"></i>
+              <span>校园拼单</span>
+            </template>
+            <el-menu-item :route="{ name: 'Bangbangpinche' }" index="11-1">帮帮拼车</el-menu-item>
+            <el-menu-item :route="{ name: 'Bangbangpindan' }" index="11-2">帮帮拼单</el-menu-item>
+          </el-submenu>
+          <el-submenu index="9">
+            <template slot="title">
+              <i class="el-icon-s-finance"></i>
+              <span>文章</span>
+            </template>
+            <el-menu-item :route="{ name: 'Wenzhangliebiao' }" index="9-1">文章列表</el-menu-item>
+          </el-submenu>
+          <el-submenu index="8">
+            <template slot="title">
+              <i class="el-icon-s-tools"></i>
+              <span>设置</span>
+            </template>
+            <!-- <el-menu-item :route="{ name: 'Xiaoxiguanli' }" index="8-1">消息管理</el-menu-item>
           <el-menu-item :route="{ name: 'Qitashezhi' }" index="8-2">其他设置</el-menu-item>
-          <el-menu-item :route="{ name: 'Lunbotushezhi' }" index="8-3">轮播图设置</el-menu-item>
-          <el-menu-item :route="{ name: 'Lunbotuliebiao' }" index="8-4">轮播图列表</el-menu-item>
-          <el-menu-item :route="{ name: 'Kaipinyeshezhi' }" index="8-5">开屏页设置</el-menu-item>
-          <el-menu-item :route="{ name: 'Shujuzhongxin' }" index="8-6">数据中心</el-menu-item>
-        </el-submenu> -->
-        <!-- <el-submenu index="10">
+            <el-menu-item :route="{ name: 'Lunbotushezhi' }" index="8-3">轮播图设置</el-menu-item>-->
+            <el-menu-item :route="{ name: 'Lunbotuliebiao' }" index="8-4">轮播图列表</el-menu-item>
+            <!-- <el-menu-item :route="{ name: 'Kaipinyeshezhi' }" index="8-5">开屏页设置</el-menu-item>
+            <el-menu-item :route="{ name: 'Shujuzhongxin' }" index="8-6">数据中心</el-menu-item>-->
+            <el-menu-item :route="{ name: 'Zhanghaoguanli' }" index="8-11">账号管理</el-menu-item>
+          </el-submenu>
+          <!-- <el-submenu index="10">
           <template slot="title">
             <i class="el-icon-s-finance"></i>
             <span>其他</span>
@@ -139,7 +170,8 @@
           <el-menu-item :route="{ name: 'Fankuiliebiao' }" index="10-1">反馈意见列表</el-menu-item>
           <el-menu-item :route="{ name: 'Gudingweizhi' }" index="10-3">固定位置列表</el-menu-item>
           <el-menu-item :route="{ name: 'Gudingweizhishangping' }" index="10-4">固定位置商品列表</el-menu-item>
-        </el-submenu> -->
+          </el-submenu>-->
+        </template>
       </el-menu>
     </div>
   </div>
@@ -152,7 +184,7 @@ export default {
       console.log(to.path); //到哪去
       if (to.path == "/Shouye") {
         this.menuActiveIndex = "1-1";
-        this.$store.commit("headerTit", "首页");
+        this.$store.commit("headerTit", "数据");
       } else if (to.path == "/Xiaoyuanbiaobai/Biaobaiqiang") {
         this.menuActiveIndex = "2-1";
         this.$store.commit(
@@ -224,14 +256,14 @@ export default {
         font-weight: 700;">树洞列表</span>`
         );
       } else if (to.path == "/Xiaoyuanyijiao/Xiaoyuanfengjing") {
-        this.menuActiveIndex = "6-1";
+        this.menuActiveIndex = "21-1";
         this.$store.commit(
           "headerTit",
           `校园一角 / <span style="color: #515a61;
         font-weight: 700;">校园风景</span>`
         );
       } else if (to.path == "/Xiaoyuanyijiao/Bangbangbaoxiu") {
-        this.menuActiveIndex = "6-2";
+        this.menuActiveIndex = "31-1";
         this.$store.commit(
           "headerTit",
           `校园一角 / <span style="color: #515a61;
@@ -252,14 +284,14 @@ export default {
         font-weight: 700;">佣金记录</span>`
         );
       } else if (to.path == "/Shiwuzhaoling/Bangbangxunzhu") {
-        this.menuActiveIndex = "8-1";
+        this.menuActiveIndex = "18-1";
         this.$store.commit(
           "headerTit",
           `失物招领 / <span style="color: #515a61;
         font-weight: 700;">帮帮寻主</span>`
         );
       } else if (to.path == "/Shiwuzhaoling/Bangbangxunwu") {
-        this.menuActiveIndex = "8-2";
+        this.menuActiveIndex = "18-2";
         this.$store.commit(
           "headerTit",
           `失物招领 / <span style="color: #515a61;
@@ -292,6 +324,13 @@ export default {
           "headerTit",
           `设置 / <span style="color: #515a61;
         font-weight: 700;">数据中心</span>`
+        );
+      } else if (to.path == "/Shezhi/Zhanghaoguanli") {
+        this.menuActiveIndex = "8-11";
+        this.$store.commit(
+          "headerTit",
+          `设置 / <span style="color: #515a61;
+        font-weight: 700;">账号管理</span>`
         );
       } else if (to.path == "/Shezhi/Chengshiliebiao") {
         this.menuActiveIndex = "8-7";
@@ -374,11 +413,17 @@ export default {
   },
   data() {
     return {
+      menu: [],
       activeIndex: 0,
       menuActiveIndex: "",
       userInfo: null,
       isCollapse: false
     };
+  },
+  created() {
+    this.menu = JSON.parse(decodeURIComponent(sessionStorage.getItem("menu")));
+    this.userName = sessionStorage.getItem("username")
+    console.log(this.menu,this.userName);
   },
   methods: {
     myisColl() {

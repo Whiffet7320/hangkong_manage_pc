@@ -18,7 +18,7 @@
               <el-row>
                 <el-col :span="12">
                   <el-form-item label="标题：">
-                    <el-input disabled size="small" v-model="lhForm.title"></el-input>
+                    <el-input size="small" v-model="lhForm.title"></el-input>
                   </el-form-item>
                 </el-col>
               </el-row>
@@ -37,11 +37,11 @@
                     </div>
                   </el-form-item>
                 </el-col>
-              </el-row> -->
+              </el-row>-->
               <el-row>
                 <el-col :span="12">
                   <el-form-item label="类型：">
-                    <el-select disabled size="small" v-model="lhForm.type" placeholder="请选择">
+                    <el-select size="small" v-model="lhForm.type" placeholder="请选择">
                       <el-option label="咨询" value="advice"></el-option>
                       <el-option label="新闻" value="news"></el-option>
                     </el-select>
@@ -57,7 +57,7 @@
                 </el-col>
               </el-row>
               <el-form-item>
-                <!-- <el-button size="small" type="primary" @click="onSubmitForm">保存</el-button> -->
+                <el-button size="small" type="primary" @click="onSubmitForm">保存</el-button>
                 <!-- <el-button @click="resetForm('ruleForm')">重置</el-button> -->
               </el-form-item>
             </el-form>
@@ -87,7 +87,7 @@ export default {
   data() {
     return {
       radioArr: [],
-      radioArr2:[],
+      radioArr2: [],
       editId: "",
       activeName: "1",
       editor: null,
@@ -98,9 +98,9 @@ export default {
         title: "",
         content: "",
         pic: "",
-        type:'',
+        type: ""
       },
-      imgFile: null,
+      imgFile: '',
       isAdd: true
     };
   },
@@ -109,7 +109,7 @@ export default {
   },
   methods: {
     async getData() {
-      console.log(this.wenzhangObj)
+      console.log(this.wenzhangObj);
       if (this.wenzhangObj) {
         // 编辑
         this.editId = this.wenzhangObj.id;
@@ -184,11 +184,11 @@ export default {
       console.log(this.lhForm);
       if (!this.wenzhangObj) {
         // 添加
-        const res = await this.$api.addArticles({
-          name: this.lhForm.title,
+        const res = await this.$api.addArticle({
+          title: this.lhForm.title,
           img: this.lhForm.pic,
           content: this.lhForm.content,
-          type: this.lhForm.type
+          tag: this.lhForm.type
         });
         console.log(res);
         if (res.code == 200) {
@@ -410,39 +410,21 @@ export default {
       "redo"
     ];
     this.editor.config.uploadImgServer = "/upload-img";
-    this.$api.uploadToken().then(res => {
-      console.log(res.data);
-      let myData = res.data;
-      let client = new window.OSS.Wrapper({
-        region: myData.region, //oss地址
-        accessKeyId: myData.accessKeyId, //ak
-        accessKeySecret: myData.accessKeySecret, //secret
-        stsToken: myData.stsToken,
-        bucket: myData.bucket //oss名字
-      });
-      this.editor.config.customUploadImg = async function(
-        resultFiles,
-        insertImgFn
-      ) {
-        // resultFiles 是 input 中选中的文件列表
-        // insertImgFn 是获取图片 url 后，插入到编辑器的方法
-        var file_re = null;
-        var imgtype = resultFiles[0].type.substr(6, 4);
-        var store = `${new Date().getTime()}.${imgtype}`;
-        file_re = await that.readFileAsBuffer(resultFiles[0]);
-        client
-          .put(store, file_re)
-          .then(function(res) {
-            console.log(res.url);
-            insertImgFn(res.url);
-          })
-          .catch(function(err) {
-            console.log(err);
-          });
-      };
-    });
+    // this.editor.config.uploadImgShowBase64 = true; // 使用 base64 保存图片
+    this.editor.config.customUploadImg = async function (
+      resultFiles,
+      insertImgFn
+    ) {
+      // resultFiles 是 input 中选中的文件列表
+      // insertImgFn 是获取图片 url 后，插入到编辑器的方法
+      console.log(resultFiles);
+      that.imgFile = new FormData();
+      that.imgFile.append("img", resultFiles[0]);
+      const res = await that.$api.upload_banner(that.imgFile);
+      insertImgFn(res.data.path);
+    };
     this.editor.create();
-     this.editor.txt.html(this.lhForm.content);
+    this.editor.txt.html(this.lhForm.content);
   }
 };
 </script>
