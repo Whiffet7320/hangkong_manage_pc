@@ -6,6 +6,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     // 校园帮帮
+    h5ValArr: [],
     biaobaiqiangPage: 1, //表白墙列表
     biaobaiqiangPageSize: 10,
     jishiShougouPage: 1, //集市-收购列表
@@ -31,11 +32,26 @@ export default new Vuex.Store({
     biaobaiqiangPinglunPageSize: 10,
     wenzhangPage: 1, //文章列表
     wenzhangPageSize: 10,
-    wenzhangObj:null,
+    wenzhangObj: null,
     zijinmingxiliebiaoPage: 1,
     zijinmingxiliebiaoPageSize: 10,
   },
   mutations: {
+    h5ValArr(state, obj) {
+      console.log(obj)
+      if (state.h5ValArr.length == 0) {
+        state.h5ValArr.push(obj);
+      } else {
+        state.h5ValArr.forEach(ele => {
+          if (ele.id == obj.id) {
+            ele.val = obj.val
+          } else {
+            state.h5ValArr.push(obj);
+          }
+        })
+      }
+      console.log(state.h5ValArr)
+    },
     headerTit(state, str) {
       state.headerTit = str;
     },

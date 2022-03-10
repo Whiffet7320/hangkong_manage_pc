@@ -1,5 +1,6 @@
 export default {
     // 校园帮帮
+    // baseUrl:'https://beikeyuan.bjxinzeyuan.cn',
     baseUrl: 'https://guangke.bjxinzeyuan.cn', //https://beikeyuan.bjxinzeyuan.cn  http://192.168.50.142:9004
     login: '/admin/login', //登录
     gaobai: '/admin/gaobai', //告白

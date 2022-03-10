@@ -13,17 +13,19 @@
         </el-tabs>
         <!-- 商品信息 -->
         <template v-if="activeName == '1'">
-          <div class="myForm">
-            <el-form :model="lhForm" ref="lhForm" label-width="100px" class="demo-ruleForm">
-              <el-row>
-                <el-col :span="12">
-                  <el-form-item label="标题：">
-                    <el-input size="small" v-model="lhForm.title"></el-input>
-                  </el-form-item>
-                </el-col>
-              </el-row>
-              <!-- <el-row>
-                <el-col :span="12">
+          <el-row>
+            <el-col :span="12">
+              <div class="myForm">
+                <el-form :model="lhForm" ref="lhForm" label-width="100px" class="demo-ruleForm">
+                  <el-row>
+                    <el-col :span="24">
+                      <el-form-item label="标题：">
+                        <el-input size="small" v-model="lhForm.title"></el-input>
+                      </el-form-item>
+                    </el-col>
+                  </el-row>
+                  <!-- <el-row>
+                <el-col :span="24">
                   <el-form-item label="封面图：">
                     <div @click="companyList" class="myImg">
                       <el-image :src="lhForm.pic" fit="fill" style="width: 60px; height: 60px">
@@ -37,31 +39,47 @@
                     </div>
                   </el-form-item>
                 </el-col>
-              </el-row>-->
-              <el-row>
-                <el-col :span="12">
-                  <el-form-item label="类型：">
-                    <el-select size="small" v-model="lhForm.type" placeholder="请选择">
-                      <el-option label="咨询" value="advice"></el-option>
-                      <el-option label="新闻" value="news"></el-option>
-                    </el-select>
+                  </el-row>-->
+                  <el-row>
+                    <el-col :span="24">
+                      <el-form-item label="类型：">
+                        <el-select size="small" v-model="lhForm.type" placeholder="请选择">
+                          <el-option label="咨询" value="advice"></el-option>
+                          <el-option label="新闻" value="news"></el-option>
+                        </el-select>
+                      </el-form-item>
+                    </el-col>
+                  </el-row>
+                  <el-row>
+                    <el-col :span="24">
+                      <div class="myEditor">
+                        <div class="txt">商品详情：</div>
+                        <div id="editor"></div>
+                      </div>
+                    </el-col>
+                  </el-row>
+                  <el-form-item>
+                    <!-- <el-button v-if="this.wenzhangObj" size="small" @click="huifuzancun">恢复暂存</el-button> -->
+                    <!-- <el-button v-if="this.wenzhangObj" size="small" @click="zancun">暂存</el-button> -->
+                    <el-button size="small" type="primary" @click="onSubmitForm">保存</el-button>
+                    <el-button size="small" @click="yulan">刷新预览</el-button>
                   </el-form-item>
-                </el-col>
-              </el-row>
-              <el-row>
-                <el-col :span="20">
-                  <div class="myEditor">
-                    <div class="txt">商品详情：</div>
-                    <div id="editor"></div>
-                  </div>
-                </el-col>
-              </el-row>
-              <el-form-item>
-                <el-button size="small" type="primary" @click="onSubmitForm">保存</el-button>
-                <!-- <el-button @click="resetForm('ruleForm')">重置</el-button> -->
-              </el-form-item>
-            </el-form>
-          </div>
+                </el-form>
+              </div>
+            </el-col>
+            <el-col :span="12">
+              <div class="rright">
+                <div class="txt">预览：</div>
+                <div class="preview-wrapper">
+                  <div class="preview-header">H5预览</div>
+
+                  <section>
+                    <iframe id="myframe" class="preview-content" src="/H5" frameborder="0" />
+                  </section>
+                </div>
+              </div>
+            </el-col>
+          </el-row>
         </template>
       </div>
     </div>
@@ -82,7 +100,7 @@ import E from "wangeditor";
 import { mapState } from "vuex";
 export default {
   computed: {
-    ...mapState(["wenzhangObj"])
+    ...mapState(["wenzhangObj", "h5ValArr"])
   },
   data() {
     return {
@@ -100,12 +118,13 @@ export default {
         pic: "",
         type: ""
       },
-      imgFile: '',
+      imgFile: "",
       isAdd: true
     };
   },
   created() {
     this.getData();
+    console.log(this.h5ValArr);
   },
   methods: {
     async getData() {
@@ -176,12 +195,49 @@ export default {
     delImg() {
       this.$set(this.lhForm, "pic", "");
     },
+    zancun() {
+      if (this.wenzhangObj) {
+        // 编辑
+        this.editId = this.wenzhangObj.id;
+        var obj = {
+          id: this.wenzhangObj.id,
+          val: document.getElementsByClassName("w-e-text")[0].innerHTML
+        };
+      }
+      this.$store.commit("h5ValArr", obj);
+      this.$message({
+        message: "已缓存"
+      });
+    },
+    huifuzancun() {
+      console.log(this.h5ValArr);
+      var myLength = 0;
+      var myObj = null;
+      this.h5ValArr.forEach(ele => {
+        if (ele.id == this.wenzhangObj.id) {
+          myLength = 1;
+          myObj = ele;
+        }
+      });
+      if (myLength == 0) {
+        this.$message({
+          message: "暂无缓存",
+          type: "warning"
+        });
+      } else {
+        this.editor.txt.html(myObj.val);
+      }
+    },
     // 保存
     async onSubmitForm() {
       this.lhForm.content = document.getElementsByClassName(
         "w-e-text"
       )[0].innerHTML;
+      // this.$store.commit('h5Val',this.lhForm.content);
       console.log(this.lhForm);
+      sessionStorage.setItem("isH5", "yes");
+      sessionStorage.setItem("isH5zhanshi", "no");
+      document.getElementById("myframe").contentWindow.location.reload(true);
       if (!this.wenzhangObj) {
         // 添加
         const res = await this.$api.addArticle({
@@ -384,6 +440,15 @@ export default {
     },
     toBack() {
       this.$router.push({ name: "Wenzhangliebiao" });
+    },
+    yulan() {
+      sessionStorage.setItem(
+        "h5Val",
+        document.getElementsByClassName("w-e-text")[0].innerHTML
+      );
+      sessionStorage.setItem("isH5", "yes");
+      sessionStorage.setItem("isH5zhanshi", "yes");
+      document.getElementById("myframe").contentWindow.location.reload(true);
     }
   },
   mounted() {
@@ -411,7 +476,7 @@ export default {
     ];
     this.editor.config.uploadImgServer = "/upload-img";
     // this.editor.config.uploadImgShowBase64 = true; // 使用 base64 保存图片
-    this.editor.config.customUploadImg = async function (
+    this.editor.config.customUploadImg = async function(
       resultFiles,
       insertImgFn
     ) {
@@ -425,6 +490,10 @@ export default {
     };
     this.editor.create();
     this.editor.txt.html(this.lhForm.content);
+    sessionStorage.setItem("h5Val", this.lhForm.content);
+    sessionStorage.setItem("isH5", "yes");
+    sessionStorage.setItem("isH5zhanshi", "yes");
+    document.getElementById("myframe").contentWindow.location.reload(true);
   }
 };
 </script>
@@ -655,7 +724,7 @@ export default {
   display: flex;
   .txt {
     color: #606266;
-    width: 90px;
+    width: 90px !important;
     font-size: 12px;
     margin-right: 12px;
     margin-top: 2px;
@@ -663,6 +732,64 @@ export default {
   }
   #editor {
     transform: translateY(-6px);
+    width: 90%;
+  }
+}
+.rright {
+  margin-top: 20px;
+  .txt {
+    color: #606266;
+    width: 90px !important;
+    font-size: 12px;
+    margin-right: 12px;
+    margin-top: 2px;
+    text-align: right;
+  }
+  .preview-wrapper {
+    margin-left: 50px;
+    width: 377px;
+    height: 620px;
+  }
+  .preview-header {
+    color: #ffffff;
+    line-height: 20px;
+    height: 20px;
+    margin-top: 20px;
+    text-align: center;
+    background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(55, 55, 55, 0.98)),
+      to(#545456)
+    );
+    background: -webkit-linear-gradient(rgba(55, 55, 55, 0.98), #545456);
+    background: linear-gradient(rgba(55, 55, 55, 0.98), #545456);
+    border-radius: 4px 4px 0 0;
+  }
+
+  .preview-statbar {
+    height: 20px;
+    margin-bottom: 4px;
+    .preview-img {
+      width: 96%;
+      height: 80%;
+      margin: 0 2%;
+      vertical-align: middle;
+      border-style: none;
+    }
+  }
+
+  .preview-content {
+    width: 377px;
+    height: 600px;
+    overflow: auto;
+    border-top: none;
+    border-right: 1px solid rgb(247, 247, 247);
+    border-bottom: 1px solid rgb(247, 247, 247);
+    border-left: 1px solid rgb(247, 247, 247);
+    border-image: initial;
+    box-shadow: #dddddd 0 2px 4px;
   }
 }
 </style>

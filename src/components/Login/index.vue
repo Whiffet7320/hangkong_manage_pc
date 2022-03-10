@@ -134,6 +134,7 @@ export default {
         sessionStorage.setItem("username", this.loginForm.username);
         sessionStorage.setItem("token", res.data.token);
         sessionStorage.setItem("isLogin", true);
+        // sessionStorage.setItem("isH5", "no");
         sessionStorage.setItem("userInfo", JSON.stringify(res.data.info));
          sessionStorage.setItem(
           "menu",

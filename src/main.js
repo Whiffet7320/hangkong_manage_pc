@@ -11,6 +11,9 @@ import 'xe-utils';
 import VXETable from 'vxe-table';
 import 'vxe-table/lib/style.css';
 import VueParticles from 'vue-particles'  
+import Vant from 'vant';
+import 'vant/lib/index.css';
+Vue.use(Vant);
 Vue.use(VueParticles)  
 Vue.use(VXETable)
 

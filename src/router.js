@@ -84,9 +84,13 @@ const routes = [{
             name: 'Bangbangpindan',
             component: () => import('./components/Xiaoyuanpindan/Bangbangpindan'),
         }]
+    }, {
+        path: '/H5',
+        name: 'H5',
+        component: () => import('./components/Wenzhang/H5'),
     },
     // 
-     {
+    {
         path: '/Wenzhang',
         name: 'Wenzhang',
         component: () => import('./components/Wenzhang'),
@@ -98,6 +102,10 @@ const routes = [{
             path: 'Tianjiawenzhang',
             name: 'Tianjiawenzhang',
             component: () => import('./components/Wenzhang/Tianjiawenzhang'),
+        }, {
+            path: 'H5',
+            name: 'H5',
+            component: () => import('./components/Wenzhang/H5'),
         }]
     }, {
         path: '/Qita',
@@ -136,7 +144,7 @@ const routes = [{
             path: 'Xiaoxiguanli',
             name: 'Xiaoxiguanli',
             component: () => import('./components/Shezhi/Xiaoxiguanli'),
-        },{
+        }, {
             path: 'Zhanghaoguanli',
             name: 'Zhanghaoguanli',
             component: () => import('./components/Shezhi/Zhanghaoguanli'),

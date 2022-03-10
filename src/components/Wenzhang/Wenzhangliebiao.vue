@@ -31,6 +31,8 @@
               <el-switch @change="changeKG(scope.row)" v-model="scope.row.myStatus"></el-switch>
             </template>
           </vxe-table-column>
+          <vxe-table-column field="zan_num" title="点赞数"></vxe-table-column>
+          <vxe-table-column field="read_num" title="阅读数"></vxe-table-column>
           <vxe-table-column field="add_time" title="发布时间"></vxe-table-column>
           <vxe-table-column title="操作状态" width="160">
             <template slot-scope="scope">
