@@ -6,6 +6,123 @@ Vue.config.productionTip = false;
 
 
 const routes = [{
+        path: '/1_yewucaozuo',
+        name: '1_yewucaozuo',
+        component: () => import('./components/1_yewucaozuo'),
+        children: [{
+            path: 'Xindingdan',
+            name: 'Xindingdan',
+            component: () => import('./components/1_yewucaozuo/Xindingdan.vue'),
+        }, {
+            path: 'Addxindingdan',
+            name: 'Addxindingdan',
+            component: () => import('./components/1_yewucaozuo/Addxindingdan.vue'),
+        }, ]
+    },
+    {
+        path: '/2_caiwujiesuan',
+        name: '2_caiwujiesuan',
+        component: () => import('./components/2_caiwujiesuan'),
+        children: [{
+            path: 'Xindingdan',
+            name: 'Xindingdan',
+            component: () => import('./components/2_caiwujiesuan/Xindingdan.vue'),
+        }, ]
+    }, {
+        path: '/3_kongyunbaobiao',
+        name: '3_kongyunbaobiao',
+        component: () => import('./components/3_kongyunbaobiao'),
+        children: [{
+            path: 'Kongyunbaobiao',
+            name: 'Kongyunbaobiao',
+            component: () => import('./components/3_kongyunbaobiao/Kongyunbaobiao.vue'),
+        }, ]
+    }, {
+        path: '/5_jichuziliao',
+        name: '5_jichuziliao',
+        component: () => import('./components/5_jichuziliao'),
+        children: [{
+            path: 'Kehuziliao',
+            name: 'Kehuziliao',
+            component: () => import('./components/5_jichuziliao/Kehuziliao.vue'),
+        }, {
+            path: 'Feiyongleixin',
+            name: 'Feiyongleixin',
+            component: () => import('./components/5_jichuziliao/Feiyongleixin.vue'),
+        }, {
+            path: 'Bizhongxinxi',
+            name: 'Bizhongxinxi',
+            component: () => import('./components/5_jichuziliao/Bizhongxinxi.vue'),
+        }, {
+            path: 'Huilv',
+            name: 'Huilv',
+            component: () => import('./components/5_jichuziliao/Huilv.vue'),
+        }, {
+            path: 'Hangbanxinxi',
+            name: 'Hangbanxinxi',
+            component: () => import('./components/5_jichuziliao/Hangbanxinxi.vue'),
+        }, {
+            path: 'Huowuleixin',
+            name: 'Huowuleixin',
+            component: () => import('./components/5_jichuziliao/Huowuleixin.vue'),
+        }, {
+            path: 'Guojia',
+            name: 'Guojia',
+            component: () => import('./components/5_jichuziliao/Guojia.vue'),
+        }, {
+            path: 'AddKehu',
+            name: 'AddKehu',
+            component: () => import('./components/5_jichuziliao/AddKehu.vue'),
+        }, {
+            path: 'AddHangban',
+            name: 'AddHangban',
+            component: () => import('./components/5_jichuziliao/AddHangban.vue'),
+        },{
+            path: 'Jichang',
+            name: 'Jichang',
+            component: () => import('./components/5_jichuziliao/Jichang.vue'),
+        },{
+            path: 'Shuilv',
+            name: 'Shuilv',
+            component: () => import('./components/5_jichuziliao/Shuilv.vue'),
+        },{
+            path: 'Kongyunhangxian',
+            name: 'Kongyunhangxian',
+            component: () => import('./components/5_jichuziliao/Kongyunhangxian.vue'),
+        },{
+            path: 'Bengongsiziliao',
+            name: 'Bengongsiziliao',
+            component: () => import('./components/5_jichuziliao/Bengongsiziliao.vue'),
+        },]
+    },
+    {
+        path: '/6_xitongguanli',
+        name: '6_xitongguanli',
+        component: () => import('./components/6_xitongguanli'),
+        children: [{
+            path: 'Zhanghaoguanli',
+            name: 'Zhanghaoguanli',
+            component: () => import('./components/6_xitongguanli/Zhanghaoguanli.vue'),
+        },{
+            path: 'Gangweiguanli',
+            name: 'Gangweiguanli',
+            component: () => import('./components/6_xitongguanli/Gangweiguanli.vue'),
+        },{
+            path: 'Fenzushezhi',
+            name: 'Fenzushezhi',
+            component: () => import('./components/6_xitongguanli/Fenzushezhi.vue'),
+        },{
+            path: 'Gongzuozubianhao',
+            name: 'Gongzuozubianhao',
+            component: () => import('./components/6_xitongguanli/Gongzuozubianhao.vue'),
+        },{
+            path: 'Xitongdaima',
+            name: 'Xitongdaima',
+            component: () => import('./components/6_xitongguanli/Xitongdaima.vue'),
+        }, ]
+    },
+    // 
+    {
         path: '/',
         name: 'Home',
         component: () => import('./components/Home'),

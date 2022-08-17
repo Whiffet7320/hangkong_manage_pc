@@ -27,6 +27,12 @@ export default {
 }
 </style>
 <style lang="scss">
+/deep/ .vxe-header--row{
+  font-size: 12px !important;
+}
+/deep/ .vxe-body--row {
+  font-size: 12px !important;
+}
 .el-popover {
   transform: translateY(-6px);
   .el-checkbox {

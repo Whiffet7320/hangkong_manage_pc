@@ -1,13 +1,13 @@
 <template>
   <div class="layout">
     <el-container v-if="this.isLogin == 'true' && this.isH5 != 'yes'">
-      <el-aside width="null">
-        <Aside />
-      </el-aside>
+      <el-header>
+        <Header />
+      </el-header>
       <el-container>
-        <el-header>
-          <Header />
-        </el-header>
+        <el-aside v-if="haveAside" width="null">
+          <Aside />
+        </el-aside>
         <el-main>
           <RouterView></RouterView>
         </el-main>
@@ -24,8 +24,8 @@ import Header from "../Header";
 import Aside from "../Aside";
 import H5 from "../../components/Wenzhang/H5";
 
-window.addEventListener("beforeunload", function() {
-  console.log(sessionStorage.getItem("isH5zhanshi"), 1111,1111);
+window.addEventListener("beforeunload", function () {
+  console.log(sessionStorage.getItem("isH5zhanshi"), 1111, 1111);
   if (sessionStorage.getItem("isH5zhanshi") == null) {
     sessionStorage.setItem("isH5", "no");
   } else {
@@ -38,7 +38,7 @@ window.addEventListener("beforeunload", function() {
     } else {
       sessionStorage.setItem("isH5", "yes");
       // setTimeout(() => {
-        sessionStorage.setItem("isH5zhanshi", "no");
+      sessionStorage.setItem("isH5zhanshi", "no");
       // }, 1000);
     }
   }
@@ -47,8 +47,23 @@ export default {
   data() {
     return {
       isLogin: "false",
-      isH5: "no"
+      isH5: "no",
+      haveAside:true,
     };
+  },
+  watch: {
+    $route: {
+      handler: function (val) {
+        console.log(val);
+        if (val.path == '/3_kongyunbaobiao/Kongyunbaobiao') {
+          this.haveAside = false;
+        }else{
+          this.haveAside = true;
+        }
+      },
+      immediate: true,
+      deep: true,
+    },
   },
   created() {
     this.isLogin = sessionStorage.getItem("isLogin");
@@ -59,12 +74,18 @@ export default {
     Login,
     Header,
     Aside,
-    H5
-  }
+    H5,
+  },
 };
 </script>
 
-<style>
+<style lang='scss'>
+/deep/ .layout .vxe-header--row{
+  font-size: 12px !important;
+}
+/deep/ .vxe-body--row {
+  font-size: 12px !important;
+}
 /* .el-header {
   background-color: #b3c0d1;
   height: 60px;
@@ -72,20 +93,23 @@ export default {
 } */
 .el-header {
   padding: 0;
+  height: 84px !important;
 }
 .el-container {
   height: calc(100vh);
 }
 .el-aside {
-  background-color: #001529;
+  background-color: #fff;
   color: #333;
-  /* width: 200px !important; */
+  width: 280px !important;
   min-width: 40px;
 }
 
 .el-main {
+    padding: 0 !important;
   /* padding: 0 0 0 24px !important; */
-  background: #f3f3f3;
+  background: #f1f5f8;
   color: #333;
+  height: calc(100vh - 84px);
 }
 </style>

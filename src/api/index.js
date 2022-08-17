@@ -270,1015 +270,578 @@ export default {
             }
         })
     },
-    gaobai(obj) {
-        return myGet({
-            url: `${urls.gaobai}`,
-            params: {
-                ...obj
-            }
-        })
-    },
-    delGaobai(id) {
-        return myDelete({
-            url: `${urls.gaobai}/${id}`,
-        })
-    },
-    gaobaiXiangqin(id) {
-        return myGet({
-            url: `${urls.gaobai}/${id}`,
-        })
-    },
-    comment_list(obj) {
-        return myGet({
-            url: `${urls.comment_list}`,
-            params: {
-                ...obj
-            }
-        })
-    },
-    update_admin(obj) {
+    user_list(obj) {
         return myPost({
-            url: `${urls.update_admin}`,
+            url: urls.user_list,
             data: {
                 ...obj
             }
         })
     },
-    admin_list(obj) {
-        return myGet({
-            url: urls.admin_list,
-            params: {
-                ...obj
-            }
-        })
-    },
-    add_admin(obj) {
+    userpost_list(obj) {
         return myPost({
-            url: `${urls.add_admin}`,
+            url: urls.userpost_list,
             data: {
                 ...obj
             }
         })
     },
-    menu() {
-        return myGet({
-            url: urls.menu,
-        })
-    },
-    getjishi(obj) {
-        return myGet({
-            url: urls.jishi,
-            params: {
-                ...obj
-            }
-        })
-    },
-    delJishi(id) {
-        return myDelete({
-            url: `${urls.jishi}/${id}`,
-        })
-    },
-    
-    shudong(obj) {
-        return myGet({
-            url: `${urls.shudong}`,
-            params: {
-                ...obj
-            }
-        })
-    },
-    delShudong(id) {
-        return myDelete({
-            url: `${urls.shudong}/${id}`,
-        })
-    },
-    article(obj) {
-        return myGet({
-            url: `${urls.article}`,
-            params: {
-                ...obj
-            }
-        })
-    },
-    addArticle(obj) {
+    add_userpost(obj) {
         return myPost({
-            url: `${urls.article}`,
+            url: urls.add_userpost,
             data: {
                 ...obj
             }
         })
     },
-    delArticle( id) {
-        return myDelete({
-            url: `${urls.article}/${id}`,
-        })
-    },
-    upLoadArticle(obj, id) {
-        return myPut({
-            url: `${urls.article}/${id}`,
-            data: {
-                ...obj
-            }
-        })
-    },
-    update_status(obj) {
+    add_users(obj) {
         return myPost({
-            url: `${urls.update_status}`,
+            url: urls.add_users,
             data: {
                 ...obj
             }
         })
     },
-    shudong_comment_list(obj) {
-        return myGet({
-            url: urls.shudong_comment_list,
-            params: {
-                ...obj
-            }
-        })
-    },
-    video_list(obj) {
-        return myGet({
-            url: urls.video_list,
-            params: {
-                ...obj
-            }
-        })
-    },
-    add_video(obj) {
+    user_menu(obj) {
         return myPost({
-            url: `${urls.add_video}`,
+            url: urls.user_menu,
             data: {
                 ...obj
             }
         })
     },
-    addUpload_video(obj) {
+    update_users(obj) {
         return myPost({
-            url: `${urls.upload_video}`,
+            url: urls.update_users,
             data: {
                 ...obj
             }
         })
     },
-    is_best(obj) {
+    del_users(obj) {
         return myPost({
-            url: `${urls.is_best}`,
+            url: urls.del_users,
             data: {
                 ...obj
             }
         })
     },
-    upload_video(obj) {
-        return myGet({
-            url: urls.upload_video,
-            params: {
-                ...obj
-            }
-        })
-    },
-    getbaoxiu(obj) {
-        return myGet({
-            url: urls.baoxiu,
-            params: {
-                ...obj
-            }
-        })
-    },
-    delBaoxiu(id) {
-        return myDelete({
-            url: `${urls.baoxiu}/${id}`,
-        })
-    },
-    getfengjing(obj) {
-        return myGet({
-            url: urls.fengjing,
-            params: {
-                ...obj
-            }
-        })
-    },
-    delFengjing(id) {
-        return myDelete({
-            url: `${urls.fengjing}/${id}`,
-        })
-    },
-    getshougou(obj) {
-        return myGet({
-            url: urls.shougou,
-            params: {
-                ...obj
-            }
-        })
-    },
-    delShougou(id) {
-        return myDelete({
-            url: `${urls.shougou}/${id}`,
-        })
-    },
-    getpinche(obj) {
-        return myGet({
-            url: urls.pinche,
-            params: {
-                ...obj
-            }
-        })
-    },
-    getpindan(obj) {
-        return myGet({
-            url: urls.pindan,
-            params: {
-                ...obj
-            }
-        })
-    },
-    // 
-    users(obj) {
-        return myGet({
-            url: urls.users,
-            params: {
-                ...obj
-            }
-        })
-    },
-    usersIdMoneyRecords(obj) {
-        return myGet({
-            url: `${urls.usersIdMoneyRecords}/${obj.id}/money-records`,
-            params: {
-                ...obj
-            }
-        })
-    },
-    usersIdScoreRecords(obj) {
-        return myGet({
-            url: `${urls.usersIdMoneyRecords}/${obj.id}/score-records`,
-            params: {
-                ...obj
-            }
-        })
-    },
-    categories(obj) {
-        return myGet({
-            url: urls.categories,
-            params: {
-                ...obj
-            }
-        })
-    },
-    addCategories(obj) {
+    add_usergroups(obj) {
         return myPost({
-            url: urls.addCategories,
+            url: urls.add_usergroups,
             data: {
                 ...obj
             }
         })
     },
-    updateCategories(obj, id) {
-        return myPut({
-            url: `${urls.updateCategories}/${id}`,
-            data: {
-                ...obj
-            }
-        })
-    },
-    score(obj) {
-        return myPut({
-            url: `${urls.score}`,
-            data: {
-                ...obj
-            }
-        })
-    },
-    money(obj) {
-        return myPut({
-            url: `${urls.money}`,
-            data: {
-                ...obj
-            }
-        })
-    },
-    items(obj) {
-        return myGet({
-            url: urls.items,
-            params: {
-                ...obj
-            }
-        })
-    },
-    addItems(obj) {
+    usergroups_list(obj) {
         return myPost({
-            url: urls.items,
+            url: urls.usergroups_list,
             data: {
                 ...obj
             }
         })
     },
-    upDateItems(obj, id) {
-        return myPut({
-            url: `${urls.items}/${id}`,
-            data: {
-                ...obj
-            }
-        })
-    },
-    deleteItems(id) {
-        return myDelete({
-            url: `${urls.items}/${id}`,
-        })
-    },
-    uploadToken() {
-        return myGet({
-            url: urls.uploadToken,
-        })
-    },
-    idCards(obj, id) {
-        return myPut({
-            url: `${urls.idCards}/${id}`,
-            data: {
-                ...obj
-            }
-        })
-    },
-    demandQuotes(obj) {
-        return myGet({
-            url: urls.demandQuotes,
-            params: {
-                ...obj
-            }
-        })
-    },
-    ordersId(obj, id) {
-        return myPut({
-            url: `${urls.ordersId}/${id}`,
-            data: {
-                ...obj
-            }
-        })
-    },
-    articles(obj) {
-        return myGet({
-            url: urls.articles,
-            params: {
-                ...obj
-            }
-        })
-    },
-    addArticles(obj) {
+    update_usergroups(obj) {
         return myPost({
-            url: urls.articles,
+            url: urls.update_usergroups,
             data: {
                 ...obj
             }
         })
     },
-    upDateArticles(obj, id) {
-        return myPut({
-            url: `${urls.articles}/${id}`,
-            data: {
-                ...obj
-            }
-        })
-    },
-    deleteArticles(id) {
-        return myDelete({
-            url: `${urls.articles}/${id}`,
-        })
-    },
-    articlesTypes() {
-        return myGet({
-            url: urls.articlesTypes,
-        })
-    },
-    banners(obj) {
-        return myGet({
-            url: urls.banners,
-            params: {
-                ...obj
-            }
-        })
-    },
-    addBanners(obj) {
+    del_usergroups(obj) {
         return myPost({
-            url: urls.banners,
+            url: urls.del_usergroups,
             data: {
                 ...obj
             }
         })
     },
-    upDateBanners(obj, id) {
-        return myPut({
-            url: `${urls.banners}/${id}`,
-            data: {
-                ...obj
-            }
-        })
-    },
-    deleteBanners(id) {
-        return myDelete({
-            url: `${urls.banners}/${id}`,
-        })
-    },
-    bannersPositions() {
-        return myGet({
-            url: urls.bannersPositions,
-        })
-    },
-    bannersJumpTypes() {
-        return myGet({
-            url: urls.bannersJumpTypes,
-        })
-    },
-    globalConfigs(obj) {
-        return myGet({
-            url: urls.globalConfigs,
-            data: {
-                ...obj
-            }
-        })
-    },
-    upDateGlobalConfigs(obj, id) {
-        return myPut({
-            url: `${urls.globalConfigs}/${id}`,
-            data: {
-                ...obj
-            }
-        })
-    },
-    areas(obj) {
-        return myGet({
-            url: urls.areas,
-            params: {
-                ...obj
-            }
-        })
-    },
-    delete_admin(obj) {
+    del_userpost(obj) {
         return myPost({
-            url: urls.delete_admin,
+            url: urls.del_userpost,
             data: {
                 ...obj
             }
         })
     },
-    admin_log_list(obj) {
-        return myGet({
-            url: urls.admin_log_list,
-            params: {
-                ...obj
-            }
-        })
-    },
-    update_read_num(obj) {
+    update_userpost(obj) {
         return myPost({
-            url: urls.update_read_num,
+            url: urls.update_userpost,
             data: {
                 ...obj
             }
         })
     },
-    update_zan_num(obj) {
+    set_userstatus(obj) {
         return myPost({
-            url: urls.update_zan_num,
+            url: urls.set_userstatus,
             data: {
                 ...obj
             }
         })
     },
-    feedbacks(obj) {
-        return myGet({
-            url: urls.feedbacks,
-            params: {
-                ...obj
-            }
-        })
-    },
-    upDatefeedbacks(obj, id) {
-        return myPut({
-            url: `${urls.feedbacks}/${id}`,
-            data: {
-                ...obj
-            }
-        })
-    },
-    withdraw(obj) {
-        return myGet({
-            url: urls.withdraw,
-            params: {
-                ...obj
-            }
-        })
-    },
-    upDateWithdraw(obj, id) {
-        return myPut({
-            url: `${urls.withdraw}/${id}`,
-            data: {
-                ...obj
-            }
-        })
-    },
-    fixedPosition(obj) {
-        return myGet({
-            url: urls.fixedPosition,
-            params: {
-                ...obj
-            }
-        })
-    },
-    positions() {
-        return myGet({
-            url: urls.positions,
-        })
-    },
-    addFixedPosition(obj) {
+    customer_attributecode(obj) {
         return myPost({
-            url: urls.fixedPosition,
+            url: urls.customer_attributecode,
             data: {
                 ...obj
             }
         })
     },
-    upDateFixedPosition(obj, id) {
-        return myPut({
-            url: `${urls.fixedPosition}/${id}`,
-            data: {
-                ...obj
-            }
-        })
-    },
-    deleteFixedPosition(id) {
-        return myDelete({
-            url: `${urls.fixedPosition}/${id}`,
-        })
-    },
-    fixedPositionItem(obj) {
-        return myGet({
-            url: urls.fixedPositionItem,
-            params: {
-                ...obj
-            }
-        })
-    },
-    addFixedPositionItem(obj) {
+    customer_type(obj) {
         return myPost({
-            url: urls.fixedPositionItem,
+            url: urls.customer_type,
             data: {
                 ...obj
             }
         })
     },
-    upDateFixedPositionItem(obj, id) {
-        return myPut({
-            url: `${urls.fixedPositionItem}/${id}`,
-            data: {
-                ...obj
-            }
-        })
-    },
-    deleteFixedPositionItem(id) {
-        return myDelete({
-            url: `${urls.fixedPositionItem}/${id}`,
-        })
-    },
-    itemAll() {
-        return myGet({
-            url: urls.itemAll,
-        })
-    },
-    turntableItem(obj) {
-        return myGet({
-            url: urls.turntableItem,
-            params: {
-                ...obj
-            }
-        })
-    },
-    addTurntableItem(obj) {
+    customer_list(obj) {
         return myPost({
-            url: urls.turntableItem,
+            url: urls.customer_list,
             data: {
                 ...obj
             }
         })
     },
-    upDateTurntableItem(obj, id) {
-        return myPut({
-            url: `${urls.turntableItem}/${id}`,
-            data: {
-                ...obj
-            }
-        })
-    },
-    deleteTurntableItem(id) {
-        return myDelete({
-            url: `${urls.turntableItem}/${id}`,
-        })
-    },
-    awards(obj) {
-        return myGet({
-            url: urls.awards,
-            params: {
-                ...obj
-            }
-        })
-    },
-    upDateAwards(obj, id) {
-        return myPut({
-            url: `${urls.awards}/${id}`,
-            data: {
-                ...obj
-            }
-        })
-    },
-    goodsOrder(obj) {
-        return myGet({
-            url: urls.goodsOrder,
-            params: {
-                ...obj
-            }
-        })
-    },
-    goodsOrderFahuo(obj, id) {
-        return myPut({
-            url: `${urls.goodsOrder}/${id}/delivery`,
-            data: {
-                ...obj
-            }
-        })
-    },
-    // 
-
-
-    productList(obj) {
-        return myGet({
-            url: urls.productList,
-            params: {
-                ...obj
-            }
-        })
-    },
-    async productUpload(image) {
-        var configs = {
-            headers: {
-                "Content-Type": "multipart/form-data;charse=UTF-8",
-                'Authorization': `Bearer ${sessionStorage.getItem("token")}`,
-            },
-        };
-        const res = await axios
-            .post(`${urls.baseUrl}/admin/product/upload`, image, configs)
-        return res.data
-    },
-    loginInfo() {
-        return myGet({
-            url: urls.loginInfo,
-        })
-    },
-    categorySave(obj) {
+    create_costtypes(obj) {
         return myPost({
-            url: urls.categorySave,
+            url: urls.create_costtypes,
             data: {
                 ...obj
             }
         })
     },
-    categoryIndex(obj) {
-        return myGet({
-            url: urls.categoryIndex,
-            params: {
-                ...obj
-            }
-        })
-    },
-    productSave(obj) {
+    create_currency(obj) {
         return myPost({
-            url: urls.productSave,
+            url: urls.create_currency,
             data: {
                 ...obj
             }
         })
     },
-    categoryDel(id) {
+    currency_list(obj) {
         return myPost({
-            url: urls.categoryDel,
+            url: urls.currency_list,
             data: {
-                id
+                ...obj
             }
         })
     },
-    productAttrs(id) {
-        return myGet({
-            url: urls.productAttrs,
-            params: {
-                id
-            }
-        })
-    },
-    productDescription(id) {
-        return myGet({
-            url: urls.productDescription,
-            params: {
-                id
-            }
-        })
-    },
-    combinationSave(obj) {
+    update_currency(obj) {
         return myPost({
-            url: urls.combinationSave,
+            url: urls.update_currency,
             data: {
                 ...obj
             }
         })
     },
-    combinationList(obj) {
-        return myGet({
-            url: urls.combinationList,
-            params: {
-                ...obj
-            }
-        })
-    },
-    combinationAttrs(id) {
-        return myGet({
-            url: urls.combinationAttrs,
-            params: {
-                id
-            }
-        })
-    },
-    combinationDescription(id) {
-        return myGet({
-            url: urls.combinationDescription,
-            params: {
-                id
-            }
-        })
-    },
-    combinationShow(obj) {
+    del_currency(obj) {
         return myPost({
-            url: urls.combinationShow,
+            url: urls.del_currency,
             data: {
                 ...obj
             }
         })
     },
-    productShow(obj) {
+    list_costtypes(obj) {
         return myPost({
-            url: urls.productShow,
+            url: urls.list_costtypes,
             data: {
                 ...obj
             }
         })
     },
-    activitySave(obj) {
+    update_costtypes(obj) {
         return myPost({
-            url: urls.activitySave,
+            url: urls.update_costtypes,
             data: {
                 ...obj
             }
         })
     },
-    activityIndex(obj) {
-        return myGet({
-            url: urls.activityIndex,
-            params: {
-                ...obj
-            }
-        })
-    },
-    activityDel(obj) {
+    del_costtypes(obj) {
         return myPost({
-            url: urls.activityDel,
+            url: urls.del_costtypes,
             data: {
                 ...obj
             }
         })
     },
-    orderIndex(obj) {
-        return myGet({
-            url: urls.orderIndex,
-            params: {
-                ...obj
-            }
-        })
-    },
-    activityAdd_product(obj) {
+    create_exchangerate(obj) {
         return myPost({
-            url: urls.activityAdd_product,
+            url: urls.create_exchangerate,
             data: {
                 ...obj
             }
         })
     },
-    activityList_product(obj) {
-        return myGet({
-            url: urls.activityList_product,
-            params: {
-                ...obj
-            }
-        })
-    },
-    orderDelivery(obj) {
+    exchangerate_list(obj) {
         return myPost({
-            url: urls.orderDelivery,
+            url: urls.exchangerate_list,
             data: {
                 ...obj
             }
         })
     },
-    activityList_gift() {
-        return myGet({
-            url: urls.activityList_gift,
-        })
-    },
-    activityAdd_gift(obj) {
+    update_exchangerate(obj) {
         return myPost({
-            url: urls.activityAdd_gift,
+            url: urls.update_exchangerate,
             data: {
                 ...obj
             }
         })
     },
-    activityDel_gift(obj) {
+    del_exchangerate(obj) {
         return myPost({
-            url: urls.activityDel_gift,
+            url: urls.del_exchangerate,
             data: {
                 ...obj
             }
         })
     },
-    activityDel_cate_gift(obj) {
+    create_flight(obj) {
         return myPost({
-            url: urls.activityDel_cate_gift,
+            url: urls.create_flight,
             data: {
                 ...obj
             }
         })
     },
-    activityAdd_cate_gift(obj) {
+    flight_list(obj) {
         return myPost({
-            url: urls.activityAdd_cate_gift,
+            url: urls.flight_list,
             data: {
                 ...obj
             }
         })
     },
-    activityDel_product(obj) {
+    update_goods(obj) {
         return myPost({
-            url: urls.activityDel_product,
+            url: urls.update_goods,
             data: {
                 ...obj
             }
         })
     },
-    uniqidIndex(obj) {
-        return myGet({
-            url: urls.uniqidIndex,
-            params: {
-                ...obj
-            }
-        })
-    },
-    uniqidAdd(obj) {
+    create_goods(obj) {
         return myPost({
-            url: urls.uniqidAdd,
+            url: urls.create_goods,
             data: {
                 ...obj
             }
         })
     },
-    uniqidDel(obj) {
+    goods_list(obj) {
         return myPost({
-            url: urls.uniqidDel,
+            url: urls.goods_list,
             data: {
                 ...obj
             }
         })
     },
-    combinationAdd_product_cate(obj) {
+    del_goods(obj) {
         return myPost({
-            url: urls.combinationAdd_product_cate,
+            url: urls.del_goods,
             data: {
                 ...obj
             }
         })
     },
-    combinationList_product_cate(obj) {
-        return myGet({
-            url: urls.combinationList_product_cate,
-            params: {
-                ...obj
-            }
-        })
-    },
-    combinationDel_product_cate(obj) {
+    create_country(obj) {
         return myPost({
-            url: urls.combinationDel_product_cate,
+            url: urls.create_country,
             data: {
                 ...obj
             }
         })
     },
-    userIndex(obj) {
-        return myGet({
-            url: urls.userIndex,
-            params: {
-                ...obj
-            }
-        })
-    },
-    webconfigSave(obj) {
+    update_country(obj) {
         return myPost({
-            url: urls.webconfigSave,
+            url: urls.update_country,
             data: {
                 ...obj
             }
         })
     },
-    webconfigIndex() {
-        return myGet({
-            url: urls.webconfigIndex,
-        })
-    },
-    sell_order_list(obj) {
-        return myGet({
-            url: urls.sell_order_list,
-            params: {
-                ...obj
-            }
-        })
-    },
-    confirm_sell_order(obj) {
+    del_country(obj) {
         return myPost({
-            url: urls.confirm_sell_order,
+            url: urls.del_country,
             data: {
                 ...obj
             }
         })
     },
-    save_shipping_templates(obj) {
+    country_list(obj) {
         return myPost({
-            url: urls.save_shipping_templates,
+            url: urls.country_list,
             data: {
                 ...obj
             }
         })
     },
-    list_shipping_templates(obj) {
-        return myGet({
-            url: urls.list_shipping_templates,
-            params: {
-                ...obj
-            }
-        })
-    },
-    detail_shipping_templates(obj) {
-        return myGet({
-            url: urls.detail_shipping_templates,
-            params: {
-                ...obj
-            }
-        })
-    },
-    del_shipping_templates(obj) {
+    create_customer(obj) {
         return myPost({
-            url: urls.del_shipping_templates,
+            url: urls.create_customer,
             data: {
                 ...obj
             }
         })
     },
-    dashboard() {
-        return myGet({
-            url: urls.dashboard,
-        })
-    },
-    user_bill_log(obj) {
-        return myGet({
-            url: urls.user_bill_log,
-            params: {
-                ...obj
-            }
-        })
-    },
-    template_message_list(obj) {
-        return myGet({
-            url: urls.template_message_list,
-            params: {
-                ...obj
-            }
-        })
-    },
-    template_message_save(obj) {
+    update_customer(obj) {
         return myPost({
-            url: urls.template_message_save,
+            url: urls.update_customer,
             data: {
                 ...obj
             }
         })
     },
-    user_extract(obj) {
-        return myGet({
-            url: urls.user_extract,
-            params: {
+    set_customerstatus(obj) {
+        return myPost({
+            url: urls.set_customerstatus,
+            data: {
+                ...obj
+            }
+        })
+    },
+    del_customer(obj) {
+        return myPost({
+            url: urls.del_customer,
+            data: {
+                ...obj
+            }
+        })
+    },
+    create_airport(obj) {
+        return myPost({
+            url: urls.create_airport,
+            data: {
+                ...obj
+            }
+        })
+    },
+    list_airport(obj) {
+        return myPost({
+            url: urls.list_airport,
+            data: {
+                ...obj
+            }
+        })
+    },
+    update_airport(obj) {
+        return myPost({
+            url: urls.update_airport,
+            data: {
+                ...obj
+            }
+        })
+    },
+    del_airport(obj) {
+        return myPost({
+            url: urls.del_airport,
+            data: {
+                ...obj
+            }
+        })
+    },
+    create_airroute(obj) {
+        return myPost({
+            url: urls.create_airroute,
+            data: {
+                ...obj
+            }
+        })
+    },
+    airroute_list(obj) {
+        return myPost({
+            url: urls.airroute_list,
+            data: {
+                ...obj
+            }
+        })
+    },
+    update_airroute(obj) {
+        return myPost({
+            url: urls.update_airroute,
+            data: {
+                ...obj
+            }
+        })
+    },
+    del_airroute(obj) {
+        return myPost({
+            url: urls.del_airroute,
+            data: {
+                ...obj
+            }
+        })
+    },
+    create_companybank(obj) {
+        return myPost({
+            url: urls.create_companybank,
+            data: {
+                ...obj
+            }
+        })
+    },
+    list_companybank(obj) {
+        return myPost({
+            url: urls.list_companybank,
+            data: {
+                ...obj
+            }
+        })
+    },
+    update_companybank(obj) {
+        return myPost({
+            url: urls.update_companybank,
+            data: {
+                ...obj
+            }
+        })
+    },
+    del_companybank(obj) {
+        return myPost({
+            url: urls.del_companybank,
+            data: {
+                ...obj
+            }
+        })
+    },
+    update_companyinfo(obj) {
+        return myPost({
+            url: urls.update_companyinfo,
+            data: {
+                ...obj
+            }
+        })
+    },
+    companyinfo(obj) {
+        return myPost({
+            url: urls.companyinfo,
+            data: {
+                ...obj
+            }
+        })
+    },
+    sensitivegoods_list(obj) {
+        return myPost({
+            url: urls.sensitivegoods_list,
+            data: {
+                ...obj
+            }
+        })
+    },
+    create_sensitivegoods(obj) {
+        return myPost({
+            url: urls.create_sensitivegoods,
+            data: {
+                ...obj
+            }
+        })
+    },
+    del_sensitivegoods(obj) {
+        return myPost({
+            url: urls.del_sensitivegoods,
+            data: {
+                ...obj
+            }
+        })
+    },
+    update_flight(obj) {
+        return myPost({
+            url: urls.update_flight,
+            data: {
+                ...obj
+            }
+        })
+    },
+    del_flight(obj) {
+        return myPost({
+            url: urls.del_flight,
+            data: {
+                ...obj
+            }
+        })
+    },
+    set_receivingbulkcargostatus(obj) {
+        return myPost({
+            url: urls.set_receivingbulkcargostatus,
+            data: {
+                ...obj
+            }
+        })
+    },
+    set_receivetraystatus(obj) {
+        return myPost({
+            url: urls.set_receivetraystatus,
+            data: {
+                ...obj
+            }
+        })
+    },
+    create_taxrate(obj) {
+        return myPost({
+            url: urls.create_taxrate,
+            data: {
+                ...obj
+            }
+        })
+    },
+    taxrate_list(obj) {
+        return myPost({
+            url: urls.taxrate_list,
+            data: {
+                ...obj
+            }
+        })
+    },
+    update_taxrate(obj) {
+        return myPost({
+            url: urls.update_taxrate,
+            data: {
+                ...obj
+            }
+        })
+    },
+    del_taxrate(obj) {
+        return myPost({
+            url: urls.del_taxrate,
+            data: {
+                ...obj
+            }
+        })
+    },
+    workno_list(obj) {
+        return myPost({
+            url: urls.workno_list,
+            data: {
+                ...obj
+            }
+        })
+    },
+    update_workno(obj) {
+        return myPost({
+            url: urls.update_workno,
+            data: {
+                ...obj
+            }
+        })
+    },
+    del_workno(obj) {
+        return myPost({
+            url: urls.del_workno,
+            data: {
+                ...obj
+            }
+        })
+    },
+    create_workno(obj) {
+        return myPost({
+            url: urls.create_workno,
+            data: {
                 ...obj
             }
         })
@@ -1304,138 +867,5 @@ export default {
         const res = await axios
             .post(`${urls.baseUrl}/admin/upload_banner`, image, configs)
         return res.data
-    },
-    banner_add(obj) {
-        return myPost({
-            url: urls.banner_add,
-            data: {
-                ...obj
-            }
-        })
-    },
-    banner_list(obj) {
-        return myGet({
-            url: urls.banner_list,
-            params: {
-                ...obj
-            }
-        })
-    },
-    banner_edit(obj) {
-        return myPost({
-            url: urls.banner_edit,
-            data: {
-                ...obj
-            }
-        })
-    },
-    banner_del(obj) {
-        return myPost({
-            url: urls.banner_del,
-            data: {
-                ...obj
-            }
-        })
-    },
-    open_pic_add(obj) {
-        return myPost({
-            url: urls.open_pic_add,
-            data: {
-                ...obj
-            }
-        })
-    },
-    open_pic() {
-        return myGet({
-            url: urls.open_pic,
-        })
-    },
-    open_pic_edit(obj) {
-        return myPost({
-            url: urls.open_pic_edit,
-            data: {
-                ...obj
-            }
-        })
-    },
-    data_center(obj) {
-        return myGet({
-            url: urls.data_center,
-            params: {
-                ...obj
-            }
-        })
-    },
-    other_shipping_templates(obj) {
-        return myGet({
-            url: urls.other_shipping_templates,
-            params: {
-                ...obj
-            }
-        })
-    },
-    orderDel(obj) {
-        return myPost({
-            url: urls.orderDel,
-            data: {
-                ...obj
-            }
-        })
-    },
-    updat_user_info(obj) {
-        return myPost({
-            url: urls.updat_user_info,
-            data: {
-                ...obj
-            }
-        })
-    },
-    article_list(obj) {
-        return myGet({
-            url: urls.article_list,
-            params: {
-                ...obj
-            }
-        })
-    },
-    article_add(obj) {
-        return myPost({
-            url: urls.article_add,
-            data: {
-                ...obj
-            }
-        })
-    },
-    article_edit(obj) {
-        return myPost({
-            url: urls.article_edit,
-            data: {
-                ...obj
-            }
-        })
-    },
-    article_del(obj) {
-        return myPost({
-            url: urls.article_del,
-            data: {
-                ...obj
-            }
-        })
-    },
-    user_pintuan_log(obj) {
-        return myGet({
-            url: urls.user_pintuan_log,
-            params: {
-                ...obj
-            }
-        })
-    },
-    user_pintuan_count(obj) {
-        return myGet({
-            url: urls.user_pintuan_count,
-            params: {
-                ...obj
-            }
-        })
     },
 }

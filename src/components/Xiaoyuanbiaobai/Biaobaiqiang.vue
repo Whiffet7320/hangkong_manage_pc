@@ -95,24 +95,6 @@
             </template>
           </vxe-table-column>
           <vxe-table-column field="receiver_name" title="被告白者"></vxe-table-column>
-          <!-- <vxe-table-column field="content" width="180" title="发送内容"></vxe-table-column>
-          <vxe-table-column field="myImg_paths" width="180" title="详情图">
-            <template slot-scope="scope">
-              <div style="display:flex">
-                <el-image
-                  v-for="(ele,i) in scope.row.myImg_paths"
-                  :key="i"
-                  :src="ele"
-                  fit="fill"
-                  style="width: 40px; height: 40px;margin-left:4px;"
-                >
-                  <div slot="error" class="image-slot">
-                    <i class="el-icon-picture-outline"></i>
-                  </div>
-                </el-image>
-              </div>
-            </template>
-          </vxe-table-column>-->
           <vxe-table-column field="sender_wx" title="告白者微信"></vxe-table-column>
           <vxe-table-column field="comment_count" title="评论数"></vxe-table-column>
           <vxe-table-column field="read_count" title="浏览量">

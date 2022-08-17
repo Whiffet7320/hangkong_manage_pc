@@ -5,38 +5,146 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    // 校园帮帮
-    h5ValArr: [],
-    biaobaiqiangPage: 1, //表白墙列表
-    biaobaiqiangPageSize: 10,
-    jishiShougouPage: 1, //集市-收购列表
-    jishiShougouPageSize: 10,
-    jishizhuanmaiPage: 1, //集市-转卖列表
-    jishizhuanmaiPageSize: 10,
-    shudongPage: 1, //树洞列表
-    shudongPageSize: 10,
-    headerTit: '',
-    fengjingPage: 1, //风景列表
-    fengjingPageSize: 10,
-    baoxiuPage: 1, //报修列表
-    baoxiuPageSize: 10,
-    xunwuPage: 1, //寻物列表
-    xunwuPageSize: 10,
-    xunzhuPage: 1, //寻主列表
-    xunzhuPageSize: 10,
-    pindanPage: 1, //拼单列表
-    pindanPageSize: 10,
-    pinchePage: 1, //拼车列表
-    pinchePageSize: 10,
-    biaobaiqiangPinglunPage: 1, //表白墙-评论列表
-    biaobaiqiangPinglunPageSize: 10,
-    wenzhangPage: 1, //文章列表
-    wenzhangPageSize: 10,
-    wenzhangObj: null,
-    zijinmingxiliebiaoPage: 1,
-    zijinmingxiliebiaoPageSize: 10,
+    headerTit:'',
+    aside_left:[],
+    xindingdanPage: 1,
+    xindingdanPageSize: 10,
+    kehuObj:null,
+    hangbanObj:null,
+    _5_1Page :1,
+    _5_1PageSize :10,
+    _5_2Page :1,
+    _5_2PageSize :10,
+    _5_3Page :1,
+    _5_3PageSize :10,
+    _5_4Page :1,
+    _5_4PageSize :10,
+    _5_5Page :1,
+    _5_5PageSize :10,
+    _5_6Page :1,
+    _5_6PageSize :10,
+    _5_7Page :1,
+    _5_7PageSize :10,
+    _5_8Page :1,
+    _5_8PageSize :10,
+    _5_9Page :1,
+    _5_9PageSize :10,
+    _5_10Page :1,
+    _5_10PageSize :10,
+    // 
+    _6_1Page :1,
+    _6_1PageSize :10,
+    _6_2Page :1,
+    _6_2PageSize :10,
+    _6_3Page :1,
+    _6_3PageSize :10,
+    _6_4Page :1,
+    _6_4PageSize :10,
   },
   mutations: {
+    headerTit(state, str) {
+      state.headerTit = str;
+    },
+    xindingdanPage(state, str) {
+      state.xindingdanPage = str;
+    },
+    xindingdanPageSize(state, str) {
+      state.xindingdanPageSize = str;
+    },
+    aside_left(state, str) {
+      state.aside_left = str;
+    },
+    kehuObj(state, str) {
+      state.kehuObj = str;
+    },
+    hangbanObj(state, str) {
+      state.hangbanObj = str;
+    },
+    _5_5Page(state, str) {
+      state._5_5Page = str;
+    },
+    _5_5PageSize(state, str) {
+      state._5_5PageSize = str;
+    },
+    _5_6Page(state, str) {
+      state._5_6Page = str;
+    },
+    _5_6PageSize(state, str) {
+      state._5_6PageSize = str;
+    },
+    _5_7Page(state, str) {
+      state._5_7Page = str;
+    },
+    _5_7PageSize(state, str) {
+      state._5_7PageSize = str;
+    },
+    _5_8Page(state, str) {
+      state._5_8Page = str;
+    },
+    _5_8PageSize(state, str) {
+      state._5_8PageSize = str;
+    },
+    _5_9Page(state, str) {
+      state._5_9Page = str;
+    },
+    _5_9PageSize(state, str) {
+      state._5_9PageSize = str;
+    },
+    _5_10Page(state, str) {
+      state._5_10Page = str;
+    },
+    _5_10PageSize(state, str) {
+      state._5_10PageSize = str;
+    },
+    _5_2Page(state, str) {
+      state._5_2Page = str;
+    },
+    _5_2PageSize(state, str) {
+      state._5_2PageSize = str;
+    },
+    _5_4Page(state, str) {
+      state._5_4Page = str;
+    },
+    _5_4PageSize(state, str) {
+      state._5_4PageSize = str;
+    },
+    _5_3Page(state, str) {
+      state._5_3Page = str;
+    },
+    _5_3PageSize(state, str) {
+      state._5_3PageSize = str;
+    },
+    _5_1Page(state, str) {
+      state._5_1Page = str;
+    },
+    _5_1PageSize(state, str) {
+      state._5_1PageSize = str;
+    },
+    _6_1Page(state, str) {
+      state._6_1Page = str;
+    },
+    _6_1PageSize(state, str) {
+      state._6_1PageSize = str;
+    },
+    _6_2Page(state, str) {
+      state._6_2Page = str;
+    },
+    _6_2PageSize(state, str) {
+      state._6_2PageSize = str;
+    },
+    _6_3Page(state, str) {
+      state._6_3Page = str;
+    },
+    _6_3PageSize(state, str) {
+      state._6_3PageSize = str;
+    },
+    _6_4Page(state, str) {
+      state._6_4Page = str;
+    },
+    _6_4PageSize(state, str) {
+      state._6_4PageSize = str;
+    },
+    // 
     h5ValArr(state, obj) {
       console.log(obj)
       if (state.h5ValArr.length == 0) {
@@ -52,90 +160,7 @@ export default new Vuex.Store({
       }
       console.log(state.h5ValArr)
     },
-    headerTit(state, str) {
-      state.headerTit = str;
-    },
-    zijinmingxiliebiaoPage(state, str) {
-      state.zijinmingxiliebiaoPage = str;
-    },
-    zijinmingxiliebiaoPageSize(state, str) {
-      state.zijinmingxiliebiaoPageSize = str;
-    },
-    biaobaiqiangPage(state, str) {
-      state.biaobaiqiangPage = str;
-    },
-    biaobaiqiangPageSize(state, str) {
-      state.biaobaiqiangPageSize = str;
-    },
-    jishiShougouPage(state, str) {
-      state.jishiShougouPage = str;
-    },
-    jishiShougouPageSize(state, str) {
-      state.jishiShougouPageSize = str;
-    },
-    jishizhuanmaiPage(state, str) {
-      state.jishizhuanmaiPage = str;
-    },
-    jishizhuanmaiPageSize(state, str) {
-      state.jishizhuanmaiPageSize = str;
-    },
-    shudongPage(state, str) {
-      state.shudongPage = str;
-    },
-    shudongPageSize(state, str) {
-      state.shudongPageSize = str;
-    },
-    fengjingPage(state, str) {
-      state.fengjingPage = str;
-    },
-    fengjingPageSize(state, str) {
-      state.fengjingPageSize = str;
-    },
-    baoxiuPage(state, str) {
-      state.baoxiuPage = str;
-    },
-    baoxiuPageSize(state, str) {
-      state.baoxiuPageSize = str;
-    },
-    xunwuPage(state, str) {
-      state.xunwuPage = str;
-    },
-    xunwuPageSize(state, str) {
-      state.xunwuPageSize = str;
-    },
-    xunzhuPage(state, str) {
-      state.xunzhuPage = str;
-    },
-    xunzhuPageSize(state, str) {
-      state.xunzhuPageSize = str;
-    },
-    pindanPage(state, str) {
-      state.pindanPage = str;
-    },
-    pindanPageSize(state, str) {
-      state.pindanPageSize = str;
-    },
-    pinchePage(state, str) {
-      state.pinchePage = str;
-    },
-    pinchePageSize(state, str) {
-      state.pinchePageSize = str;
-    },
-    biaobaiqiangPinglunPage(state, str) {
-      state.biaobaiqiangPinglunPage = str;
-    },
-    biaobaiqiangPinglunPageSize(state, str) {
-      state.biaobaiqiangPinglunPageSize = str;
-    },
-    wenzhangPage(state, str) {
-      state.wenzhangPage = str;
-    },
-    wenzhangPageSize(state, str) {
-      state.wenzhangPageSize = str;
-    },
-    wenzhangObj(state, str) {
-      state.wenzhangObj = str;
-    },
+   
   },
   actions: {
 

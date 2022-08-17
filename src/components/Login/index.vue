@@ -3,15 +3,15 @@
     <div class="container">
       <vue-particles
         color="#fff"
-        :particleOpacity="0.5"
-        :particlesNumber="50"
+        :particleOpacity="0.6"
+        :particlesNumber="30"
         shapeType="circle"
-        :particleSize="4"
-        linesColor="#ebbfcc"
-        :linesWidth="2"
+        :particleSize="6"
+        linesColor="#fff"
+        :linesWidth="1"
         :lineLinked="true"
         :lineOpacity="0.4"
-        :linesDistance="150"
+        :linesDistance="10"
         :moveSpeed="2"
         :hoverEffect="true"
         hoverMode="grab"
@@ -21,8 +21,9 @@
       >
       </vue-particles>
       <div class="loginBox">
-        <div class="tit1">后台管理系统</div>
-        <div class="tit2">欢迎你回来~</div>
+        <img class="logoo-img" src="../../assets/newImage/logo.png" alt="" />
+        <!-- <div class="tit1">后台管理系统</div> -->
+        <div class="tit2">飞捷腾达货运代理空运管理系统</div>
         <div class="loginBox2">
           <el-form
             :model="loginForm"
@@ -33,7 +34,7 @@
             class="demo-ruleForm"
           >
             <el-form-item prop="username">
-              <div class="userInp">账号</div>
+              <!-- <div class="userInp">账号</div> -->
               <el-input
                 type="text"
                 v-model="loginForm.username"
@@ -43,7 +44,7 @@
               ></el-input>
             </el-form-item>
             <el-form-item prop="password">
-              <div class="pasInp">密码</div>
+              <!-- <div class="pasInp">密码</div> -->
               <el-input
                 type="password"
                 v-model="loginForm.password"
@@ -64,20 +65,18 @@
                 @keyup.enter.native="onLogin"
               ></el-input>
             </el-form-item>
-            <el-form-item>
+            <!-- <el-form-item>
               <div class="footer">
                 <div class="wjmm">忘记密码</div>
                 <div class="zczh">注册账号</div>
               </div>
-            </el-form-item>
+            </el-form-item> -->
           </el-form>
           <el-button
             @click="onLogin"
             class="loginBtn"
-            type="danger"
-            circle
-            icon="el-icon-arrow-right"
-          ></el-button>
+            type="primary"
+          >登录</el-button>
         </div>
       </div>
     </div>
@@ -110,49 +109,49 @@ export default {
       loginForm: {
         username: "admin",
         checkPass: "",
-        password: ""
+        password: "",
       },
       rules: {
         username: [
-          { required: true, message: "请输入用户名", trigger: "blur" }
+          { required: true, message: "请输入用户名", trigger: "blur" },
         ],
         password: [{ validator: validatePass, trigger: "blur" }],
-        checkPass: [{ validator: validatePass2, trigger: "blur" }]
+        checkPass: [{ validator: validatePass2, trigger: "blur" }],
       },
-      isRegister: true
+      isRegister: true,
     };
   },
   methods: {
     // 登录
     async onLogin() {
       const res = await this.$api.login({
-        account: this.loginForm.username,
-        password: this.loginForm.password
+        username: this.loginForm.username,
+        userpass: this.loginForm.password,
       });
       console.log(res);
-      if (res.code == 200) {
-        sessionStorage.setItem("username", this.loginForm.username);
-        sessionStorage.setItem("token", res.data.token);
+      if (res.result == 1) {
+        // sessionStorage.setItem("username", this.loginForm.username);
+        sessionStorage.setItem("token", res.token);
         sessionStorage.setItem("isLogin", true);
         // sessionStorage.setItem("isH5", "no");
-        sessionStorage.setItem("userInfo", JSON.stringify(res.data.info));
-         sessionStorage.setItem(
+        // sessionStorage.setItem("userInfo", JSON.stringify(res.info));
+        sessionStorage.setItem(
           "menu",
-          encodeURIComponent(JSON.stringify(res.data.menu))
+          encodeURIComponent(JSON.stringify(res.menu_list))
         );
         this.$message({
-          message: res.message,
-          type: "success"
+          message: res.msg,
+          type: "success",
         });
         setTimeout(() => {
           this.$router.push({ path: "/" });
           this.$router.go(0);
         }, 500);
       } else {
-        this.$message.error(res.message);
+        this.$message.error(res.msg);
       }
-    }
-  }
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -161,6 +160,8 @@ export default {
   height: 100vh;
   background-color: #000000;
   .container {
+    background-image: url("../../assets/newImage/zu13054.png");
+    background-size: 100% 100%;
     position: relative;
     width: 100%;
     height: 100%;
@@ -183,45 +184,46 @@ export default {
       // border: 1px solid red;
       width: 31%;
       height: 100%;
-      .tit1 {
+      .logoo-img {
         position: absolute;
-        top: 16%;
-        width: 100%;
-        opacity: 1;
-        font-size: 55px;
-        font-family: PingFang SC, PingFang SC-Bold;
-        font-weight: 700;
-        text-align: center;
-        color: #ebbfcc;
+        height: 120px;
+        width: 178px;
+        top: 150px;
+        left: 50%;
+        transform: translateX(-50%);
       }
       .tit2 {
+        width: 422px;
         position: absolute;
-        width: 100%;
-        top: 24%;
-        opacity: 1;
-        font-size: 18px;
-        font-family: PingFang SC, PingFang SC-Regular;
-        font-weight: 400;
-        text-align: center;
-        color: #c2c2c2;
+        top: 290px;
+        font-size: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: PingFang SC-Medium, PingFang SC;
+        font-weight: 500;
+        color: #418bfb;
       }
       .loginBox2 {
         position: absolute;
-        width: 100%;
-        height: 35%;
-        top: 31%;
+        width: 460px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 300px;
+        top: 42%;
         height: 373px;
         opacity: 1;
-        background: #ffffff;
+        // background: #ffffff;
         border-radius: 20px;
-        box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
+        // box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
         .demo-ruleForm {
-          margin-top: 13%;
           /deep/ .el-form-item__content {
-            margin-left: 13% !important;
+            margin-left: 0 !important;
           }
           /deep/ .el-input {
-            width: 80%;
+            width: 100%;
+          }
+          /deep/ .el-input__inner{
+            background: #F0F2F5;
           }
           .userInp {
             opacity: 1;
@@ -261,8 +263,8 @@ export default {
         }
         .loginBtn {
           position: absolute;
-          top: 108%;
           left: 50%;
+          width: 100%;
           transform: translateX(-50%);
         }
       }
