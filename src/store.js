@@ -11,6 +11,7 @@ export default new Vuex.Store({
     xindingdanPageSize: 10,
     kehuObj:null,
     hangbanObj:null,
+    chukouObj:null,
     _5_1Page :1,
     _5_1PageSize :10,
     _5_2Page :1,
@@ -56,6 +57,9 @@ export default new Vuex.Store({
     },
     kehuObj(state, str) {
       state.kehuObj = str;
+    },
+    chukouObj(state, str) {
+      state.chukouObj = str;
     },
     hangbanObj(state, str) {
       state.hangbanObj = str;

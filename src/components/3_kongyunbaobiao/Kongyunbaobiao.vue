@@ -27,14 +27,14 @@
                   <el-option label="中国-CN-China" value="China">
                     <div style="display: flex; justify-content: space-between">
                       <span>中国</span>
-                      <span style="color: #8492a6; font-size: 13px">CN</span>
-                      <span style="color: #8492a6; font-size: 13px">China</span>
+                      <span style="color: #8492a6; font-size: 12px;margin:0 12px">CN</span>
+                      <span style="color: #8492a6; font-size: 12px;margin:0 12px">China</span>
                     </div>
                   </el-option>
                   <el-option label="美国-USA-America" value="America">
                     <div style="display: flex; justify-content: space-between">
                       <span>美国</span>
-                      <span style="color: #8492a6; font-size: 13px">USA</span>
+                      <span style="color: #8492a6; font-size: 12px;margin:0 12px">USA</span>
                       <span style="color: #8492a6; font-size: 13px"
                         >America</span
                       >
@@ -69,7 +69,7 @@
                         style="display: flex; justify-content: space-between"
                       >
                         <span>中国</span>
-                        <span style="color: #8492a6; font-size: 13px">CN</span>
+                        <span style="color: #8492a6; font-size: 12px;margin:0 12px">CN</span>
                         <span style="color: #8492a6; font-size: 13px"
                           >China</span
                         >
@@ -80,7 +80,7 @@
                         style="display: flex; justify-content: space-between"
                       >
                         <span>美国</span>
-                        <span style="color: #8492a6; font-size: 13px">USA</span>
+                        <span style="color: #8492a6; font-size: 12px;margin:0 12px">USA</span>
                         <span style="color: #8492a6; font-size: 13px"
                           >America</span
                         >
@@ -106,14 +106,14 @@
                   <el-option label="中国-CN-China" value="China">
                     <div style="display: flex; justify-content: space-between">
                       <span>中国</span>
-                      <span style="color: #8492a6; font-size: 13px">CN</span>
-                      <span style="color: #8492a6; font-size: 13px">China</span>
+                      <span style="color: #8492a6; font-size: 12px;margin:0 12px">CN</span>
+                      <span style="color: #8492a6; font-size: 12px;margin:0 12px">China</span>
                     </div>
                   </el-option>
                   <el-option label="美国-USA-America" value="America">
                     <div style="display: flex; justify-content: space-between">
                       <span>美国</span>
-                      <span style="color: #8492a6; font-size: 13px">USA</span>
+                      <span style="color: #8492a6; font-size: 12px;margin:0 12px">USA</span>
                       <span style="color: #8492a6; font-size: 13px"
                         >America</span
                       >
@@ -133,14 +133,14 @@
                   <el-option label="中国-CN-China" value="China">
                     <div style="display: flex; justify-content: space-between">
                       <span>中国</span>
-                      <span style="color: #8492a6; font-size: 13px">CN</span>
-                      <span style="color: #8492a6; font-size: 13px">China</span>
+                      <span style="color: #8492a6; font-size: 12px;margin:0 12px">CN</span>
+                      <span style="color: #8492a6; font-size: 12px;margin:0 12px">China</span>
                     </div>
                   </el-option>
                   <el-option label="美国-USA-America" value="America">
                     <div style="display: flex; justify-content: space-between">
                       <span>美国</span>
-                      <span style="color: #8492a6; font-size: 13px">USA</span>
+                      <span style="color: #8492a6; font-size: 12px;margin:0 12px">USA</span>
                       <span style="color: #8492a6; font-size: 13px"
                         >America</span
                       >
@@ -210,14 +210,14 @@
                   <el-option label="中国-CN-China" value="China">
                     <div style="display: flex; justify-content: space-between">
                       <span>中国</span>
-                      <span style="color: #8492a6; font-size: 13px">CN</span>
-                      <span style="color: #8492a6; font-size: 13px">China</span>
+                      <span style="color: #8492a6; font-size: 12px;margin:0 12px">CN</span>
+                      <span style="color: #8492a6; font-size: 12px;margin:0 12px">China</span>
                     </div>
                   </el-option>
                   <el-option label="美国-USA-America" value="America">
                     <div style="display: flex; justify-content: space-between">
                       <span>美国</span>
-                      <span style="color: #8492a6; font-size: 13px">USA</span>
+                      <span style="color: #8492a6; font-size: 12px;margin:0 12px">USA</span>
                       <span style="color: #8492a6; font-size: 13px"
                         >America</span
                       >

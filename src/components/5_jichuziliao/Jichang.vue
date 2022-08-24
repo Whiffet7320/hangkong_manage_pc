@@ -178,8 +178,8 @@
                     :value="item.id"
                   >
                     <div style="display: flex; justify-content: space-between">
-                      <span style="color: #8492a6; font-size: 13px">{{item.english_name}}</span>
-                      <span style="color: #8492a6; font-size: 13px">{{item.chinese_name}}</span>
+                      <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{item.english_name}}</span>
+                      <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{item.chinese_name}}</span>
                     </div>
                   </el-option>
                 </el-select>

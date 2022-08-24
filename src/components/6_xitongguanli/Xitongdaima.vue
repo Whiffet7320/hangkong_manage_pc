@@ -8,7 +8,7 @@
         :default-active="menuActiveIndex"
         class="el-menu-vertical-demo"
         background-color="#fff"
-        text-color="#909399"
+        text-color="#fff"
       >
         <el-menu-item index="6-5-1">
           <span slot="title">系统代码1</span>
@@ -271,6 +271,8 @@ background:#999999;
     height: 40px;
     line-height: 40px;
     font-size: 12px;
+    background-color: #323233 !important;
+    color: #60aeff;
   }
 }
 .content {

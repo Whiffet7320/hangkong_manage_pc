@@ -86,4 +86,19 @@ export default {
     create_workno:"/create_workno",//创建工作号编号
     update_workno:'/update_workno',//修改工作号编号
     del_workno:'/del_workno',//删除工作号编号
+    // 业务操作
+    create_userorderidentifier:"/create_userorderidentifier",//生成新工作号
+    create_userorder:"/create_userorder",//创建新订单
+    update_userorder:"/update_userorder",//委托信息
+    read_userinfo:"/read_userinfo",//读取当前登录用户信息
+    view_userorder:"/view_userorder",//订单详情
+    package:"/package",//包装类型列表
+    delivery_method:"/delivery_method",//货到方式列表
+    customs_method:"/customs_method",//报关方式列表
+    business_type:"/business_type",//业务类型列表
+    check_orderprimaryno:"/check_orderprimaryno",//检查主订单号是否存在
+    product_type:"/product_type",//空运服务产品列表
+    user_signature:"/user_signature",//签单
+    operate_procedure:"/operate_procedure",//操作流程
+
 }

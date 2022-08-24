@@ -32,10 +32,10 @@
                       <div
                         style="display: flex; justify-content: space-between"
                       >
-                        <span style="color: #8492a6; font-size: 13px">{{
+                        <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{
                           item.three_charcode
                         }}</span>
-                        <span style="color: #8492a6; font-size: 13px">{{
+                        <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{
                           item.province
                         }}</span>
                       </div>
@@ -60,10 +60,10 @@
                       <div
                         style="display: flex; justify-content: space-between"
                       >
-                        <span style="color: #8492a6; font-size: 13px">{{
+                        <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{
                           item.three_charcode
                         }}</span>
-                        <span style="color: #8492a6; font-size: 13px">{{
+                        <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{
                           item.province
                         }}</span>
                       </div>
@@ -88,10 +88,10 @@
                       <div
                         style="display: flex; justify-content: space-between"
                       >
-                        <span style="color: #8492a6; font-size: 13px">{{
+                        <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{
                           item.english_name
                         }}</span>
-                        <span style="color: #8492a6; font-size: 13px">{{
+                        <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{
                           item.chinese_name
                         }}</span>
                       </div>
@@ -131,10 +131,10 @@
                       <div
                         style="display: flex; justify-content: space-between"
                       >
-                        <span style="color: #8492a6; font-size: 13px">{{
+                        <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{
                           item.three_charcode
                         }}</span>
-                        <span style="color: #8492a6; font-size: 13px">{{
+                        <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{
                           item.province
                         }}</span>
                       </div>
@@ -407,10 +407,10 @@
                     :value="`${item.code}`"
                   >
                     <div style="display: flex; justify-content: space-between">
-                      <span style="color: #8492a6; font-size: 13px">{{
+                      <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{
                         item.code
                       }}</span>
-                      <span style="color: #8492a6; font-size: 13px">{{
+                      <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{
                         item.name
                       }}</span>
                     </div>

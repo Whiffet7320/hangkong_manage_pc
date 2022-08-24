@@ -846,6 +846,110 @@ export default {
             }
         })
     },
+    create_userorderidentifier(obj) {
+        return myPost({
+            url: urls.create_userorderidentifier,
+            data: {
+                ...obj
+            }
+        })
+    },
+    create_userorder(obj) {
+        return myPost({
+            url: urls.create_userorder,
+            data: {
+                ...obj
+            }
+        })
+    },
+    update_userorder(obj) {
+        return myPost({
+            url: urls.update_userorder,
+            data: {
+                ...obj
+            }
+        })
+    },
+    read_userinfo(obj) {
+        return myPost({
+            url: urls.read_userinfo,
+            data: {
+                ...obj
+            }
+        })
+    },
+    view_userorder(obj) {
+        return myPost({
+            url: urls.view_userorder,
+            data: {
+                ...obj
+            }
+        })
+    },
+    package(obj) {
+        return myPost({
+            url: urls.package,
+            data: {
+                ...obj
+            }
+        })
+    },
+    delivery_method(obj) {
+        return myPost({
+            url: urls.delivery_method,
+            data: {
+                ...obj
+            }
+        })
+    },
+    customs_method(obj) {
+        return myPost({
+            url: urls.customs_method,
+            data: {
+                ...obj
+            }
+        })
+    },
+    business_type(obj) {
+        return myPost({
+            url: urls.business_type,
+            data: {
+                ...obj
+            }
+        })
+    },
+    check_orderprimaryno(obj) {
+        return myPost({
+            url: urls.check_orderprimaryno,
+            data: {
+                ...obj
+            }
+        })
+    },
+    product_type(obj) {
+        return myPost({
+            url: urls.product_type,
+            data: {
+                ...obj
+            }
+        })
+    },
+    user_signature(obj) {
+        return myPost({
+            url: urls.user_signature,
+            data: {
+                ...obj
+            }
+        })
+    },
+    operate_procedure(obj) {
+        return myPost({
+            url: urls.operate_procedure,
+            data: {
+                ...obj
+            }
+        })
+    },
     async upload_pic(image) {
         var configs = {
             headers: {

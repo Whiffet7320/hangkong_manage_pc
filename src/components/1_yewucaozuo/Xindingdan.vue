@@ -4,11 +4,7 @@
       <div class="t-tit1" v-html="headerTit"></div>
       <div class="t-tit2">
         <div class="tt2-left">
-          <el-input
-            placeholder="请输入内容"
-            v-model="keyword"
-            class="input-with-select"
-          >
+          <el-input placeholder="请输入内容" v-model="keyword" class="input-with-select">
             <el-select v-model="sele1" slot="prepend" placeholder="请选择">
               <el-option label="餐厅名" value="1"></el-option>
               <el-option label="订单号" value="2"></el-option>
@@ -36,12 +32,8 @@
         <vxe-grid ref="xGrid2" v-bind="gridOptions2">
           <template #name_edit="{ row }">
             <div class="flex">
-              <el-button size="small" @click="tabEdit(row)" type="text"
-                >编辑</el-button
-              >
-              <el-button size="small" @click="tabDel(row)" type="text"
-                >删除</el-button
-              >
+              <el-button size="small" @click="tabEdit(row)" type="text">编辑</el-button>
+              <el-button size="small" @click="tabDel(row)" type="text">删除</el-button>
             </div>
           </template>
         </vxe-grid>
@@ -59,39 +51,23 @@
             title="操作时间"
           ></vxe-table-column>
         </vxe-table> -->
-        <el-pagination
-          class="fenye"
-          @size-change="this.xindingdanHandleSizeChange"
-          @current-change="this.xindingdanHandleCurrentChange"
-          :current-page="this.xindingdanPage"
-          :page-size="10"
-          :page-sizes="[10, 15, 20, 30]"
-          layout="total,sizes, prev, pager, next, jumper"
-          :total="this.total"
-        ></el-pagination>
+        <el-pagination class="fenye" @size-change="this.xindingdanHandleSizeChange"
+          @current-change="this.xindingdanHandleCurrentChange" :current-page="this.xindingdanPage" :page-size="10"
+          :page-sizes="[10, 15, 20, 30]" layout="total,sizes, prev, pager, next, jumper" :total="this.total">
+        </el-pagination>
       </div>
     </div>
     <!-- 创建新订单 -->
-    <el-dialog
-      title="创建新订单"
-      :visible.sync="addDialogVisible"
-      width="700px"
-      :before-close="addHandleClose"
-    >
+    <el-dialog title="创建新订单" :visible.sync="addDialogVisible" width="700px" :before-close="addHandleClose">
       <div class="myAddForm">
-        <el-form
-          :model="addForm"
-          ref="addForm"
-          label-width="130px"
-          class="demo-addForm"
-        >
+        <el-form :model="addForm" ref="addForm" label-width="130px" class="demo-addForm">
           <el-row>
             <el-col :span="20">
               <el-form-item label="工作号类型：">
-                <el-radio-group v-model="addForm.radio1">
-                  <el-radio label="ky1">空运出口工作单号</el-radio>
-                  <el-radio label="ky2">空运出口包机</el-radio>
-                </el-radio-group>
+                <el-select size="small" v-model="addForm.workno_id" placeholder="请选择">
+                  <el-option v-for="item in gzzData" :key="item.id" :label="item.code" :value="item.id">
+                  </el-option>
+                </el-select>
               </el-form-item>
             </el-col>
           </el-row>
@@ -100,12 +76,10 @@
               <el-form-item label="新工作号：">
                 <el-row>
                   <el-col :span="18">
-                    <el-input size="small" v-model="addForm.input1"></el-input>
+                    <el-input size="small" v-model="addForm.work_no"></el-input>
                   </el-col>
                   <el-col style="margin-left: 20px" :span="4">
-                    <el-button size="small" type="primary" @click="AddOnSubmit"
-                      >新生成</el-button
-                    >
+                    <el-button size="small" type="primary" @click="newShengcheng">新生成</el-button>
                   </el-col>
                 </el-row>
               </el-form-item>
@@ -114,8 +88,10 @@
           <el-row>
             <el-col :span="20">
               <el-form-item label="运输类型：">
-                <el-radio-group v-model="addForm.radio2">
-                  <el-radio label="ky3">空运</el-radio>
+                <el-radio-group v-model="addForm.traffic_type">
+                  <el-radio label="1">空运</el-radio>
+                  <el-radio label="2">海运</el-radio>
+                  <el-radio label="3">陆运</el-radio>
                 </el-radio-group>
               </el-form-item>
             </el-col>
@@ -123,9 +99,7 @@
           <el-row>
             <el-col :span="20">
               <el-form-item>
-                <el-button size="small" type="primary" @click="AddOnSubmit"
-                  >确定</el-button
-                >
+                <el-button size="small" type="primary" @click="AddOnSubmit">确定</el-button>
               </el-form-item>
             </el-col>
           </el-row>
@@ -157,15 +131,18 @@ export default {
     return {
       isAdd: false,
       keyword: "",
-      sele1:'',
-      sele2:'',
+      sele1: '',
+      sele2: '',
       total: 0,
       tableData: [],
       addForm: {
-          sele1:'',
-        radio1: "",
-        input1: "",
-        radio2: "ky3",
+        workno_id: "",
+        work_no: "",
+        traffic_type: '',
+        // sele1: '',
+        // radio1: "",
+        // input1: "",
+        // radio2: "ky3",
       },
       addDialogVisible: false,
       gridOptions2: {
@@ -246,11 +223,13 @@ export default {
             address: "Shanghai",
           },
         ],
+        gzzData: [],
       },
     };
   },
   created() {
     this.columnDrop2();
+    this.getGZZData()
   },
   beforeDestroy() {
     if (this.sortable2) {
@@ -258,11 +237,27 @@ export default {
     }
   },
   methods: {
+    async getGZZData() {
+      const res = await this.$api.workno_list({
+        page: 1,
+        pagesize: 10000,
+      });
+      this.gzzData = res.list;
+    },
+    async newShengcheng() {
+      const res = await this.$api.create_userorderidentifier({
+        workno_id: this.addForm.workno_id,
+      });
+      this.$message(res.msg);
+      if (res.result == 1) {
+        this.addForm.work_no = res.work_no;
+      }
+    },
     addDingdan() {
       this.isAdd = true;
-      this.addForm.radio1 = "";
-      this.addForm.radio2 = "ky3";
-      this.addForm.input1 = "";
+      // this.addForm.radio1 = "";
+      // this.addForm.radio2 = "ky3";
+      // this.addForm.input1 = "";
       this.addDialogVisible = true;
     },
     tabEdit(row) {
@@ -318,9 +313,16 @@ export default {
         );
       });
     },
-    AddOnSubmit() {
-      console.log(this.addForm);
-      this.$router.push({name:'Addxindingdan'})
+    async AddOnSubmit() {
+      const res = await this.$api.create_userorder({
+        ...this.addForm,
+        order_type: 1
+      })
+      this.$message(res.msg);
+      if (res.result == 1) {
+        this.$store.commit('chukouObj', { order_id: res.order_id,...this.addForm })
+        this.$router.push({ name: 'Addxindingdan' })
+      }
     },
     addHandleClose() {
       this.addDialogVisible = false;
@@ -338,45 +340,53 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.index {
-}
+.index {}
+
 .top {
   background: #fff;
   padding: 24px 20px;
+
   .t-tit1 {
     color: #999;
+
     .active {
       color: #515a61;
       font-weight: 700;
     }
   }
+
   .t-tit2 {
     display: flex;
     align-content: center;
     justify-content: space-between;
     margin-top: 24px;
+
     .tt2-left {
       /deep/ .el-input-group {
         width: 500px;
       }
+
       /deep/ .el-select {
         width: 110px;
       }
+
       /deep/ .el-input-group__append {
         background: #409eff;
         color: #fff;
         border: 0 !important;
       }
     }
-    .tt2-right {
-    }
+
+    .tt2-right {}
   }
 }
+
 .content {
   background: #fff;
   margin: 20px;
   padding: 16px;
 }
+
 .fenye {
   margin-top: 10px;
 }
@@ -385,6 +395,7 @@ export default {
 .sortable-column-demo .vxe-header--row .vxe-header--column.sortable-chosen {
   background-color: #dfecfb;
 }
+
 .sortable-column-demo .vxe-header--row .vxe-header--column.col--fixed {
   cursor: no-drop;
 }
