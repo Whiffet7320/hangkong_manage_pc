@@ -286,7 +286,16 @@ const routes = [{
             name: 'Shujuzhongxin',
             component: () => import('./components/Shezhi/Shujuzhongxin'),
         }]
-    },
+    },{
+        path: '/NotFound',
+        name: 'NotFound',
+        component: () => import('./components/NotFound'),
+        children: [{
+            path: 'NotFound404',
+            name: 'NotFound404',
+            component: () => import('./components/NotFound/404'),
+        }]
+    }, 
 ]
 
 const router = new VueRouter({

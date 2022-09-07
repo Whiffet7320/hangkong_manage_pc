@@ -950,6 +950,70 @@ export default {
             }
         })
     },
+    price_confirmationview(obj) {
+        return myPost({
+            url: urls.price_confirmationview,
+            data: {
+                ...obj
+            }
+        })
+    },
+    price_confirmation(obj) {
+        return myPost({
+            url: urls.price_confirmation,
+            data: {
+                ...obj
+            }
+        })
+    },
+    takeoff_confirmationview(obj) {
+        return myPost({
+            url: urls.takeoff_confirmationview,
+            data: {
+                ...obj
+            }
+        })
+    },
+    takeoff_confirmation(obj) {
+        return myPost({
+            url: urls.takeoff_confirmation,
+            data: {
+                ...obj
+            }
+        })
+    },
+    transshipment_confirmationview(obj) {
+        return myPost({
+            url: urls.transshipment_confirmationview,
+            data: {
+                ...obj
+            }
+        })
+    },
+    transshipment_confirmation(obj) {
+        return myPost({
+            url: urls.transshipment_confirmation,
+            data: {
+                ...obj
+            }
+        })
+    },
+    goods_arrivalconfirmationview(obj) {
+        return myPost({
+            url: urls.goods_arrivalconfirmationview,
+            data: {
+                ...obj
+            }
+        })
+    },
+    goods_arrivalconfirmation(obj) {
+        return myPost({
+            url: urls.goods_arrivalconfirmation,
+            data: {
+                ...obj
+            }
+        })
+    },
     async upload_pic(image) {
         var configs = {
             headers: {

@@ -141,11 +141,39 @@ export default {
   // },
   methods: {
     getmenu(val) {
+      console.log(val)
       this.menu = JSON.parse(
         decodeURIComponent(sessionStorage.getItem("menu"))
       );
+      console.log(this.menu)
+      this.menu.forEach(ele=>{
+        console.log(ele.name)
+        if(ele.name == '业务操作'){
+          this.$store.commit('_1_qx',ele.button)
+        }
+        if(ele.name == '财务结算'){
+          this.$store.commit('_2_qx',ele.button)
+        }
+        if(ele.name == '空运报表'){
+          this.$store.commit('_3_qx',ele.button)
+        }
+        if(ele.name == '统计分析'){
+          this.$store.commit('_4_qx',ele.button)
+        }
+        if(ele.name == '基础资料'){
+          this.$store.commit('_5_qx',ele.button)
+        }
+        if(ele.name == '系统管理'){
+          this.$store.commit('_6_qx',ele.button)
+        }
+      })
       // this.userName = sessionStorage.getItem("username");
-      this.aside_left = this.menu[val-1].sub_menu
+      this.menu.forEach(ele=>{
+        if(ele.menu_index == val){
+          this.aside_left = ele.sub_menu
+        }
+      })
+      // this.aside_left = this.menu[val-1].sub_menu
       console.log(this.aside_left)
       this.$store.commit("aside_left", this.aside_left);
     },

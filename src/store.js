@@ -41,6 +41,12 @@ export default new Vuex.Store({
     _6_3PageSize :10,
     _6_4Page :1,
     _6_4PageSize :10,
+    _1_qx:[],
+    _2_qx:[],
+    _3_qx:[],
+    _4_qx:[],
+    _5_qx:[],
+    _6_qx:[],
   },
   mutations: {
     headerTit(state, str) {
@@ -147,6 +153,24 @@ export default new Vuex.Store({
     },
     _6_4PageSize(state, str) {
       state._6_4PageSize = str;
+    },
+    _1_qx(state, str) {
+      state._1_qx = str;
+    },
+    _2_qx(state, str) {
+      state._2_qx = str;
+    },
+    _3_qx(state, str) {
+      state._3_qx = str;
+    },
+    _4_qx(state, str) {
+      state._4_qx = str;
+    },
+    _5_qx(state, str) {
+      state._5_qx = str;
+    },
+    _6_qx(state, str) {
+      state._6_qx = str;
     },
     // 
     h5ValArr(state, obj) {

@@ -5,6 +5,7 @@
     </div>
     <div class="t-tit3">
       <el-button
+      :disabled="_6_qx.indexOf('增加') == -1"
         style="margin-left: 20px; margin-top: 20px"
         @click="addKehu"
         type="success"
@@ -23,7 +24,7 @@
           <vxe-table-column title="操作状态" width="120">
             <template slot-scope="scope">
               <div class="flex">
-                <el-button size="small" @click="toEdit(scope.row)" type="text"
+                <el-button :disabled="_6_qx.indexOf('修改') == -1" size="small" @click="toEdit(scope.row)" type="text"
                   >编辑</el-button
                 >
                 <el-button
@@ -175,7 +176,7 @@
 import { mapState } from "vuex";
 export default {
   computed: {
-    ...mapState(["headerTit", "_6_2Page", "_6_2PageSize"]),
+    ...mapState(["headerTit", "_6_2Page", "_6_2PageSize",'_6_qx']),
   },
   watch: {
     _6_2Page: function (page) {

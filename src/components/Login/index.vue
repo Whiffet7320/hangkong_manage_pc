@@ -128,7 +128,7 @@ export default {
         username: this.loginForm.username,
         userpass: this.loginForm.password,
       });
-      console.log(res);
+      // console.log(res);
       if (res.result == 1) {
         // sessionStorage.setItem("username", this.loginForm.username);
         sessionStorage.setItem("token", res.token);
@@ -155,6 +155,9 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+#particles-js{
+  height: 98%;
+}
 #login {
   width: 100%;
   height: 100vh;

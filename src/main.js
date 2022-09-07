@@ -85,6 +85,34 @@ router.beforeEach((to, from, next) => {
   }
 });
 
+// router.beforeEach((to, from, next) => {
+//   console.log(to.fullPath)
+//   var menu = JSON.parse(decodeURIComponent(sessionStorage.getItem("menu")))
+//   // console.log(menu)
+//   var flag = false;
+//   menu.forEach(ele=>{
+//     ele.sub_menu.forEach(ele2=>{
+//       if(to.fullPath.indexOf(ele2.url) != -1){
+//         flag = true;
+//       }
+//     })
+//   })
+//   if(to.fullPath == '/'){
+//     flag = true;
+//   }
+//   console.log(flag)
+//   if(!flag && to.fullPath != '/NotFound/NotFound404'){
+//     next({name:'NotFound404'})
+//   }
+//   // 如果有token 说明该用户已登陆
+//   if (sessionStorage.getItem("isLogin")=='true') {
+//     // 在已登陆的情况下访问登陆页会重定向到首页
+//     next()
+//   } else {
+//     // 没有登陆则访问任何页面都重定向到登陆页
+//   }
+// });
+
 Vue.config.productionTip = false
 
 new Vue({

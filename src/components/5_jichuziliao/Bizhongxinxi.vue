@@ -21,7 +21,7 @@
           </el-select> -->
         </div>
         <div class="tt2-right">
-          <el-button @click="addDingdan" type="success">创建币种</el-button>
+          <el-button :disabled="_5_qx.indexOf('增加') == -1" @click="addDingdan" type="success">创建币种</el-button>
         </div>
       </div>
     </div>
@@ -50,10 +50,10 @@
           <vxe-table-column title="操作状态" width="120">
             <template slot-scope="scope">
               <div class="flex">
-                <el-button size="small" @click="tabEdit(scope.row)" type="text"
+                <el-button size="small" :disabled="_5_qx.indexOf('修改') == -1" @click="tabEdit(scope.row)" type="text"
                   >编辑</el-button
                 >
-                <el-button size="small" @click="tabDel(scope.row)" type="text"
+                <el-button size="small" :disabled="_5_qx.indexOf('删除') == -1" @click="tabDel(scope.row)" type="text"
                   >删除</el-button
                 >
               </div>
@@ -162,7 +162,7 @@
 import { mapState } from "vuex";
 export default {
   computed: {
-    ...mapState(["headerTit", "_5_3Page", "_5_3PageSize"]),
+    ...mapState(["headerTit", "_5_3Page", "_5_3PageSize",'_5_qx']),
   },
   watch: {
     _5_3Page: function (page) {

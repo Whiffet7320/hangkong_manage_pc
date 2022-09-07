@@ -62,7 +62,7 @@
         </div> -->
       </div>
       <div class="t-tit3">
-        <el-button style="margin-right: 20px" @click="addKehu" type="success"
+        <el-button :disabled="_5_qx.indexOf('增加') == -1" style="margin-right: 20px" @click="addKehu" type="success"
           >创建客户</el-button
         >
         <el-checkbox @change="check1" v-model="business_type"
@@ -146,10 +146,10 @@
           <vxe-table-column title="操作状态" width="120">
             <template slot-scope="scope">
               <div class="flex">
-                <el-button size="small" @click="tabEdit(scope.row)" type="text"
+                <el-button size="small" :disabled="_5_qx.indexOf('修改') == -1" @click="tabEdit(scope.row)" type="text"
                   >编辑</el-button
                 >
-                <el-button size="small" @click="tabDel(scope.row)" type="text"
+                <el-button size="small" :disabled="_5_qx.indexOf('删除') == -1" @click="tabDel(scope.row)" type="text"
                   >删除</el-button
                 >
               </div>
@@ -238,7 +238,7 @@
 import { mapState } from "vuex";
 export default {
   computed: {
-    ...mapState(["headerTit", "_5_1Page", "_5_1PageSize"]),
+    ...mapState(["headerTit", "_5_1Page", "_5_1PageSize",'_5_qx']),
   },
   watch: {
     _5_1Page: function (page) {

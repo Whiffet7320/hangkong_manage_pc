@@ -19,8 +19,8 @@
                   </template>
                   <template v-if="stepIndex > 1" v-slot:description>
                     <div class="stepbox">
-                      <div class="st-txt">创建人：{{procedure[0].user.realname}}</div>
-                      <div class="st-txt">{{procedure[0].create_time}}</div>
+                      <div class="st-txt">创建人：{{ procedure[0].user.realname }}</div>
+                      <div class="st-txt">{{ procedure[0].create_time }}</div>
                     </div>
                   </template>
                 </el-step>
@@ -76,8 +76,8 @@
 
             <div class="n-tit1">委托信息</div>
             <div class="box">
-              <el-form :disabled='newIs_sign == 1' style="margin-top: 16px" :model="addForm1_1" ref="addForm1_1" label-width="130px"
-                class="demo-addForm" :rules="rules1_1">
+              <el-form :disabled='newIs_sign == 1' style="margin-top: 16px" :model="addForm1_1" ref="addForm1_1"
+                label-width="130px" class="demo-addForm" :rules="rules1_1">
                 <el-row :gutter="10">
                   <el-col :span="6">
                     <el-form-item label="运输类型：">
@@ -160,9 +160,9 @@
                                   display: flex;
                                   justify-content: space-between;
                                 ">
-                            <span style="font-size: 12px">{{ item.abbreviation }}</span>
-                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.chinese_name }}</span>
-                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.english_name }}</span>
+                            <span style="font-size: 12px">{{  item.abbreviation  }}</span>
+                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.chinese_name  }}</span>
+                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.english_name  }}</span>
                           </div>
                         </el-option>
                       </el-select>
@@ -183,8 +183,8 @@
           <div style="margin-top: 40px" class="nav1 nav3">
             <div class="n-tit1">货物信息</div>
             <div class="box">
-              <el-form :disabled='newIs_sign == 1' style="margin-top: 16px" :model="addForm1_2" ref="addForm1_2" label-width="130px"
-                class="demo-addForm" :rules="rules1_2">
+              <el-form :disabled='newIs_sign == 1' style="margin-top: 16px" :model="addForm1_2" ref="addForm1_2"
+                label-width="130px" class="demo-addForm" :rules="rules1_2">
                 <el-row :gutter="10">
                   <el-col :span="5">
                     <el-form-item label="收货地址：" prop="receivingaddress_id">
@@ -197,9 +197,9 @@
                                   display: flex;
                                   justify-content: space-between;
                                 ">
-                            <span style="font-size: 12px">{{ item.abbreviation }}</span>
-                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.chinese_name }}</span>
-                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.english_name }}</span>
+                            <span style="font-size: 12px">{{  item.abbreviation  }}</span>
+                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.chinese_name  }}</span>
+                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.english_name  }}</span>
                           </div>
                         </el-option>
                       </el-select>
@@ -216,12 +216,12 @@
                                   display: flex;
                                   justify-content: space-between;
                                 ">
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.three_charcode
-                                }}</span>
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.english_name
-                                }}</span>
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.chinese_name
-                                }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.three_charcode 
+                                  }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.english_name 
+                                  }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.chinese_name 
+                                  }}</span>
                               </div>
                             </el-option>
                           </el-select>
@@ -235,12 +235,12 @@
                                   display: flex;
                                   justify-content: space-between;
                                 ">
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.three_charcode
-                                }}</span>
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.english_name
-                                }}</span>
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.chinese_name
-                                }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.three_charcode 
+                                  }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.english_name 
+                                  }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.chinese_name 
+                                  }}</span>
                               </div>
                             </el-option>
                           </el-select>
@@ -269,8 +269,8 @@
                               display: flex;
                               justify-content: space-between;
                             ">
-                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.country_code }}</span>
-                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.chinese_name }}</span>
+                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.country_code  }}</span>
+                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.chinese_name  }}</span>
                           </div>
                         </el-option>
                       </el-select>
@@ -287,12 +287,12 @@
                                   display: flex;
                                   justify-content: space-between;
                                 ">
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.three_charcode
-                                }}</span>
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.english_name
-                                }}</span>
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.chinese_name
-                                }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.three_charcode 
+                                  }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.english_name 
+                                  }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.chinese_name 
+                                  }}</span>
                               </div>
                             </el-option>
                           </el-select>
@@ -306,12 +306,12 @@
                                   display: flex;
                                   justify-content: space-between;
                                 ">
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.three_charcode
-                                }}</span>
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.english_name
-                                }}</span>
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.chinese_name
-                                }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.three_charcode 
+                                  }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.english_name 
+                                  }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.chinese_name 
+                                  }}</span>
                               </div>
                             </el-option>
                           </el-select>
@@ -434,8 +434,8 @@
           <div style="margin-top: 40px" class="nav1 nav3">
             <div class="n-tit1">空运服务</div>
             <div class="box">
-              <el-form :disabled='newIs_sign == 1' style="margin-top: 16px" :model="addForm1_3" ref="addForm1_3" label-width="130px"
-                class="demo-addForm" :rules="rules1_3">
+              <el-form :disabled='newIs_sign == 1' style="margin-top: 16px" :model="addForm1_3" ref="addForm1_3"
+                label-width="130px" class="demo-addForm" :rules="rules1_3">
                 <el-row style="margin-top: 20px" :gutter="10">
                   <el-col :span="6">
                     <el-form-item label="业务类型：" prop="business_type">
@@ -464,12 +464,18 @@
                                   display: flex;
                                   justify-content: space-between;
                                 ">
-                            <span style="font-size: 12px">{{ item.abbreviation }}</span>
-                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.chinese_name }}</span>
-                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.english_name }}</span>
+                            <span style="font-size: 12px">{{  item.abbreviation  }}</span>
+                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.chinese_name  }}</span>
+                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.english_name  }}</span>
                           </div>
                         </el-option>
                       </el-select>
+                    </el-form-item>
+                  </el-col>
+                  <el-col :span="6">
+                    <el-form-item label="航班号：" prop="flight_no">
+                      <el-input size="small" v-model="addForm1_3.flight_no" placeholder="请输入内容">
+                      </el-input>
                     </el-form-item>
                   </el-col>
                 </el-row>
@@ -483,9 +489,9 @@
                                   display: flex;
                                   justify-content: space-between;
                                 ">
-                            <span style="font-size: 12px">{{ item.abbreviation }}</span>
-                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.chinese_name }}</span>
-                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.english_name }}</span>
+                            <span style="font-size: 12px">{{  item.abbreviation  }}</span>
+                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.chinese_name  }}</span>
+                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.english_name  }}</span>
                           </div>
                         </el-option>
                       </el-select>
@@ -500,9 +506,9 @@
                                   display: flex;
                                   justify-content: space-between;
                                 ">
-                            <span style="font-size: 12px">{{ item.abbreviation }}</span>
-                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.chinese_name }}</span>
-                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.english_name }}</span>
+                            <span style="font-size: 12px">{{  item.abbreviation  }}</span>
+                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.chinese_name  }}</span>
+                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.english_name  }}</span>
                           </div>
                         </el-option>
                       </el-select>
@@ -532,8 +538,8 @@
           <div class="nav1 nav3">
             <div class="n-tit1">基本信息</div>
             <div class="box">
-              <el-form :disabled='newIs_sign == 1' style="margin-top: 16px" :model="addForm2_1" ref="addForm2_1" label-width="130px"
-                class="demo-addForm" :rules="rules2_1">
+              <el-form :disabled='newIs_sign == 1' style="margin-top: 16px" :model="addForm2_1" ref="addForm2_1"
+                label-width="130px" class="demo-addForm" :rules="rules2_1">
                 <el-row :gutter="10">
                   <el-col :span="12">
                     <div class="b-txt">应收客户</div>
@@ -607,12 +613,12 @@
                                   display: flex;
                                   justify-content: space-between;
                                 ">
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.three_charcode
-                                }}</span>
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.english_name
-                                }}</span>
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.chinese_name
-                                }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.three_charcode 
+                                  }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.english_name 
+                                  }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.chinese_name 
+                                  }}</span>
                               </div>
                             </el-option>
                           </el-select>
@@ -626,12 +632,12 @@
                                   display: flex;
                                   justify-content: space-between;
                                 ">
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.three_charcode
-                                }}</span>
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.english_name
-                                }}</span>
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.chinese_name
-                                }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.three_charcode 
+                                  }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.english_name 
+                                  }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.chinese_name 
+                                  }}</span>
                               </div>
                             </el-option>
                           </el-select>
@@ -650,12 +656,12 @@
                                   display: flex;
                                   justify-content: space-between;
                                 ">
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.three_charcode
-                                }}</span>
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.english_name
-                                }}</span>
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.chinese_name
-                                }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.three_charcode 
+                                  }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.english_name 
+                                  }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.chinese_name 
+                                  }}</span>
                               </div>
                             </el-option>
                           </el-select>
@@ -669,12 +675,12 @@
                                   display: flex;
                                   justify-content: space-between;
                                 ">
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.three_charcode
-                                }}</span>
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.english_name
-                                }}</span>
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.chinese_name
-                                }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.three_charcode 
+                                  }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.english_name 
+                                  }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.chinese_name 
+                                  }}</span>
                               </div>
                             </el-option>
                           </el-select>
@@ -693,7 +699,7 @@
                                   display: flex;
                                   justify-content: space-between;
                                 ">
-                                <span style="font-size: 12px">{{ item.abbreviation }}</span>
+                                <span style="font-size: 12px">{{  item.abbreviation  }}</span>
                                 <!-- <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.chinese_name
                                 }}</span>
                                 <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.english_name
@@ -712,10 +718,10 @@
                                   justify-content: space-between;
                                 ">
                                 <!-- <span style="font-size: 12px">{{ item.abbreviation }}</span> -->
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.chinese_name
-                                }}</span>
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.english_name
-                                }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.chinese_name 
+                                  }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.english_name 
+                                  }}</span>
                               </div>
                             </el-option>
                           </el-select>
@@ -745,8 +751,8 @@
           <div style="margin-top: 40px" class="nav1 nav3">
             <div class="n-tit1">件重体信息</div>
             <div class="box">
-              <el-form :disabled='newIs_sign == 1' style="margin-top: 16px" :model="addForm2_2" ref="addForm2_2" label-width="130px"
-                class="demo-addForm" :rules="rules2_2">
+              <el-form :disabled='newIs_sign == 1' style="margin-top: 16px" :model="addForm2_2" ref="addForm2_2"
+                label-width="130px" class="demo-addForm" :rules="rules2_2">
                 <el-row style="margin-top: 20px" :gutter="10">
                   <el-col :span="6">
                     <el-form-item label="制单件数：" prop="production_units">
@@ -797,12 +803,12 @@
           <div class="nav1 nav3">
             <div class="n-tit1">空运信息</div>
             <div class="box">
-              <el-form style="margin-top: 16px" :model="addForm3_1" ref="addForm3_1" label-width="130px"
+              <el-form :disabled="tab3_formDis" style="margin-top: 16px" :model="addForm3_1" ref="addForm3_1" label-width="130px"
                 class="demo-addForm">
                 <el-row :gutter="10">
                   <el-col :span="5">
                     <el-form-item label="主单号：">
-                      <el-input size="small" v-model="addForm3_1.input1" placeholder="请输入内容"></el-input>
+                      <el-input size="small" v-model="addForm1_3.primary_no" placeholder="请输入内容"></el-input>
                     </el-form-item>
                   </el-col>
                   <el-col :span="5">
@@ -814,70 +820,72 @@
                 <el-row :gutter="10">
                   <el-col :span="5">
                     <el-form-item label="航空公司：">
-                      <el-input size="small" v-model="addForm3_1.input1" placeholder="请输入内容"></el-input>
+                      <el-input size="small" v-model="ddObj.airline_company.chinese_name" placeholder="请输入内容">
+                      </el-input>
                     </el-form-item>
                   </el-col>
                   <el-col :span="5">
                     <el-form-item label="起运港：">
-                      <el-input size="small" v-model="addForm3_1.input1" placeholder="请输入内容"></el-input>
+                      <el-input size="small" v-model="ddObj.port_consigned.chinese_name" placeholder="请输入内容"></el-input>
                     </el-form-item>
                   </el-col>
                   <el-col :span="5">
                     <el-form-item label="目的港：">
-                      <el-input size="small" v-model="addForm3_1.input1" placeholder="请输入内容"></el-input>
+                      <el-input size="small" v-model="ddObj.port_destination.chinese_name" placeholder="请输入内容">
+                      </el-input>
                     </el-form-item>
                   </el-col>
                 </el-row>
                 <el-row :gutter="10">
                   <el-col :span="5">
                     <el-form-item label="制单件数：">
-                      <el-input size="small" v-model="addForm3_1.input1" placeholder="请输入内容"></el-input>
+                      <el-input size="small" v-model="ddObj.production_units" placeholder="请输入内容"></el-input>
                     </el-form-item>
                   </el-col>
                   <el-col :span="5">
                     <el-form-item label="制单GW：">
-                      <el-input size="small" v-model="addForm3_1.input1" placeholder="请输入内容"></el-input>
+                      <el-input size="small" v-model="ddObj.maker_gw" placeholder="请输入内容"></el-input>
                     </el-form-item>
                   </el-col>
                   <el-col :span="5">
                     <el-form-item label="制单体积：">
-                      <el-input size="small" v-model="addForm3_1.input1" placeholder="请输入内容"></el-input>
+                      <el-input size="small" v-model="ddObj.maker_volume" placeholder="请输入内容"></el-input>
                     </el-form-item>
                   </el-col>
                   <el-col :span="5">
                     <el-form-item label="制单CW：">
-                      <el-input size="small" v-model="addForm3_1.input1" placeholder="请输入内容"></el-input>
+                      <el-input size="small" v-model="ddObj.maker_cw" placeholder="请输入内容"></el-input>
                     </el-form-item>
                   </el-col>
                 </el-row>
                 <el-row :gutter="10">
                   <el-col :span="5">
                     <el-form-item label="制单密度：">
-                      <el-input size="small" v-model="addForm3_1.input1" placeholder="请输入内容"></el-input>
+                      <el-input size="small" v-model="ddObj.maker_density" placeholder="请输入内容"></el-input>
                     </el-form-item>
                   </el-col>
                   <el-col :span="5">
                     <el-form-item label="应收重量：">
-                      <el-input size="small" v-model="addForm3_1.input1" placeholder="请输入内容"></el-input>
+                      <el-input size="small" v-model="ddObj.receivable_weight" placeholder="请输入内容"></el-input>
                     </el-form-item>
                   </el-col>
                 </el-row>
                 <el-row :gutter="10">
                   <el-col :span="5">
                     <el-form-item label="中文品名：">
-                      <el-input type="textarea" :rows="5" placeholder="请输入内容" v-model="addForm3_1.input4">
+                      <el-input type="textarea" :rows="5" placeholder="请输入内容" v-model="ddObj.chinese_productname">
                       </el-input>
                     </el-form-item>
                   </el-col>
                   <el-col :span="5">
                     <el-form-item label="英文品名：">
-                      <el-input type="textarea" :rows="5" placeholder="请输入内容" v-model="addForm3_1.input4">
+                      <el-input type="textarea" :rows="5" placeholder="请输入内容" v-model="ddObj.english_productname">
                       </el-input>
                     </el-form-item>
                   </el-col>
                   <el-col :span="10">
                     <el-form-item label="操作说明：">
-                      <el-input type="textarea" :rows="5" placeholder="请输入内容" v-model="addForm3_1.input4">
+                      <el-input type="textarea" :rows="5" placeholder="请输入内容" v-model="ddObj.operating_instructions">
                       </el-input>
                     </el-form-item>
                   </el-col>
@@ -885,76 +893,127 @@
               </el-form>
             </div>
           </div>
-          <div style="margin-top: 40px" class="nav1 nav3">
+          <div v-if='jiageQRObj && qrIndex >= 2' style="margin-top: 40px" class="nav1 nav3">
             <div class="n-tit1">价格确认</div>
             <div class="box">
-              <div class="float-txt">价格已确认</div>
+              <div v-if='jiageQRObj && jiageQRObj.identify_user.is_modify == 0' class="float-txt">价格已确认</div>
+              <div v-if='jiageQRObj && jiageQRObj.identify_user.is_modify == 1' class="float-txt">价格已修改</div>
               <el-row :gutter="10">
-                <el-col :span="3"><span class="span-txt">委托件数：60</span></el-col>
-                <el-col :span="3"><span class="span-txt">委托重量：72</span></el-col>
-                <el-col :span="3"><span class="span-txt">委托体积：10</span></el-col>
-                <el-col :span="3"><span class="span-txt">委托密度：56</span></el-col>
-                <el-col :span="3"><span class="span-txt">销售卖价：89</span></el-col>
-                <el-col :span="3"><span class="span-txt">备注</span></el-col>
+                <el-col :span="3"><span
+                    :class="{ 'span-txt': true, 'red': jiageQRObj.number_entrustedpieces.is_modify == 1 }">委托件数：{{ jiageQRObj.number_entrustedpieces.val }}</span>
+                </el-col>
+                <el-col :span="3"><span
+                    :class="{ 'span-txt': true, 'red': jiageQRObj.entrusted_weight.is_modify == 1 }">委托重量：{{ jiageQRObj.entrusted_weight.val }}</span>
+                </el-col>
+                <el-col :span="3"><span
+                    :class="{ 'span-txt': true, 'red': jiageQRObj.entrusted_volume.is_modify == 1 }">委托体积：{{ jiageQRObj.entrusted_volume.val }}</span>
+                </el-col>
+                <el-col :span="3"><span
+                    :class="{ 'span-txt': true, 'red': jiageQRObj.commission_density.is_modify == 1 }">委托密度：{{ jiageQRObj.commission_density.val }}</span>
+                </el-col>
+                <el-col :span="3"><span
+                    :class="{ 'span-txt': true, 'red': jiageQRObj.selling_seller.is_modify == 1 }">销售卖价：{{ jiageQRObj.selling_seller.val }}</span>
+                </el-col>
+                <el-col :span="3"><span
+                    :class="{ 'span-txt': true, 'red': jiageQRObj.priceconfirmation_remarks.is_modify == 1 }">备注:{{ jiageQRObj.priceconfirmation_remarks.val }}</span>
+                </el-col>
               </el-row>
               <el-row :gutter="10" style="margin-top: 16px">
-                <el-col :span="3"><span class="span-txt">实际件数：56</span></el-col>
-                <el-col :span="3"><span class="span-txt">实际重量：45</span></el-col>
-                <el-col :span="3"><span class="span-txt">实际体积：26</span></el-col>
-                <el-col :span="3"><span class="span-txt">实际密度：61</span></el-col>
+                <el-col :span="3"><span
+                    :class="{ 'span-txt': true, 'red': jiageQRObj.actual_number.is_modify == 1 }">实际件数：{{ jiageQRObj.actual_number.val }}</span>
+                </el-col>
+                <el-col :span="3"><span
+                    :class="{ 'span-txt': true, 'red': jiageQRObj.actual_weight.is_modify == 1 }">实际重量：{{ jiageQRObj.actual_weight.val }}</span>
+                </el-col>
+                <el-col :span="3"><span
+                    :class="{ 'span-txt': true, 'red': jiageQRObj.actual_volume.is_modify == 1 }">实际体积：{{ jiageQRObj.actual_volume.val }}</span>
+                </el-col>
+                <el-col :span="3"><span
+                    :class="{ 'span-txt': true, 'red': jiageQRObj.actual_density.is_modify == 1 }">实际密度：{{ jiageQRObj.actual_density.val }}</span>
+                </el-col>
               </el-row>
               <el-row :gutter="10" style="margin-top: 16px">
-                <el-col :span="8"><span class="span-txt">确认人/修改人：万小明</span></el-col>
-                <el-col :span="10"><span class="span-txt">确认/修改 时间：2022-05-15 12:12:56</span></el-col>
+                <el-col :span="8"><span
+                    :class="{ 'span-txt': true, 'red': jiageQRObj.identify_user.is_modify == 1 }">{{ jiageQRObj.identify_user.is_modify == 1 ? '修改人' : '确认人' }}：{{ jiageQRObj.identify_user.realname }}</span>
+                </el-col>
+                <el-col :span="10"><span
+                    :class="{ 'span-txt': true, 'red': jiageQRObj.identify_user.is_modify == 1 }">{{ jiageQRObj.identify_user.is_modify == 1 ? '修改' : '确认' }}时间：{{ jiageQRObj.identify_user.modify_time }}</span>
+                </el-col>
               </el-row>
             </div>
           </div>
-          <div style="margin-top: 40px" class="nav1 nav3">
+          <div v-if='qifeiQRObj && qrIndex >= 3' style="margin-top: 40px" class="nav1 nav3">
             <div class="n-tit1">起飞确认</div>
             <div class="box">
-              <div class="float-txt">起飞已确认</div>
+              <div v-if='qifeiQRObj && qifeiQRObj.identify_user.is_modify == 0' class="float-txt">起飞已确认</div>
+              <div v-if='qifeiQRObj && qifeiQRObj.identify_user.is_modify == 1' class="float-txt">起飞已修改</div>
               <el-row :gutter="10">
-                <el-col :span="5"><span class="span-txt">航班号：60</span></el-col>
-                <el-col :span="5"><span class="span-txt">航班日期：72</span></el-col>
+                <el-col :span="5"><span
+                    :class="{ 'span-txt': true, 'red': qifeiQRObj.flight_no.is_modify == 1 }">航班号：{{ qifeiQRObj.flight_no.val }}</span>
+                </el-col>
+                <el-col :span="5"><span
+                    :class="{ 'span-txt': true, 'red': qifeiQRObj.flight_date.is_modify == 1 }">航班日期：{{ qifeiQRObj.flight_date.val }}</span>
+                </el-col>
               </el-row>
               <el-row :gutter="10" style="margin-top: 16px">
-                <el-col :span="5"><span class="span-txt">确认时间：2022-05-15 12:12:56</span></el-col>
-                <el-col :span="5"><span class="span-txt">航线员：万小明</span></el-col>
-                <el-col :span="8"><span class="span-txt">备注：</span></el-col>
+                <el-col :span="5"><span
+                    :class="{ 'span-txt': true, 'red': qifeiQRObj.identify_user.is_modify == 1 }">确认时间：{{ qifeiQRObj.identify_user.modify_time }}</span>
+                </el-col>
+                <el-col :span="5"><span
+                    :class="{ 'span-txt': true, 'red': qifeiQRObj.identify_user.is_modify == 1 }">航线员：{{ qifeiQRObj.identify_user.realname }}</span>
+                </el-col>
+                <el-col :span="8"><span
+                    :class="{ 'span-txt': true, 'red': qifeiQRObj.takeoff_remark.is_modify == 1 }">备注：{{ qifeiQRObj.takeoff_remark.val }}</span>
+                </el-col>
               </el-row>
             </div>
           </div>
-          <div style="margin-top: 40px" class="nav1 nav3">
+          <div v-if='zhuanyunQRObj && qrIndex >= 4' style="margin-top: 40px" class="nav1 nav3">
             <div class="n-tit1">转运确认</div>
             <div class="box">
-              <div class="float-txt">转运已确认</div>
+              <div v-if='zhuanyunQRObj && zhuanyunQRObj.identify_user.is_modify == 0' class="float-txt">转运已确认</div>
+              <div v-if='zhuanyunQRObj && zhuanyunQRObj.identify_user.is_modify == 1' class="float-txt">转运已修改</div>
               <el-row :gutter="10">
-                <el-col :span="5"><span class="span-txt">转运航班：60</span></el-col>
-                <el-col :span="5"><span class="span-txt">航班日期：72</span></el-col>
+                <el-col :span="5"><span
+                    :class="{ 'span-txt': true, 'red': zhuanyunQRObj.transshipmentflight_no.is_modify == 1 }">转运航班：{{ zhuanyunQRObj.transshipmentflight_no.val }}</span>
+                </el-col>
+                <el-col :span="5"><span
+                    :class="{ 'span-txt': true, 'red': zhuanyunQRObj.flight_date.is_modify == 1 }">航班日期：{{ zhuanyunQRObj.flight_date.val }}</span>
+                </el-col>
               </el-row>
               <el-row :gutter="10" style="margin-top: 16px">
-                <el-col :span="5"><span class="span-txt">确认时间：2022-05-15 12:12:56</span></el-col>
-                <el-col :span="5"><span class="span-txt">航线员：万小明</span></el-col>
-                <el-col :span="8"><span class="span-txt">备注：</span></el-col>
+                <el-col :span="5"><span
+                    :class="{ 'span-txt': true, 'red': zhuanyunQRObj.identify_user.is_modify == 1 }">确认时间：{{ zhuanyunQRObj.identify_user.modify_time }}</span>
+                </el-col>
+                <el-col :span="5"><span
+                    :class="{ 'span-txt': true, 'red': zhuanyunQRObj.identify_user.is_modify == 1 }">航线员：{{ zhuanyunQRObj.identify_user.realname }}</span>
+                </el-col>
+                <el-col :span="8"><span
+                    :class="{ 'span-txt': true, 'red': zhuanyunQRObj.transshipment_remark.is_modify == 1 }">备注：{{ zhuanyunQRObj.transshipment_remark.val }}</span>
+                </el-col>
               </el-row>
             </div>
           </div>
-          <div style="margin-top: 40px" class="nav1 nav3">
+          <div v-if='daogangQRObj && qrIndex >= 5' style="margin-top: 40px" class="nav1 nav3">
             <div class="n-tit1">到港确认</div>
             <div class="box">
-              <div class="float-txt">已到港</div>
+              <div v-if='daogangQRObj && daogangQRObj.is_modify == 0' class="float-txt">已到港</div>
               <el-row :gutter="10" style="margin-top: 16px">
-                <el-col :span="5"><span class="span-txt">确认时间：2022-05-15 12:12:56</span></el-col>
-                <el-col :span="5"><span class="span-txt">航线员：万小明</span></el-col>
-                <el-col :span="8"><span class="span-txt">备注：</span></el-col>
+                <el-col :span="5"><span
+                    :class="{ 'span-txt': true, 'red': daogangQRObj.is_modify == 1 }">确认时间：{{ daogangQRObj.modify_time }}</span>
+                </el-col>
+                <el-col :span="5"><span
+                    :class="{ 'span-txt': true, 'red': daogangQRObj.is_modify == 1 }">确认人：{{ daogangQRObj.realname }}</span>
+                </el-col>
+                <!-- <el-col :span="8"><span :class="{'span-txt':true,'red':daogangQRObj.is_modify==1}">备注：{{}}</span></el-col> -->
               </el-row>
             </div>
           </div>
           <div class="footer-btn">
-            <el-button type="primary" @click="onSubmit3_1">价格确认</el-button>
-            <el-button type="primary" @click="onSubmit3_2">起飞确认</el-button>
-            <el-button type="primary" @click="onSubmit3_3">转运确认</el-button>
-            <el-button type="primary" @click="onSubmit3_4">到港确认</el-button>
+            <el-button v-if="qrIndex == 1" type="primary" @click="onSubmit3_1">价格确认</el-button>
+            <el-button v-if="qrIndex == 2" type="primary" @click="onSubmit3_2">起飞确认</el-button>
+            <el-button v-if="qrIndex == 3" type="primary" @click="onSubmit3_3">转运确认</el-button>
+            <el-button v-if="qrIndex == 4" type="primary" @click="onSubmit3_4">到港确认</el-button>
           </div>
         </el-tab-pane>
         <el-tab-pane label="制作费用" name="4">
@@ -1178,11 +1237,11 @@
       <div class="dia2_1">
         <div class="tit1">
           <div class="txt1-1">确认人</div>
-          <div class="txt1-2">{{realname}}</div>
+          <div class="txt1-2">{{ realname }}</div>
         </div>
         <div class="tit1" style="margin-top: 20px">
           <div class="txt1-1">确认时间</div>
-          <div class="txt1-2">{{now}}</div>
+          <div class="txt1-2">{{ now }}</div>
         </div>
         <div class="btns">
           <el-button style="width: 100px" @click="addDialogVisible2_1 = false">取消</el-button>
@@ -1197,62 +1256,62 @@
           class="demo-addForm">
           <el-row :gutter="10">
             <el-col :span="11">
-              <el-form-item label="委托件数：" prop="input1">
-                <el-input size="small" v-model="addFormDia3_1.input1" placeholder="请输入内容"></el-input>
+              <el-form-item label="委托件数：">
+                <el-input size="small" v-model="addFormDia3_1.number_entrustedpieces" placeholder="请输入内容"></el-input>
               </el-form-item>
             </el-col>
             <el-col :span="11">
-              <el-form-item label="委托重量：" prop="input1">
-                <el-input size="small" v-model="addFormDia3_1.input1" placeholder="请输入内容"></el-input>
-              </el-form-item>
-            </el-col>
-          </el-row>
-          <el-row :gutter="10">
-            <el-col :span="11">
-              <el-form-item label="委托体积：" prop="input1">
-                <el-input size="small" v-model="addFormDia3_1.input1" placeholder="请输入内容"></el-input>
-              </el-form-item>
-            </el-col>
-            <el-col :span="11">
-              <el-form-item label="委托密度：" prop="input1">
-                <el-input size="small" v-model="addFormDia3_1.input1" placeholder="请输入内容"></el-input>
+              <el-form-item label="委托重量：">
+                <el-input size="small" v-model="addFormDia3_1.entrusted_weight" placeholder="请输入内容"></el-input>
               </el-form-item>
             </el-col>
           </el-row>
           <el-row :gutter="10">
             <el-col :span="11">
-              <el-form-item label="销售卖家：" prop="input1">
-                <el-input size="small" v-model="addFormDia3_1.input1" placeholder="请输入内容"></el-input>
+              <el-form-item label="委托体积：">
+                <el-input size="small" v-model="addFormDia3_1.entrusted_volume" placeholder="请输入内容"></el-input>
               </el-form-item>
             </el-col>
             <el-col :span="11">
-              <el-form-item label="备注：" prop="input1">
-                <el-input size="small" v-model="addFormDia3_1.input1" placeholder="请输入内容"></el-input>
+              <el-form-item label="委托密度：">
+                <el-input size="small" v-model="addFormDia3_1.commission_density" placeholder="请输入内容"></el-input>
+              </el-form-item>
+            </el-col>
+          </el-row>
+          <el-row :gutter="10">
+            <el-col :span="11">
+              <el-form-item label="销售卖家：">
+                <el-input size="small" v-model="addFormDia3_1.selling_seller" placeholder="请输入内容"></el-input>
+              </el-form-item>
+            </el-col>
+            <el-col :span="11">
+              <el-form-item label="备注：">
+                <el-input size="small" v-model="addFormDia3_1.remarks" placeholder="请输入内容"></el-input>
               </el-form-item>
             </el-col>
           </el-row>
           <div class="heng"></div>
           <el-row style="margin-top: 24px" :gutter="10">
             <el-col :span="11">
-              <el-form-item label="实际件数：" prop="input1">
-                <el-input size="small" v-model="addFormDia3_1.input1" placeholder="请输入内容"></el-input>
+              <el-form-item label="实际件数：">
+                <el-input size="small" v-model="addFormDia3_1.actual_number" placeholder="请输入内容"></el-input>
               </el-form-item>
             </el-col>
             <el-col :span="11">
-              <el-form-item label="实际重量：" prop="input1">
-                <el-input size="small" v-model="addFormDia3_1.input1" placeholder="请输入内容"></el-input>
+              <el-form-item label="实际重量：">
+                <el-input size="small" v-model="addFormDia3_1.actual_weight" placeholder="请输入内容"></el-input>
               </el-form-item>
             </el-col>
           </el-row>
           <el-row :gutter="10">
             <el-col :span="11">
-              <el-form-item label="实际体积：" prop="input1">
-                <el-input size="small" v-model="addFormDia3_1.input1" placeholder="请输入内容"></el-input>
+              <el-form-item label="实际体积：">
+                <el-input size="small" v-model="addFormDia3_1.actual_volume" placeholder="请输入内容"></el-input>
               </el-form-item>
             </el-col>
             <el-col :span="11">
-              <el-form-item label="实际密度：" prop="input1">
-                <el-input size="small" v-model="addFormDia3_1.input1" placeholder="请输入内容"></el-input>
+              <el-form-item label="实际密度：">
+                <el-input size="small" v-model="addFormDia3_1.actual_density" placeholder="请输入内容"></el-input>
               </el-form-item>
             </el-col>
           </el-row>
@@ -1271,12 +1330,12 @@
           <el-row :gutter="10">
             <el-col :span="21">
               <el-form-item label="航班号：" prop="input1">
-                <el-input size="small" v-model="addFormDia3_2.input1" placeholder="请输入内容"></el-input>
+                <el-input size="small" v-model="addFormDia3_2.flight_no" placeholder="请输入内容"></el-input>
               </el-form-item>
             </el-col>
             <el-col :span="21">
               <el-form-item label="航班日期：" prop="input1">
-                <el-date-picker size="small" value-format="yyyy-MM-dd" v-model="addFormDia3_2.time1" type="date"
+                <el-date-picker size="small" value-format="yyyy-MM-dd" v-model="addFormDia3_2.flight_date" type="date"
                   placeholder="选择日期">
                 </el-date-picker>
               </el-form-item>
@@ -1285,7 +1344,8 @@
           <el-row :gutter="10">
             <el-col :span="21">
               <el-form-item label="备注：" prop="input1">
-                <el-input size="small" v-model="addFormDia3_2.input1" placeholder="请输入内容" type="textarea" :rows="4">
+                <el-input size="small" v-model="addFormDia3_2.takeoff_remark" placeholder="请输入内容" type="textarea"
+                  :rows="4">
                 </el-input>
               </el-form-item>
             </el-col>
@@ -1305,12 +1365,12 @@
           <el-row :gutter="10">
             <el-col :span="21">
               <el-form-item label="转运航班：" prop="input1">
-                <el-input size="small" v-model="addFormDia3_3.input1" placeholder="请输入内容"></el-input>
+                <el-input size="small" v-model="addFormDia3_3.transshipmentflight_no" placeholder="请输入内容"></el-input>
               </el-form-item>
             </el-col>
             <el-col :span="21">
               <el-form-item label="航班日期：" prop="input1">
-                <el-date-picker size="small" value-format="yyyy-MM-dd" v-model="addFormDia3_3.time1" type="date"
+                <el-date-picker size="small" value-format="yyyy-MM-dd" v-model="addFormDia3_3.flight_date" type="date"
                   placeholder="选择日期">
                 </el-date-picker>
               </el-form-item>
@@ -1319,7 +1379,8 @@
           <el-row :gutter="10">
             <el-col :span="21">
               <el-form-item label="备注：" prop="input1">
-                <el-input size="small" v-model="addFormDia3_3.input1" placeholder="请输入内容" type="textarea" :rows="4">
+                <el-input size="small" v-model="addFormDia3_3.transshipment_remark" placeholder="请输入内容" type="textarea"
+                  :rows="4">
                 </el-input>
               </el-form-item>
             </el-col>
@@ -1812,9 +1873,11 @@ export default {
         booking_agentid: "",
         carrier_id: "",
         product: "",
+        flight_no: "",
       },
       rules1_3: {
         primary_no: [{ required: true, message: "请输入主单号", trigger: "blur" }],
+        flight_no: [{ required: true, message: "请输入航班号", trigger: "blur" }],
         business_type: [
           { required: true, message: "请选择", trigger: "change" },
         ],
@@ -1914,12 +1977,35 @@ export default {
       addForm3_1: {},
       addDialogVisible2_1: false,
       addDialogVisible3_1: false,
-      addFormDia3_1: {},
+      addFormDia3_1: {
+        number_entrustedpieces: "",
+        entrusted_weight: "",
+        entrusted_volume: "",
+        commission_density: "",
+        selling_seller: "",
+        remarks: "",
+        actual_number: "",
+        actual_weight: "",
+        actual_volume: "",
+        actual_density: "",
+      },
       addDialogVisible3_2: false,
-      addFormDia3_2: {},
+      addFormDia3_2: {
+        flight_no: "",
+        flight_date: "",
+        takeoff_remark: "",
+      },
       addDialogVisible3_3: false,
-      addFormDia3_3: {},
+      addFormDia3_3: {
+        transshipmentflight_no: "",
+        flight_date: "",
+        transshipment_remark: "",
+      },
       addDialogVisible3_4: false,
+      addFormDia3_4:{
+        modify_time:"",
+        realname:"",
+      },
       tableData4_1: [],
       loading4_1: true,
       options1: [
@@ -1977,10 +2063,16 @@ export default {
       bgfsList: [],
       ywlxList: [],
       cpList: [],
-      realname:"",
-      login_userid:"",
-      now:"",
-      newIs_sign:"",
+      realname: "",
+      login_userid: "",
+      now: "",
+      newIs_sign: "",
+      jiageQRObj: null,
+      qifeiQRObj: null,
+      zhuanyunQRObj: null,
+      daogangQRObj: null,
+      qrIndex: 1,
+      tab3_formDis:false,
     };
   },
   mounted() {
@@ -2003,6 +2095,8 @@ export default {
     this.getYWLXList()
     this.getCPList()
     this.getUserData()
+    this.getJiaGeQR()
+    this.getQiFeiQR()
   },
   methods: {
     async getData() {
@@ -2108,27 +2202,53 @@ export default {
       const res = await this.$api.read_userinfo()
       this.post_id = res.login_user.post_id
     },
-    async checkOrder(e) {
-      const res = await this.$api.check_orderprimaryno({
-        primary_no: e,
+    async getJiaGeQR() {
+      const res = await this.$api.price_confirmationview({
+        order_id: this.chukouObj.order_id,
       })
-      console.log(res)
-      if (res.result == 1) {
-        if (res.check_status == 1) {
-          this.tooltipFlag = true;
-          this.tooltipContent = '有相同的主单号'
-        } else {
-          this.tooltipFlag = false;
-        }
-      }
+      this.jiageQRObj = { ...res }
     },
-    async changeStepBox(step){
+    async getQiFeiQR() {
+      const res = await this.$api.takeoff_confirmationview({
+        order_id: this.chukouObj.order_id,
+      })
+      this.qifeiQRObj = { ...res }
+    },
+    async getZhuanYunQR() {
+      const res = await this.$api.transshipment_confirmationview({
+        order_id: this.chukouObj.order_id,
+      })
+      this.zhuanyunQRObj = { ...res }
+    },
+    async getDaoGangQR() {
+      const res = await this.$api.goods_arrivalconfirmationview({
+        order_id: this.chukouObj.order_id,
+      })
+      this.daogangQRObj = { ...res }
+    },
+    checkOrder(e) {
+      setTimeout(async () => {
+        const res = await this.$api.check_orderprimaryno({
+          primary_no: e,
+        })
+        console.log(res)
+        if (res.result == 1) {
+          if (res.check_status == 1) {
+            this.tooltipFlag = true;
+            this.tooltipContent = '有相同的主单号'
+          } else {
+            this.tooltipFlag = false;
+          }
+        }
+      }, 1000)
+    },
+    async changeStepBox(step) {
       const res = await this.$api.operate_procedure({
         order_id: this.chukouObj.order_id,
-        types:step
+        types: step
       })
       this.$message(res.msg)
-      if(res.result == 1){
+      if (res.result == 1) {
         this.getData()
       }
     },
@@ -2289,7 +2409,7 @@ export default {
         }
       }
     },
-    async onSubmit2_2(is_sign) { 
+    async onSubmit2_2(is_sign) {
       let i = 0
       console.log(this.addForm2_1, this.addForm2_2)
       this.$refs['addForm2_1'].validate((valid) => {
@@ -2307,18 +2427,23 @@ export default {
         const res = await this.$api.user_signature({
           ...this.addForm2_1,
           ...this.addForm2_2,
-          primary_no:this.addForm1_3.primary_no,
+          primary_no: this.addForm1_3.primary_no,
           order_id: this.chukouObj.order_id,
-          is_sign:is_sign,
-          sign_time:this.now,
-          sign_userid:this.login_userid
+          is_sign: is_sign,
+          sign_time: this.now,
+          sign_userid: this.login_userid
         })
         this.$message(res.msg);
         if (res.result == 1) {
           console.log(res)
           setTimeout(() => {
             this.getData()
+            this.getJiaGeQR()
+            this.getQiFeiQR()
+            this.getZhuanYunQR()
+            this.getDaoGangQR()
             this.activeName = '2'
+            this.tab3_formDis = true;
             this.addDialogVisible2_1 = false;
           }, 500)
         }
@@ -2332,29 +2457,79 @@ export default {
       this.addDialogVisible2_1 = true;
     },
     onSubmit3_1() {
+      for (const key in this.jiageQRObj) {
+        this.addFormDia3_1[key] = this.jiageQRObj[key].val
+      }
       this.addDialogVisible3_1 = true;
     },
-    onSubmitDia3_1() {
-      console.log(this.addFormDia3_1);
+    async onSubmitDia3_1() {
+      const res = await this.$api.price_confirmation({
+        ...this.addFormDia3_1,
+        order_id: this.chukouObj.order_id,
+      })
+      this.$message(res.msg)
+      if (res.result == 1) {
+        this.getJiaGeQR()
+        this.qrIndex++
+        this.addDialogVisible3_1 = false
+      }
     },
     onSubmit3_2() {
+      for (const key in this.qifeiQRObj) {
+        this.addFormDia3_2[key] = this.qifeiQRObj[key].val
+      }
       this.addDialogVisible3_2 = true;
     },
     onSubmit3_3() {
+      for (const key in this.zhuanyunQRObj) {
+        this.addFormDia3_3[key] = this.zhuanyunQRObj[key].val
+      }
       this.addDialogVisible3_3 = true;
     },
-    onSubmit3_4() {
+    async onSubmit3_4() {
+      console.log(this.daogangQRObj)
+      for (const key in this.daogangQRObj) {
+        this.addFormDia3_4[key] = this.daogangQRObj[key].val
+      }
       this.addDialogVisible3_4 = true;
     },
-    onSubmitDia3_2() {
+    async onSubmitDia3_2() {
       console.log(this.addFormDia3_2);
+      const res = await this.$api.takeoff_confirmation({
+        ...this.addFormDia3_2,
+        order_id: this.chukouObj.order_id,
+      })
+      this.$message(res.msg)
+      if (res.result == 1) {
+        this.getQiFeiQR()
+        this.qrIndex++
+        this.addDialogVisible3_2 = false
+      }
     },
-    onSubmitDia3_3() {
+    async onSubmitDia3_3() {
       console.log(this.addFormDia3_3);
+      const res = await this.$api.transshipment_confirmation({
+        ...this.addFormDia3_3,
+        order_id: this.chukouObj.order_id,
+      })
+      this.$message(res.msg)
+      if (res.result == 1) {
+        this.getZhuanYunQR()
+        this.qrIndex++
+        this.addDialogVisible3_3 = false
+        console.log(this.zhuanyunQRObj,this.daogangQRObj,1111111)
+      }
     },
-    onSubmitDia3_4() {
-      this.addDialogVisible3_4 = false;
-      // console.log(this.addFormDia3_4);
+    async onSubmitDia3_4() {
+      const res = await this.$api.goods_arrivalconfirmation({
+        order_id: this.chukouObj.order_id,
+      })
+      this.$message(res.msg)
+      if (res.result == 1) {
+        this.getDaoGangQR()
+        this.qrIndex++
+        this.addDialogVisible3_4 = false
+      }
     },
     onSubmitDia4_1() {
       console.log(this.addFormDia4_1);
@@ -2521,6 +2696,10 @@ export default {
       .span-txt {
         font-size: 14px;
         color: #606266;
+      }
+
+      .span-txt.red {
+        color: #F56C6C
       }
     }
 

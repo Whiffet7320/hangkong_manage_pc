@@ -100,5 +100,12 @@ export default {
     product_type:"/product_type",//空运服务产品列表
     user_signature:"/user_signature",//签单
     operate_procedure:"/operate_procedure",//操作流程
-
+    price_confirmationview:'/price_confirmationview',//价格确认详情
+    price_confirmation:"/price_confirmation",//价格确认
+    takeoff_confirmationview:"/takeoff_confirmationview",//起飞确认详情
+    takeoff_confirmation:"/takeoff_confirmation",//起飞确认
+    transshipment_confirmationview:"/transshipment_confirmationview",//转运确认详情
+    transshipment_confirmation:"/transshipment_confirmation",//转运确认
+    goods_arrivalconfirmationview:"/goods_arrivalconfirmationview",//到港确认详情
+    goods_arrivalconfirmation:'/goods_arrivalconfirmation',//到港确认
 }
