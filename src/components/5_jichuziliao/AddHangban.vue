@@ -488,7 +488,7 @@ export default {
         general_cargopolicy: "",
       },
       addForm2: {
-        schedule: "1",
+        schedule: 1,
         flight_date: [],
       },
       time1: "",
@@ -567,6 +567,7 @@ export default {
           flight_date: this.addForm2.flight_date.toString(),
           sensitive_goodsid: this.sensitive_goodsid.toString(),
           incidental: JSON.stringify(this.tableData1),
+          schedule:this.addForm2.schedule
         });
         this.$message(res.msg);
         if (res.result == 1) {
@@ -582,6 +583,7 @@ export default {
           flight_date: this.addForm2.flight_date.toString(),
           sensitive_goodsid: this.sensitive_goodsid.toString(),
           incidental: JSON.stringify(this.tableData1),
+          schedule:this.addForm2.schedule
         });
         this.$message(res.msg);
         if (res.result == 1) {

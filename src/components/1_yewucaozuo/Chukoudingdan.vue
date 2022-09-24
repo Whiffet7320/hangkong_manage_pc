@@ -5,33 +5,31 @@
       <div class="t-tit2">
         <div class="tt2-left">
           <el-input placeholder="请输入内容" v-model="keyword" class="input-with-select">
-            <el-select v-model="search_type" slot="prepend" placeholder="请选择">
-              <el-option label="工作单号" value="1"></el-option>
-              <!-- <el-option label="运单号" value="2"></el-option> -->
-              <el-option label="公司名" value="3"></el-option>
-              <el-option label="中文品名" value="4"></el-option>
+            <el-select v-model="sele1" slot="prepend" placeholder="请选择">
+              <el-option label="餐厅名" value="1"></el-option>
+              <el-option label="订单号" value="2"></el-option>
+              <el-option label="用户电话" value="3"></el-option>
             </el-select>
-            <el-button @click="search" slot="append" icon="el-icon-search">搜索</el-button>
+            <el-button slot="append" icon="el-icon-search">搜索</el-button>
           </el-input>
-          <el-select @change="changeOrder" style="margin-left:50px;width:200px" v-model="order_status" placeholder="请选择">
-            <el-option label="全部工作号" value="0"> </el-option>
+          <el-select style="margin-left:50px;width:200px" v-model="sele2" placeholder="请选择">
             <el-option label="新订单" value="1"> </el-option>
             <el-option label="应付已制作" value="2"> </el-option>
             <el-option label="应收已制作" value="3"> </el-option>
             <el-option label="应付已审核" value="4"> </el-option>
             <el-option label="应收已审核" value="5"> </el-option>
-            <el-option label="费用已完成" value="6"> </el-option>
+            <el-option label="全部工作号" value="6"> </el-option>
           </el-select>
         </div>
         <div class="tt2-right">
           <el-button @click="addDingdan" type="success">创建新订单</el-button>
-          <!-- <el-button type="primary" plain>字段设置</el-button> -->
+          <el-button type="primary" plain>字段设置</el-button>
         </div>
       </div>
     </div>
     <div class="content">
       <div class="myTable">
-        <vxe-grid ref="xGrid2" v-if="vxeGrid" v-bind="gridOptions2">
+        <vxe-grid ref="xGrid2" v-bind="gridOptions2">
           <template #name_edit="{ row }">
             <div class="flex">
               <el-button size="small" @click="tabEdit(row)" type="text">编辑</el-button>
@@ -113,7 +111,7 @@
 
 <script>
 import Sortable from "sortablejs";
-// import VXETable from "vxe-table";
+import VXETable from "vxe-table";
 import { mapState } from "vuex";
 export default {
   computed: {
@@ -122,19 +120,19 @@ export default {
   watch: {
     xindingdanPage: function (page) {
       this.$store.commit("xindingdanPage", page);
-      this.getData();
+      //   this.getData();
     },
     xindingdanPageSize: function (pageSize) {
       this.$store.commit("xindingdanPageSize", pageSize);
-      this.getData();
+      //   this.getData();
     },
   },
   data() {
     return {
       isAdd: false,
       keyword: "",
-      search_type: '',
-      order_status: '',
+      sele1: '',
+      sele2: '',
       total: 0,
       tableData: [],
       addForm: {
@@ -148,43 +146,34 @@ export default {
       },
       addDialogVisible: false,
       gridOptions2: {
+        // border: true,
         showFooter: true,
         class: "sortable-column-demo",
-        columnConfig: {
-          useKey: true,
-          minWidth: 200,
-        },
+        // columnConfig: {
+        //   useKey: true,
+        //   minWidth: 200,
+        // },
         scrollX: {
           enabled: false,
         },
+        // footerMethod: this.footerMethod,
         columns: [
-          { field: "work_no", title: "工作号", width: '170', className: '' },
-          { field: "primary_no", title: "主单号", width: '170', className: '' },
-          { field: "receiving_address", title: "货主名称", width: '180', className: '' },
-          { field: "airline_company", title: "航空公司", width: '180', className: '' },
-          { field: "goodsarrival_date", title: "到货日期", width: '130', className: '' },
-          { field: "flight_date", title: "航班日期", width: '130', className: '' },
+          { field: "name", title: "Name", width: 300 },
+          { field: "nickname", title: "Nickname" },
+          { field: "role", title: "Role" },
+          { field: "sex", title: "Sex" },
+          { field: "age", title: "Age" },
+          { field: "date3", title: "Date" },
           {
-            field: "operator",
-            title: "操作员",
+            field: "address",
+            title: "Address",
             showOverflow: true,
-            width: '120', className: ''
           },
-          { field: "sale", title: "业务员", width: '120', className: '' },
-          { field: "customer_service", title: "客服", width: '120', className: '' },
-          { field: "distribution_status", title: "配货状态", width: '160', className: '' },
-          { field: "myAirport", title: "三子代码/中文全称", width: '200', className: '' },
-          { field: "chinese_productname", title: "货物中文名称", width: '180', className: '' },
-          { field: "myOrder_status", title: "工作号状态", width: '180', className: '' },
-          { field: "myAirtransportation_status", title: "空运状态", width: '160', className: '' },
-          { field: "booking_agent", title: "订舱代理", width: '180', className: '' },
           {
-            title: "操作",
+            title: "操作状态",
             slots: {
               default: "name_edit",
             },
-            fixed: 'right',
-            width: '110'
           },
         ],
         data: [
@@ -195,7 +184,7 @@ export default {
             role: "Develop",
             sex: "Man",
             age: 28,
-            address: "ShenzhenShenzhenShenzhenShenzhenShenzhenShenzhenShenzhenShenzhen",
+            address: "Shenzhen",
           },
           {
             id: 10002,
@@ -204,7 +193,7 @@ export default {
             role: "Test",
             sex: "Women",
             age: 22,
-            address: "\"Guangzhou\"-\"广州\"",
+            address: "Guangzhou",
           },
           {
             id: 10003,
@@ -236,14 +225,9 @@ export default {
         ],
         gzzData: [],
       },
-      tableColumn: [],
-      ddData: [],
-      columnList: [],
-      vxeGrid: true,
     };
   },
   created() {
-    this.getColumnData()
     this.columnDrop2();
     this.getGZZData()
   },
@@ -253,58 +237,6 @@ export default {
     }
   },
   methods: {
-    async getColumnData() {
-      const res = await this.$api.order_columnlist({
-        order_type: 1,
-      })
-      // this.gridOptions2.columns = res.column
-      res.column.forEach(ele => {
-        ele.title = ele.column_name;
-        ele.field = ele.column_field;
-        ele.className = ele.id
-        if (ele.field == 'order_status') {
-          ele.field = 'myOrder_status'
-        }
-        if (ele.field == 'airtransportation_status') {
-          ele.field = 'myAirtransportation_status'
-        }
-        if (ele.field == 'airport') {
-          ele.field = 'myAirport'
-        }
-      })
-      res.column.push({
-        title: "操作",
-        slots: {
-          default: "name_edit",
-        },
-        fixed: 'right',
-        width: '110'
-      })
-      this.$set(this.gridOptions2, 'columns', res.column)
-      this.vxeGrid = true
-      this.$forceUpdate()
-      this.columnDrop2()
-      this.getData()
-      console.log(this.gridOptions2.columns)
-    },
-    async getData() {
-      const res = await this.$api.order_list({
-        order_type: 1,
-        page: this.xindingdanPage,
-        pagesize: this.xindingdanPageSize,
-        search_type:this.search_type,
-        keyword:this.keyword,
-        order_status:this.order_status
-      });
-      res.list.forEach(ele => {
-        ele.myOrder_status = ele.order_status == 1 ? '新订单' : ele.order_status == 2 ? '应付已制作' : ele.order_status == 3 ? '应收已制作' : ele.order_status == 4 ? '应付已审核' : ele.order_status == 5 ? '应收已审核' : "费用已完成";
-        ele.myAirtransportation_status = ele.airtransportation_status == 0 ? '未起飞' : ele.airtransportation_status == 1 ? '起飞已确认' : ele.airtransportation_status == 2 ? '转运已确认' : '已到港';
-        ele.myAirport = `${ele.airport.three_charcode}/${ele.airport.chinese_name}`
-      })
-      this.gridOptions2.data = res.list
-      this.total = res.total;
-      this.$forceUpdate()
-    },
     async getGZZData() {
       const res = await this.$api.workno_list({
         page: 1,
@@ -321,12 +253,6 @@ export default {
         this.addForm.work_no = res.work_no;
       }
     },
-    changeOrder(){
-      this.getData()
-    },
-    search(){
-      this.getData()
-    },
     addDingdan() {
       this.isAdd = true;
       // this.addForm.radio1 = "";
@@ -336,18 +262,9 @@ export default {
     },
     tabEdit(row) {
       console.log(row);
-      this.$store.commit('chukouObj', { order_id: row.id ,traffic_type:row.traffic_type,work_no:row.work_no})
-      this.$router.push({ name: 'Addxindingdan' })
     },
-    async tabDel(row) {
+    tabDel(row) {
       console.log(row);
-      const res = await this.$api.order_del({
-        order_id: row.id
-      })
-      this.$message(res.msg)
-      if (res.result == 1) {
-        this.getData()
-      }
     },
     columnDrop2() {
       this.$nextTick(() => {
@@ -358,23 +275,39 @@ export default {
           ),
           {
             handle: ".vxe-header--column",
-            onEnd: async ({ newIndex, oldIndex }) => {
-              this.vxeGrid = false
-              if (this.tableColumn.length == 0) {
-                this.tableColumn = $table.getColumns();
+            onEnd: ({ item, newIndex, oldIndex }) => {
+              const { fullColumn, tableColumn } = $table.getTableColumn();
+              const targetThElem = item;
+              const wrapperElem = targetThElem.parentNode;
+              const newColumn = fullColumn[newIndex];
+              if (newColumn.fixed) {
+                const oldThElem = wrapperElem.children[oldIndex];
+                // 错误的移动
+                if (newIndex > oldIndex) {
+                  wrapperElem.insertBefore(targetThElem, oldThElem);
+                } else {
+                  wrapperElem.insertBefore(
+                    targetThElem,
+                    oldThElem ? oldThElem.nextElementSibling : oldThElem
+                  );
+                }
+                VXETable.modal.message({
+                  content: "固定列不允许拖动，即将还原操作！",
+                  status: "error",
+                });
+                return;
               }
-              let currRow = this.tableColumn.splice(oldIndex, 1)[0];
-              this.tableColumn.splice(newIndex, 0, currRow);
-              var arr = []
-              this.tableColumn.forEach(ele => {
-                arr.push(ele.className)
-              })
-              console.log(arr.toString())
-              await this.$api.order_columnset({
-                order_type: 1,
-                column_ids: arr.toString()
-              })
-              this.getColumnData()
+              // 获取列索引 columnIndex > fullColumn
+              const oldColumnIndex = $table.getColumnIndex(
+                tableColumn[oldIndex]
+              );
+              const newColumnIndex = $table.getColumnIndex(
+                tableColumn[newIndex]
+              );
+              // 移动到目标列
+              const currRow = fullColumn.splice(oldColumnIndex, 1)[0];
+              fullColumn.splice(newColumnIndex, 0, currRow);
+              $table.loadColumn(fullColumn);
             },
           }
         );
@@ -387,7 +320,7 @@ export default {
       })
       this.$message(res.msg);
       if (res.result == 1) {
-        this.$store.commit('chukouObj', { order_id: res.order_id, ...this.addForm })
+        this.$store.commit('chukouObj', { order_id: res.order_id,...this.addForm })
         this.$router.push({ name: 'Addxindingdan' })
       }
     },

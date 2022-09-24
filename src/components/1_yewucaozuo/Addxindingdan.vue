@@ -160,9 +160,9 @@
                                   display: flex;
                                   justify-content: space-between;
                                 ">
-                            <span style="font-size: 12px">{{  item.abbreviation  }}</span>
-                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.chinese_name  }}</span>
-                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.english_name  }}</span>
+                            <span style="font-size: 12px">{{ item.abbreviation }}</span>
+                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.chinese_name }}</span>
+                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.english_name }}</span>
                           </div>
                         </el-option>
                       </el-select>
@@ -197,9 +197,9 @@
                                   display: flex;
                                   justify-content: space-between;
                                 ">
-                            <span style="font-size: 12px">{{  item.abbreviation  }}</span>
-                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.chinese_name  }}</span>
-                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.english_name  }}</span>
+                            <span style="font-size: 12px">{{ item.abbreviation }}</span>
+                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.chinese_name }}</span>
+                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.english_name }}</span>
                           </div>
                         </el-option>
                       </el-select>
@@ -216,12 +216,12 @@
                                   display: flex;
                                   justify-content: space-between;
                                 ">
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.three_charcode 
-                                  }}</span>
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.english_name 
-                                  }}</span>
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.chinese_name 
-                                  }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.three_charcode
+                                }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.english_name
+                                }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.chinese_name
+                                }}</span>
                               </div>
                             </el-option>
                           </el-select>
@@ -235,12 +235,12 @@
                                   display: flex;
                                   justify-content: space-between;
                                 ">
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.three_charcode 
-                                  }}</span>
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.english_name 
-                                  }}</span>
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.chinese_name 
-                                  }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.three_charcode
+                                }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.english_name
+                                }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.chinese_name
+                                }}</span>
                               </div>
                             </el-option>
                           </el-select>
@@ -269,8 +269,8 @@
                               display: flex;
                               justify-content: space-between;
                             ">
-                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.country_code  }}</span>
-                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.chinese_name  }}</span>
+                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.country_code }}</span>
+                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.chinese_name }}</span>
                           </div>
                         </el-option>
                       </el-select>
@@ -287,12 +287,12 @@
                                   display: flex;
                                   justify-content: space-between;
                                 ">
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.three_charcode 
-                                  }}</span>
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.english_name 
-                                  }}</span>
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.chinese_name 
-                                  }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.three_charcode
+                                }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.english_name
+                                }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.chinese_name
+                                }}</span>
                               </div>
                             </el-option>
                           </el-select>
@@ -306,12 +306,12 @@
                                   display: flex;
                                   justify-content: space-between;
                                 ">
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.three_charcode 
-                                  }}</span>
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.english_name 
-                                  }}</span>
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.chinese_name 
-                                  }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.three_charcode
+                                }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.english_name
+                                }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.chinese_name
+                                }}</span>
                               </div>
                             </el-option>
                           </el-select>
@@ -464,9 +464,9 @@
                                   display: flex;
                                   justify-content: space-between;
                                 ">
-                            <span style="font-size: 12px">{{  item.abbreviation  }}</span>
-                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.chinese_name  }}</span>
-                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.english_name  }}</span>
+                            <span style="font-size: 12px">{{ item.abbreviation }}</span>
+                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.chinese_name }}</span>
+                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.english_name }}</span>
                           </div>
                         </el-option>
                       </el-select>
@@ -489,9 +489,9 @@
                                   display: flex;
                                   justify-content: space-between;
                                 ">
-                            <span style="font-size: 12px">{{  item.abbreviation  }}</span>
-                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.chinese_name  }}</span>
-                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.english_name  }}</span>
+                            <span style="font-size: 12px">{{ item.abbreviation }}</span>
+                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.chinese_name }}</span>
+                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.english_name }}</span>
                           </div>
                         </el-option>
                       </el-select>
@@ -506,9 +506,9 @@
                                   display: flex;
                                   justify-content: space-between;
                                 ">
-                            <span style="font-size: 12px">{{  item.abbreviation  }}</span>
-                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.chinese_name  }}</span>
-                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.english_name  }}</span>
+                            <span style="font-size: 12px">{{ item.abbreviation }}</span>
+                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.chinese_name }}</span>
+                            <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.english_name }}</span>
                           </div>
                         </el-option>
                       </el-select>
@@ -613,12 +613,12 @@
                                   display: flex;
                                   justify-content: space-between;
                                 ">
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.three_charcode 
-                                  }}</span>
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.english_name 
-                                  }}</span>
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.chinese_name 
-                                  }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.three_charcode
+                                }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.english_name
+                                }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.chinese_name
+                                }}</span>
                               </div>
                             </el-option>
                           </el-select>
@@ -632,12 +632,12 @@
                                   display: flex;
                                   justify-content: space-between;
                                 ">
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.three_charcode 
-                                  }}</span>
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.english_name 
-                                  }}</span>
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.chinese_name 
-                                  }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.three_charcode
+                                }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.english_name
+                                }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.chinese_name
+                                }}</span>
                               </div>
                             </el-option>
                           </el-select>
@@ -656,12 +656,12 @@
                                   display: flex;
                                   justify-content: space-between;
                                 ">
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.three_charcode 
-                                  }}</span>
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.english_name 
-                                  }}</span>
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.chinese_name 
-                                  }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.three_charcode
+                                }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.english_name
+                                }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.chinese_name
+                                }}</span>
                               </div>
                             </el-option>
                           </el-select>
@@ -675,12 +675,12 @@
                                   display: flex;
                                   justify-content: space-between;
                                 ">
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.three_charcode 
-                                  }}</span>
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.english_name 
-                                  }}</span>
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.chinese_name 
-                                  }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.three_charcode
+                                }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.english_name
+                                }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.chinese_name
+                                }}</span>
                               </div>
                             </el-option>
                           </el-select>
@@ -699,7 +699,7 @@
                                   display: flex;
                                   justify-content: space-between;
                                 ">
-                                <span style="font-size: 12px">{{  item.abbreviation  }}</span>
+                                <span style="font-size: 12px">{{ item.abbreviation }}</span>
                                 <!-- <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.chinese_name
                                 }}</span>
                                 <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.english_name
@@ -718,10 +718,10 @@
                                   justify-content: space-between;
                                 ">
                                 <!-- <span style="font-size: 12px">{{ item.abbreviation }}</span> -->
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.chinese_name 
-                                  }}</span>
-                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{  item.english_name 
-                                  }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.chinese_name
+                                }}</span>
+                                <span style="color: #8492a6; font-size: 12px;margin:0 12px">{{ item.english_name
+                                }}</span>
                               </div>
                             </el-option>
                           </el-select>
@@ -803,8 +803,8 @@
           <div class="nav1 nav3">
             <div class="n-tit1">空运信息</div>
             <div class="box">
-              <el-form :disabled="tab3_formDis" style="margin-top: 16px" :model="addForm3_1" ref="addForm3_1" label-width="130px"
-                class="demo-addForm">
+              <el-form :disabled="tab3_formDis" style="margin-top: 16px" :model="addForm3_1" ref="addForm3_1"
+                label-width="130px" class="demo-addForm">
                 <el-row :gutter="10">
                   <el-col :span="5">
                     <el-form-item label="主单号：">
@@ -900,44 +900,57 @@
               <div v-if='jiageQRObj && jiageQRObj.identify_user.is_modify == 1' class="float-txt">价格已修改</div>
               <el-row :gutter="10">
                 <el-col :span="3"><span
-                    :class="{ 'span-txt': true, 'red': jiageQRObj.number_entrustedpieces.is_modify == 1 }">委托件数：{{ jiageQRObj.number_entrustedpieces.val }}</span>
+                    :class="{ 'span-txt': true, 'red': jiageQRObj.number_entrustedpieces.is_modify == 1 }">委托件数：{{
+                    jiageQRObj.number_entrustedpieces.val }}</span>
                 </el-col>
                 <el-col :span="3"><span
-                    :class="{ 'span-txt': true, 'red': jiageQRObj.entrusted_weight.is_modify == 1 }">委托重量：{{ jiageQRObj.entrusted_weight.val }}</span>
+                    :class="{ 'span-txt': true, 'red': jiageQRObj.entrusted_weight.is_modify == 1 }">委托重量：{{
+                    jiageQRObj.entrusted_weight.val }}</span>
                 </el-col>
                 <el-col :span="3"><span
-                    :class="{ 'span-txt': true, 'red': jiageQRObj.entrusted_volume.is_modify == 1 }">委托体积：{{ jiageQRObj.entrusted_volume.val }}</span>
+                    :class="{ 'span-txt': true, 'red': jiageQRObj.entrusted_volume.is_modify == 1 }">委托体积：{{
+                    jiageQRObj.entrusted_volume.val }}</span>
                 </el-col>
                 <el-col :span="3"><span
-                    :class="{ 'span-txt': true, 'red': jiageQRObj.commission_density.is_modify == 1 }">委托密度：{{ jiageQRObj.commission_density.val }}</span>
+                    :class="{ 'span-txt': true, 'red': jiageQRObj.commission_density.is_modify == 1 }">委托密度：{{
+                    jiageQRObj.commission_density.val }}</span>
                 </el-col>
                 <el-col :span="3"><span
-                    :class="{ 'span-txt': true, 'red': jiageQRObj.selling_seller.is_modify == 1 }">销售卖价：{{ jiageQRObj.selling_seller.val }}</span>
+                    :class="{ 'span-txt': true, 'red': jiageQRObj.selling_seller.is_modify == 1 }">销售卖价：{{
+                    jiageQRObj.selling_seller.val }}</span>
                 </el-col>
                 <el-col :span="3"><span
-                    :class="{ 'span-txt': true, 'red': jiageQRObj.priceconfirmation_remarks.is_modify == 1 }">备注:{{ jiageQRObj.priceconfirmation_remarks.val }}</span>
+                    :class="{ 'span-txt': true, 'red': jiageQRObj.priceconfirmation_remarks.is_modify == 1 }">备注:{{
+                    jiageQRObj.priceconfirmation_remarks.val }}</span>
                 </el-col>
               </el-row>
               <el-row :gutter="10" style="margin-top: 16px">
                 <el-col :span="3"><span
-                    :class="{ 'span-txt': true, 'red': jiageQRObj.actual_number.is_modify == 1 }">实际件数：{{ jiageQRObj.actual_number.val }}</span>
+                    :class="{ 'span-txt': true, 'red': jiageQRObj.actual_number.is_modify == 1 }">实际件数：{{
+                    jiageQRObj.actual_number.val }}</span>
                 </el-col>
                 <el-col :span="3"><span
-                    :class="{ 'span-txt': true, 'red': jiageQRObj.actual_weight.is_modify == 1 }">实际重量：{{ jiageQRObj.actual_weight.val }}</span>
+                    :class="{ 'span-txt': true, 'red': jiageQRObj.actual_weight.is_modify == 1 }">实际重量：{{
+                    jiageQRObj.actual_weight.val }}</span>
                 </el-col>
                 <el-col :span="3"><span
-                    :class="{ 'span-txt': true, 'red': jiageQRObj.actual_volume.is_modify == 1 }">实际体积：{{ jiageQRObj.actual_volume.val }}</span>
+                    :class="{ 'span-txt': true, 'red': jiageQRObj.actual_volume.is_modify == 1 }">实际体积：{{
+                    jiageQRObj.actual_volume.val }}</span>
                 </el-col>
                 <el-col :span="3"><span
-                    :class="{ 'span-txt': true, 'red': jiageQRObj.actual_density.is_modify == 1 }">实际密度：{{ jiageQRObj.actual_density.val }}</span>
+                    :class="{ 'span-txt': true, 'red': jiageQRObj.actual_density.is_modify == 1 }">实际密度：{{
+                    jiageQRObj.actual_density.val }}</span>
                 </el-col>
               </el-row>
               <el-row :gutter="10" style="margin-top: 16px">
-                <el-col :span="8"><span
-                    :class="{ 'span-txt': true, 'red': jiageQRObj.identify_user.is_modify == 1 }">{{ jiageQRObj.identify_user.is_modify == 1 ? '修改人' : '确认人' }}：{{ jiageQRObj.identify_user.realname }}</span>
+                <el-col :span="8"><span :class="{ 'span-txt': true, 'red': jiageQRObj.identify_user.is_modify == 1 }">{{
+                jiageQRObj.identify_user.is_modify == 1 ? '修改人' : '确认人' }}：{{ jiageQRObj.identify_user.realname
+                    }}</span>
                 </el-col>
                 <el-col :span="10"><span
-                    :class="{ 'span-txt': true, 'red': jiageQRObj.identify_user.is_modify == 1 }">{{ jiageQRObj.identify_user.is_modify == 1 ? '修改' : '确认' }}时间：{{ jiageQRObj.identify_user.modify_time }}</span>
+                    :class="{ 'span-txt': true, 'red': jiageQRObj.identify_user.is_modify == 1 }">{{
+                    jiageQRObj.identify_user.is_modify == 1 ? '修改' : '确认' }}时间：{{ jiageQRObj.identify_user.modify_time
+                    }}</span>
                 </el-col>
               </el-row>
             </div>
@@ -948,22 +961,26 @@
               <div v-if='qifeiQRObj && qifeiQRObj.identify_user.is_modify == 0' class="float-txt">起飞已确认</div>
               <div v-if='qifeiQRObj && qifeiQRObj.identify_user.is_modify == 1' class="float-txt">起飞已修改</div>
               <el-row :gutter="10">
-                <el-col :span="5"><span
-                    :class="{ 'span-txt': true, 'red': qifeiQRObj.flight_no.is_modify == 1 }">航班号：{{ qifeiQRObj.flight_no.val }}</span>
+                <el-col :span="5"><span :class="{ 'span-txt': true, 'red': qifeiQRObj.flight_no.is_modify == 1 }">航班号：{{
+                qifeiQRObj.flight_no.val }}</span>
                 </el-col>
                 <el-col :span="5"><span
-                    :class="{ 'span-txt': true, 'red': qifeiQRObj.flight_date.is_modify == 1 }">航班日期：{{ qifeiQRObj.flight_date.val }}</span>
+                    :class="{ 'span-txt': true, 'red': qifeiQRObj.flight_date.is_modify == 1 }">航班日期：{{
+                    qifeiQRObj.flight_date.val }}</span>
                 </el-col>
               </el-row>
               <el-row :gutter="10" style="margin-top: 16px">
                 <el-col :span="5"><span
-                    :class="{ 'span-txt': true, 'red': qifeiQRObj.identify_user.is_modify == 1 }">确认时间：{{ qifeiQRObj.identify_user.modify_time }}</span>
+                    :class="{ 'span-txt': true, 'red': qifeiQRObj.identify_user.is_modify == 1 }">确认时间：{{
+                    qifeiQRObj.identify_user.modify_time }}</span>
                 </el-col>
                 <el-col :span="5"><span
-                    :class="{ 'span-txt': true, 'red': qifeiQRObj.identify_user.is_modify == 1 }">航线员：{{ qifeiQRObj.identify_user.realname }}</span>
+                    :class="{ 'span-txt': true, 'red': qifeiQRObj.identify_user.is_modify == 1 }">航线员：{{
+                    qifeiQRObj.identify_user.realname }}</span>
                 </el-col>
                 <el-col :span="8"><span
-                    :class="{ 'span-txt': true, 'red': qifeiQRObj.takeoff_remark.is_modify == 1 }">备注：{{ qifeiQRObj.takeoff_remark.val }}</span>
+                    :class="{ 'span-txt': true, 'red': qifeiQRObj.takeoff_remark.is_modify == 1 }">备注：{{
+                    qifeiQRObj.takeoff_remark.val }}</span>
                 </el-col>
               </el-row>
             </div>
@@ -975,21 +992,26 @@
               <div v-if='zhuanyunQRObj && zhuanyunQRObj.identify_user.is_modify == 1' class="float-txt">转运已修改</div>
               <el-row :gutter="10">
                 <el-col :span="5"><span
-                    :class="{ 'span-txt': true, 'red': zhuanyunQRObj.transshipmentflight_no.is_modify == 1 }">转运航班：{{ zhuanyunQRObj.transshipmentflight_no.val }}</span>
+                    :class="{ 'span-txt': true, 'red': zhuanyunQRObj.transshipmentflight_no.is_modify == 1 }">转运航班：{{
+                    zhuanyunQRObj.transshipmentflight_no.val }}</span>
                 </el-col>
                 <el-col :span="5"><span
-                    :class="{ 'span-txt': true, 'red': zhuanyunQRObj.flight_date.is_modify == 1 }">航班日期：{{ zhuanyunQRObj.flight_date.val }}</span>
+                    :class="{ 'span-txt': true, 'red': zhuanyunQRObj.flight_date.is_modify == 1 }">航班日期：{{
+                    zhuanyunQRObj.flight_date.val }}</span>
                 </el-col>
               </el-row>
               <el-row :gutter="10" style="margin-top: 16px">
                 <el-col :span="5"><span
-                    :class="{ 'span-txt': true, 'red': zhuanyunQRObj.identify_user.is_modify == 1 }">确认时间：{{ zhuanyunQRObj.identify_user.modify_time }}</span>
+                    :class="{ 'span-txt': true, 'red': zhuanyunQRObj.identify_user.is_modify == 1 }">确认时间：{{
+                    zhuanyunQRObj.identify_user.modify_time }}</span>
                 </el-col>
                 <el-col :span="5"><span
-                    :class="{ 'span-txt': true, 'red': zhuanyunQRObj.identify_user.is_modify == 1 }">航线员：{{ zhuanyunQRObj.identify_user.realname }}</span>
+                    :class="{ 'span-txt': true, 'red': zhuanyunQRObj.identify_user.is_modify == 1 }">航线员：{{
+                    zhuanyunQRObj.identify_user.realname }}</span>
                 </el-col>
                 <el-col :span="8"><span
-                    :class="{ 'span-txt': true, 'red': zhuanyunQRObj.transshipment_remark.is_modify == 1 }">备注：{{ zhuanyunQRObj.transshipment_remark.val }}</span>
+                    :class="{ 'span-txt': true, 'red': zhuanyunQRObj.transshipment_remark.is_modify == 1 }">备注：{{
+                    zhuanyunQRObj.transshipment_remark.val }}</span>
                 </el-col>
               </el-row>
             </div>
@@ -999,11 +1021,11 @@
             <div class="box">
               <div v-if='daogangQRObj && daogangQRObj.is_modify == 0' class="float-txt">已到港</div>
               <el-row :gutter="10" style="margin-top: 16px">
-                <el-col :span="5"><span
-                    :class="{ 'span-txt': true, 'red': daogangQRObj.is_modify == 1 }">确认时间：{{ daogangQRObj.modify_time }}</span>
+                <el-col :span="5"><span :class="{ 'span-txt': true, 'red': daogangQRObj.is_modify == 1 }">确认时间：{{
+                daogangQRObj.modify_time }}</span>
                 </el-col>
-                <el-col :span="5"><span
-                    :class="{ 'span-txt': true, 'red': daogangQRObj.is_modify == 1 }">确认人：{{ daogangQRObj.realname }}</span>
+                <el-col :span="5"><span :class="{ 'span-txt': true, 'red': daogangQRObj.is_modify == 1 }">确认人：{{
+                daogangQRObj.realname }}</span>
                 </el-col>
                 <!-- <el-col :span="8"><span :class="{'span-txt':true,'red':daogangQRObj.is_modify==1}">备注：{{}}</span></el-col> -->
               </el-row>
@@ -1018,12 +1040,12 @@
         </el-tab-pane>
         <el-tab-pane label="制作费用" name="4">
           <div class="btns">
-            <el-button @click="addDialogVisible4_2 = true" type="primary">查看利润</el-button>
+            <el-button @click="chakanlirun" type="primary">查看利润</el-button>
             <!-- <el-button @click="addDialogVisible4_3 = true" type="primary"
               >费用方案</el-button
             > -->
-            <el-button @click="addDialogVisible4_4 = true" type="primary">核算卡</el-button>
-            <el-button @click="addDialogVisible4_5 = true" type="primary">黑名单解锁</el-button>
+            <el-button @click="hesuanka" type="primary">核算卡</el-button>
+            <el-button @click="heimingdanjiesuo" type="primary">黑名单解锁</el-button>
           </div>
           <div class="nav1 nav3">
             <div class="n-tit1">应收费用明细</div>
@@ -1031,49 +1053,56 @@
               <vxe-toolbar>
                 <template #buttons>
                   <vxe-button @click="tableData4_1_c1">新增</vxe-button>
-                  <vxe-button @click="tableData4_1_c2">单笔审核</vxe-button>
+                  <!-- <vxe-button @click="tableData4_1_c2">单笔审核</vxe-button> -->
                   <vxe-button @click="tableData4_1_c3">全部审核</vxe-button>
+                  <div v-if="myIsOk1" class="float_tit1">应收已审核</div>
                 </template>
               </vxe-toolbar>
-              <vxe-table align="center" :loading="loading4_1" :data="tableData4_1">
-                <vxe-table-column field="myReceivable" title="审" width="60">
+              <vxe-table class="mytable-scrollbar" :row-class-name="rowClassName1" align="center" :loading="loading4_1"
+                :data="tableData4_1">
+                <vxe-table-column field="myShen" title="审" width="60">
                   <template slot-scope="scope">
-                    <el-checkbox @change="change4_1(scope.row)" v-model="scope.row.myReceivable"></el-checkbox>
+                    <el-checkbox :disabled="scope.row.myShen" @change="change4_1(scope.row)" v-model="scope.row.myShen">
+                    </el-checkbox>
                   </template>
                 </vxe-table-column>
-                <vxe-table-column field="myReceivable" title="票" width="60">
+                <vxe-table-column field="myPiao" title="票" width="60">
                   <template slot-scope="scope">
-                    <el-checkbox @change="change4_2(scope.row)" v-model="scope.row.myReceivable"></el-checkbox>
+                    <el-checkbox :disabled="scope.row.myPiao" @change="change4_2(scope.row)" v-model="scope.row.myPiao">
+                    </el-checkbox>
                   </template>
                 </vxe-table-column>
-                <!-- <vxe-table-column field="id" title="ID"></vxe-table-column> -->
-                <vxe-table-column field="input1" title="费用类型" show-overflow></vxe-table-column>
-                <vxe-table-column field="radio1" title="结算对象" show-overflow></vxe-table-column>
-                <vxe-table-column field="input2" title="方式" show-overflow></vxe-table-column>
-                <vxe-table-column field="input3" title="单位" show-overflow></vxe-table-column>
-                <vxe-table-column field="input4" title="币种" show-overflow></vxe-table-column>
-                <vxe-table-column field="input5" title="数量" show-overflow></vxe-table-column>
-                <vxe-table-column field="input6" title="单价" show-overflow></vxe-table-column>
-                <vxe-table-column field="input7" title="应收金额" show-overflow></vxe-table-column>
-                <vxe-table-column field="input8" title="税价类型" show-overflow></vxe-table-column>
-                <vxe-table-column field="input9" title="税率" show-overflow></vxe-table-column>
-                <vxe-table-column field="time1" title="税价" show-overflow></vxe-table-column>
-                <vxe-table-column field="input10" title="金额(不含税)" show-overflow></vxe-table-column>
-                <vxe-table-column field="input10" title="帐单号" show-overflow></vxe-table-column>
-                <vxe-table-column field="input10" title="应收日期" show-overflow></vxe-table-column>
-                <vxe-table-column field="input10" title="实收金额" show-overflow></vxe-table-column>
-                <vxe-table-column field="input10" title="发票号" show-overflow></vxe-table-column>
-                <vxe-table-column field="input10" title="发票抬头" show-overflow></vxe-table-column>
-                <vxe-table-column field="input10" title="录入人" show-overflow></vxe-table-column>
-                <vxe-table-column field="input10" title="录入时间" show-overflow></vxe-table-column>
-                <vxe-table-column field="input10" title="审核人" show-overflow></vxe-table-column>
-                <vxe-table-column field="input10" title="单号" show-overflow></vxe-table-column>
-                <vxe-table-column field="input10" title="汇率" show-overflow></vxe-table-column>
-                <vxe-table-column title="操作状态" width="120">
+                <vxe-table-column width="100" field="costtypes.definition" title="费用类型" show-overflow>
+                </vxe-table-column>
+                <vxe-table-column width="100" field="settleaccounts.chinese_name" title="结算对象" show-overflow>
+                </vxe-table-column>
+                <vxe-table-column width="100" field="myMode" title="方式" show-overflow></vxe-table-column>
+                <vxe-table-column width="80" field="unit_name" title="单位" show-overflow></vxe-table-column>
+                <vxe-table-column width="80" field="currency.name" title="币种" show-overflow></vxe-table-column>
+                <vxe-table-column width="80" field="quantity" title="数量" show-overflow></vxe-table-column>
+                <vxe-table-column width="80" field="price" title="单价" show-overflow></vxe-table-column>
+                <vxe-table-column width="80" field="amount_receivable" title="应收金额" show-overflow></vxe-table-column>
+                <vxe-table-column width="100" field="myTaxprice_type" title="税价类型" show-overflow></vxe-table-column>
+                <vxe-table-column width="100" field="taxrate.name" title="税率" show-overflow></vxe-table-column>
+                <vxe-table-column width="80" field="taxprice" title="税价" show-overflow></vxe-table-column>
+                <vxe-table-column width="120" field="amount_money" title="金额(不含税)" show-overflow></vxe-table-column>
+                <vxe-table-column width="120" field="bill_no" title="帐单号" show-overflow></vxe-table-column>
+                <vxe-table-column width="120" field="receivable_date" title="应收日期" show-overflow></vxe-table-column>
+                <vxe-table-column width="100" field="paid_amount" title="实收金额" show-overflow></vxe-table-column>
+                <vxe-table-column width="120" field="invoice_no" title="发票号" show-overflow></vxe-table-column>
+                <vxe-table-column width="120" field="invoice_title" title="发票抬头" show-overflow></vxe-table-column>
+                <vxe-table-column width="100" field="entered_by" title="录入人" show-overflow></vxe-table-column>
+                <vxe-table-column width="130" field="create_time" title="录入时间" show-overflow></vxe-table-column>
+                <vxe-table-column width="100" field="reviewed_by" title="审核人" show-overflow></vxe-table-column>
+                <vxe-table-column width="120" field="odd_numbers" title="单号" show-overflow></vxe-table-column>
+                <vxe-table-column width="100" field="exchange_rate" title="汇率" show-overflow></vxe-table-column>
+                <vxe-table-column fixed="right" title="操作状态" width="120">
                   <template slot-scope="scope">
                     <div class="flex">
-                      <el-button size="small" @click="toEdit4_1(scope.row)" type="text">编辑</el-button>
-                      <el-button size="small" @click="toDel4_1(scope.row)" type="text">删除</el-button>
+                      <el-button :disabled="scope.row.is_examine != 0" size="small" @click="toEdit4_1(scope.row)"
+                        type="text">编辑</el-button>
+                      <el-button :disabled="scope.row.is_examine == 3" size="small" @click="toDel4_1(scope.row)"
+                        type="text">删除</el-button>
                     </div>
                   </template>
                 </vxe-table-column>
@@ -1085,50 +1114,57 @@
             <div class="myTable" v-if="activeName == 4">
               <vxe-toolbar>
                 <template #buttons>
-                  <vxe-button @click="tableData4_1_c1">新增</vxe-button>
-                  <vxe-button @click="tableData4_1_c2">单笔审核</vxe-button>
-                  <vxe-button @click="tableData4_1_c3">全部审核</vxe-button>
+                  <vxe-button @click="tableData4_2_c1">新增</vxe-button>
+                  <!-- <vxe-button @click="tableData4_2_c2">单笔审核</vxe-button> -->
+                  <vxe-button @click="tableData4_2_c3">全部审核</vxe-button>
+                  <div v-if="myIsOk2" class="float_tit2">应付已审核</div>
                 </template>
               </vxe-toolbar>
-              <vxe-table align="center" :loading="loading4_1" :data="tableData4_1">
-                <vxe-table-column field="myReceivable" title="审" width="60">
+              <vxe-table :row-class-name="rowClassName1" align="center" :loading="loading4_1" :data="tableData4_1_1">
+                <vxe-table-column field="myShen" title="审" width="60">
                   <template slot-scope="scope">
-                    <el-checkbox @change="change4_3(scope.row)" v-model="scope.row.myReceivable"></el-checkbox>
+                    <el-checkbox :disabled="scope.row.myShen" @change="change4_3(scope.row)" v-model="scope.row.myShen">
+                    </el-checkbox>
                   </template>
                 </vxe-table-column>
-                <vxe-table-column field="myReceivable" title="票" width="60">
+                <vxe-table-column field="myPiao" title="票" width="60">
                   <template slot-scope="scope">
-                    <el-checkbox @change="change4_4(scope.row)" v-model="scope.row.myReceivable"></el-checkbox>
+                    <el-checkbox :disabled="scope.row.myPiao" @change="change4_4(scope.row)" v-model="scope.row.myPiao">
+                    </el-checkbox>
                   </template>
                 </vxe-table-column>
                 <!-- <vxe-table-column field="id" title="ID"></vxe-table-column> -->
-                <vxe-table-column field="input1" title="费用类型" show-overflow></vxe-table-column>
-                <vxe-table-column field="radio1" title="结算对象" show-overflow></vxe-table-column>
-                <vxe-table-column field="input2" title="方式" show-overflow></vxe-table-column>
-                <vxe-table-column field="input3" title="单位" show-overflow></vxe-table-column>
-                <vxe-table-column field="input4" title="币种" show-overflow></vxe-table-column>
-                <vxe-table-column field="input5" title="数量" show-overflow></vxe-table-column>
-                <vxe-table-column field="input6" title="单价" show-overflow></vxe-table-column>
-                <vxe-table-column field="input7" title="应收金额" show-overflow></vxe-table-column>
-                <vxe-table-column field="input8" title="税价类型" show-overflow></vxe-table-column>
-                <vxe-table-column field="input9" title="税率" show-overflow></vxe-table-column>
-                <vxe-table-column field="time1" title="税价" show-overflow></vxe-table-column>
-                <vxe-table-column field="input10" title="金额(不含税)" show-overflow></vxe-table-column>
-                <vxe-table-column field="input10" title="帐单号" show-overflow></vxe-table-column>
-                <vxe-table-column field="input10" title="应收日期" show-overflow></vxe-table-column>
-                <vxe-table-column field="input10" title="实收金额" show-overflow></vxe-table-column>
-                <vxe-table-column field="input10" title="发票号" show-overflow></vxe-table-column>
-                <vxe-table-column field="input10" title="发票抬头" show-overflow></vxe-table-column>
-                <vxe-table-column field="input10" title="录入人" show-overflow></vxe-table-column>
-                <vxe-table-column field="input10" title="录入时间" show-overflow></vxe-table-column>
-                <vxe-table-column field="input10" title="审核人" show-overflow></vxe-table-column>
-                <vxe-table-column field="input10" title="单号" show-overflow></vxe-table-column>
-                <vxe-table-column field="input10" title="汇率" show-overflow></vxe-table-column>
-                <vxe-table-column title="操作状态" width="120">
+                <vxe-table-column width="100" field="costtypes.definition" title="费用类型" show-overflow>
+                </vxe-table-column>
+                <vxe-table-column width="100" field="settleaccounts.chinese_name" title="结算对象" show-overflow>
+                </vxe-table-column>
+                <vxe-table-column width="100" field="myMode" title="方式" show-overflow></vxe-table-column>
+                <vxe-table-column width="80" field="unit_name" title="单位" show-overflow></vxe-table-column>
+                <vxe-table-column width="80" field="currency.name" title="币种" show-overflow></vxe-table-column>
+                <vxe-table-column width="80" field="quantity" title="数量" show-overflow></vxe-table-column>
+                <vxe-table-column width="80" field="price" title="单价" show-overflow></vxe-table-column>
+                <vxe-table-column width="80" field="amount_receivable" title="应收金额" show-overflow></vxe-table-column>
+                <vxe-table-column width="100" field="myTaxprice_type" title="税价类型" show-overflow></vxe-table-column>
+                <vxe-table-column width="100" field="taxrate.name" title="税率" show-overflow></vxe-table-column>
+                <vxe-table-column width="80" field="taxprice" title="税价" show-overflow></vxe-table-column>
+                <vxe-table-column width="120" field="amount_money" title="金额(不含税)" show-overflow></vxe-table-column>
+                <vxe-table-column width="120" field="bill_no" title="帐单号" show-overflow></vxe-table-column>
+                <vxe-table-column width="120" field="receivable_date" title="应收日期" show-overflow></vxe-table-column>
+                <vxe-table-column width="100" field="paid_amount" title="实收金额" show-overflow></vxe-table-column>
+                <vxe-table-column width="120" field="invoice_no" title="发票号" show-overflow></vxe-table-column>
+                <vxe-table-column width="120" field="invoice_title" title="发票抬头" show-overflow></vxe-table-column>
+                <vxe-table-column width="100" field="entered_by" title="录入人" show-overflow></vxe-table-column>
+                <vxe-table-column width="130" field="create_time" title="录入时间" show-overflow></vxe-table-column>
+                <vxe-table-column width="100" field="reviewed_by" title="审核人" show-overflow></vxe-table-column>
+                <vxe-table-column width="120" field="odd_numbers" title="单号" show-overflow></vxe-table-column>
+                <vxe-table-column width="100" field="exchange_rate" title="汇率" show-overflow></vxe-table-column>
+                <vxe-table-column fixed="right" title="操作状态" width="120">
                   <template slot-scope="scope">
                     <div class="flex">
-                      <el-button size="small" @click="toEdit4_1(scope.row)" type="text">编辑</el-button>
-                      <el-button size="small" @click="toDel4_1(scope.row)" type="text">删除</el-button>
+                      <el-button :disabled="scope.row.is_examine != 0" size="small" @click="toEdit4_1_1(scope.row)"
+                        type="text">编辑</el-button>
+                      <el-button :disabled="scope.row.is_examine == 3" size="small" @click="toDel4_1_1(scope.row)"
+                        type="text">删除</el-button>
                     </div>
                   </template>
                 </vxe-table-column>
@@ -1202,22 +1238,26 @@
         </el-tab-pane>
         <el-tab-pane label="文件附件" name="6">
           <div class="btns">
-            <el-button @click="companyList" type="primary">上传<i class="el-icon-upload el-icon--right"></i></el-button>
+            <el-button @click="shangchuan" type="primary">上传<i class="el-icon-upload el-icon--right"></i></el-button>
           </div>
           <div class="txttt">
             请上传pdf、JPG、PNG、Doc格式文件上传，且不可大于100M
           </div>
           <div class="nav1 nav3">
             <div class="myTable" v-if="activeName == 6">
-              <vxe-table align="center" :data="tableData6_1">
-                <vxe-table-column field="input1" title="文件名" show-overflow width="500"></vxe-table-column>
-                <vxe-table-column field="radio1" title="文件类型" show-overflow></vxe-table-column>
-                <vxe-table-column field="input2" title="占用空间" show-overflow></vxe-table-column>
-                <vxe-table-column field="input3" title="附件" show-overflow></vxe-table-column>
-                <vxe-table-column field="input4" title="创建人" show-overflow></vxe-table-column>
-                <vxe-table-column field="input5" title="创建日期" show-overflow></vxe-table-column>
-                <vxe-table-column field="input6" title="源途径" show-overflow></vxe-table-column>
-                <vxe-table-column field="input7" title="备注" show-overflow></vxe-table-column>
+              <vxe-table align="center" :data="fujianList">
+                <vxe-table-column field="file_name" title="文件名" show-overflow></vxe-table-column>
+                <vxe-table-column field="file_mime" title="文件类型" show-overflow></vxe-table-column>
+                <vxe-table-column field="file_size" title="占用空间" show-overflow></vxe-table-column>
+                <vxe-table-column field="input3" title="附件">
+                  <template slot-scope="scope">
+                    <el-image @click="downFujian(scope.row)" style="width: 28px; height: 28px;cursor: pointer;"
+                      src="https://rushifu-test.oss-cn-hangzhou.aliyuncs.com/1663828414393.png"></el-image>
+                  </template>
+                </vxe-table-column>
+                <vxe-table-column field="user.realname" title="创建人" show-overflow></vxe-table-column>
+                <vxe-table-column field="create_time" title="创建日期" show-overflow></vxe-table-column>
+                <vxe-table-column field="remark" title="备注" show-overflow></vxe-table-column>
                 <vxe-table-column title="操作状态" width="120">
                   <template slot-scope="scope">
                     <div class="flex">
@@ -1227,6 +1267,11 @@
                   </template>
                 </vxe-table-column>
               </vxe-table>
+              <el-pagination class="fenye" @size-change="this.fujianHandleSizeChange"
+                @current-change="this.fujianHandleCurrentChange" :current-page="this.fujianPage" :page-size="10"
+                :page-sizes="[10, 15, 20, 30]" layout="total,sizes, prev, pager, next, jumper"
+                :total="this.fujianTotal">
+              </el-pagination>
             </div>
           </div>
         </el-tab-pane>
@@ -1414,28 +1459,23 @@
           <el-row :gutter="10">
             <el-col :span="8">
               <el-form-item label="费用类型：" prop="input1">
-                <el-select size="small" v-model="addFormDia4_1.sele5">
-                  <el-option label="区域一" value="shanghai"></el-option>
-                  <el-option label="区域二" value="beijing"></el-option>
+                <el-select size="small" v-model="addFormDia4_1.costtypes_id">
+                  <el-option v-for="item in fylxList" :key="item.id" :label="item.cost_code" :value="item.id">
+                  </el-option>
                 </el-select>
               </el-form-item>
             </el-col>
             <el-col :span="8">
               <el-form-item label="结算对象：" prop="input1">
-                <el-select style="margin-left: 10px; width: 100%" filterable size="small" v-model="addFormDia4_1.sele2"
-                  placeholder="请选择">
-                  <el-option label="中国" value="China">
-                    <div style="display: flex; justify-content: space-between">
-                      <span>中国</span>
-                      <span style="color: #8492a6; font-size: 12px;margin:0 12px">CN</span>
-                      <span style="color: #8492a6; font-size: 12px;margin:0 12px">China</span>
-                    </div>
-                  </el-option>
-                  <el-option label="美国" value="America">
-                    <div style="display: flex; justify-content: space-between">
-                      <span>美国</span>
-                      <span style="color: #8492a6; font-size: 12px;margin:0 12px">USA</span>
-                      <span style="color: #8492a6; font-size: 12px;margin:0 12px">America</span>
+                <el-select filterable size="small" v-model="addFormDia4_1.settleaccounts_id" placeholder="请选择">
+                  <el-option v-for="item in khList1" :key="item.id"
+                    :label="`${item.abbreviation}-${item.chinese_name}-${item.english_name}`" :value="item.id">
+                    <div style="
+                                  display: flex;
+                                  justify-content: space-between;
+                                ">
+                      <span style="font-size: 12px">{{ item.abbreviation }}-{{ item.chinese_name }}-{{ item.english_name
+                      }}</span>
                     </div>
                   </el-option>
                 </el-select>
@@ -1443,9 +1483,9 @@
             </el-col>
             <el-col :span="8">
               <el-form-item label="方式：" prop="input1">
-                <el-select size="small" v-model="addFormDia4_1.sele5">
-                  <el-option label="区域一" value="shanghai"></el-option>
-                  <el-option label="区域二" value="beijing"></el-option>
+                <el-select size="small" v-model="addFormDia4_1.mode">
+                  <el-option label="运费预付" value="prepaid"></el-option>
+                  <el-option label="运费到付" value="collect"></el-option>
                 </el-select>
               </el-form-item>
             </el-col>
@@ -1453,74 +1493,71 @@
           <el-row :gutter="10">
             <el-col :span="5">
               <el-form-item label="单位：" prop="input1">
-                <el-select size="small" v-model="addFormDia4_1.sele5">
-                  <el-option label="区域一" value="shanghai"></el-option>
-                  <el-option label="区域二" value="beijing"></el-option>
+                <el-select size="small" v-model="addFormDia4_1.unit_id">
+                  <el-option v-for="item in bzList" :key="item.id" :label="item.name" :value="item.id"></el-option>
                 </el-select>
               </el-form-item>
             </el-col>
             <el-col :span="6">
               <el-form-item label="币种：" prop="input1">
-                <el-select size="small" v-model="addFormDia4_1.sele5">
-                  <el-option label="区域一" value="shanghai"></el-option>
-                  <el-option label="区域二" value="beijing"></el-option>
+                <el-select @change='changeBizhong1' size="small" v-model="addFormDia4_1.currency_id">
+                  <el-option v-for="item in bizhongList" :key='item.id' :label="item.code" :value="item.id"></el-option>
                 </el-select>
               </el-form-item>
             </el-col>
             <el-col :span="6">
               <el-form-item label="数量：" prop="input1">
-                <el-input size="small" v-model="addFormDia4_1.input1" placeholder="请输入内容"></el-input>
+                <el-input size="small" v-model="addFormDia4_1.quantity" placeholder="请输入内容"></el-input>
               </el-form-item>
             </el-col>
             <el-col :span="6">
               <el-form-item label="单价：" prop="input1">
-                <el-input size="small" v-model="addFormDia4_1.input1" placeholder="请输入内容"></el-input>
+                <el-input size="small" v-model="addFormDia4_1.price" placeholder="请输入内容"></el-input>
               </el-form-item>
             </el-col>
           </el-row>
           <el-row :gutter="10">
             <el-col :span="5">
               <el-form-item label="应收金额：" prop="input1">
-                <el-input size="small" v-model="addFormDia4_1.input1" placeholder="请输入内容"></el-input>
+                <el-input size="small" v-model="addFormDia4_1.amount_receivable" placeholder="请输入内容"></el-input>
               </el-form-item>
             </el-col>
             <el-col :span="6">
               <el-form-item label="税价类型：" prop="input1">
-                <el-select size="small" v-model="addFormDia4_1.sele5">
-                  <el-option label="区域一" value="shanghai"></el-option>
-                  <el-option label="区域二" value="beijing"></el-option>
+                <el-select size="small" v-model="addFormDia4_1.taxprice_type">
+                  <el-option label="价内税" value="1"></el-option>
+                  <el-option label="价外税" value="2"></el-option>
                 </el-select>
               </el-form-item>
             </el-col>
             <el-col :span="6">
               <el-form-item label="税率：" prop="input1">
-                <el-select size="small" v-model="addFormDia4_1.sele5">
-                  <el-option label="区域一" value="shanghai"></el-option>
-                  <el-option label="区域二" value="beijing"></el-option>
+                <el-select size="small" v-model="addFormDia4_1.taxrate_id">
+                  <el-option v-for="item in shuilvList" :key="item.id" :label="item.name" :value="item.id"></el-option>
                 </el-select>
               </el-form-item>
             </el-col>
             <el-col :span="6">
               <el-form-item label="税价：" prop="input1">
-                <el-input size="small" v-model="addFormDia4_1.input1" placeholder="请输入内容"></el-input>
+                <el-input size="small" v-model="addFormDia4_1.taxprice" placeholder="请输入内容"></el-input>
               </el-form-item>
             </el-col>
           </el-row>
           <el-row :gutter="10">
             <el-col :span="8">
               <el-form-item label="金额(不含税)：" prop="input1">
-                <el-input size="small" v-model="addFormDia4_1.input1" placeholder="请输入内容"></el-input>
+                <el-input size="small" v-model="addFormDia4_1.amount_money" placeholder="请输入内容"></el-input>
               </el-form-item>
             </el-col>
             <el-col :span="8">
               <el-form-item label="帐单号：" prop="input1">
-                <el-input size="small" v-model="addFormDia4_1.input1" placeholder="请输入内容"></el-input>
+                <el-input size="small" v-model="addFormDia4_1.bill_no" placeholder="请输入内容"></el-input>
               </el-form-item>
             </el-col>
             <el-col :span="8">
               <el-form-item label="应收日期：" prop="input1">
-                <el-date-picker size="small" value-format="yyyy-MM-dd" v-model="addFormDia4_1.time1" type="date"
-                  placeholder="选择日期">
+                <el-date-picker size="small" value-format="yyyy-MM-dd" v-model="addFormDia4_1.receivable_date"
+                  type="date" placeholder="选择日期">
                 </el-date-picker>
               </el-form-item>
             </el-col>
@@ -1528,39 +1565,39 @@
           <el-row :gutter="10">
             <el-col :span="5">
               <el-form-item label="实收金额：" prop="input1">
-                <el-input size="small" v-model="addFormDia4_1.input1" placeholder="请输入内容"></el-input>
+                <el-input size="small" v-model="addFormDia4_1.paid_amount" placeholder="请输入内容"></el-input>
               </el-form-item>
             </el-col>
             <el-col :span="6">
               <el-form-item label="发票号：" prop="input1">
-                <el-input size="small" v-model="addFormDia4_1.input1" placeholder="请输入内容"></el-input>
+                <el-input size="small" v-model="addFormDia4_1.invoice_no" placeholder="请输入内容"></el-input>
               </el-form-item>
             </el-col>
             <el-col :span="6">
               <el-form-item label="发票抬头：" prop="input1">
-                <el-input size="small" v-model="addFormDia4_1.input1" placeholder="请输入内容"></el-input>
+                <el-input size="small" v-model="addFormDia4_1.invoice_title" placeholder="请输入内容"></el-input>
               </el-form-item>
             </el-col>
             <el-col :span="6">
               <el-form-item label="录入人：" prop="input1">
-                <el-input size="small" v-model="addFormDia4_1.input1" placeholder="请输入内容"></el-input>
+                <el-input size="small" v-model="addFormDia4_1.entered_by" placeholder="请输入内容"></el-input>
               </el-form-item>
             </el-col>
           </el-row>
           <el-row :gutter="10">
             <el-col :span="8">
               <el-form-item label="审核人：" prop="input1">
-                <el-input size="small" v-model="addFormDia4_1.input1" placeholder="请输入内容"></el-input>
+                <el-input size="small" v-model="addFormDia4_1.reviewed_by" placeholder="请输入内容"></el-input>
               </el-form-item>
             </el-col>
             <el-col :span="8">
               <el-form-item label="单号：" prop="input1">
-                <el-input size="small" v-model="addFormDia4_1.input1" placeholder="请输入内容"></el-input>
+                <el-input size="small" v-model="addFormDia4_1.odd_numbers" placeholder="请输入内容"></el-input>
               </el-form-item>
             </el-col>
             <el-col :span="8">
               <el-form-item label="汇率：" prop="input1">
-                <el-input size="small" v-model="addFormDia4_1.input1" placeholder="请输入内容"></el-input>
+                <el-input size="small" disabled v-model="addFormDia4_1.exchange_rate" placeholder="请输入内容"></el-input>
               </el-form-item>
             </el-col>
           </el-row>
@@ -1571,16 +1608,173 @@
         </el-form>
       </div>
     </el-dialog>
+    <!-- 新增应付费用 -->
+    <el-dialog title="新增应付费用" :visible.sync="addDialogVisible4_1_1" width="1100px" :before-close="addHandleClose4_1_1">
+      <div class="dia4_1 dia3_4">
+        <el-form style="margin-top: 16px" :model="addFormDia4_1_1" ref="addFormDia4_1_1" label-width="110px"
+          class="demo-addForm">
+          <el-row :gutter="10">
+            <el-col :span="8">
+              <el-form-item label="费用类型：" prop="input1">
+                <el-select size="small" v-model="addFormDia4_1_1.costtypes_id">
+                  <el-option v-for="item in fylxList" :key="item.id" :label="item.cost_code" :value="item.id">
+                  </el-option>
+                </el-select>
+              </el-form-item>
+            </el-col>
+            <el-col :span="8">
+              <el-form-item label="结算对象：" prop="input1">
+                <el-select filterable size="small" v-model="addFormDia4_1_1.settleaccounts_id" placeholder="请选择">
+                  <el-option v-for="item in khList1" :key="item.id"
+                    :label="`${item.abbreviation}-${item.chinese_name}-${item.english_name}`" :value="item.id">
+                    <div style="
+                                  display: flex;
+                                  justify-content: space-between;
+                                ">
+                      <span style="font-size: 12px">{{ item.abbreviation }}-{{ item.chinese_name }}-{{ item.english_name
+                      }}</span>
+                    </div>
+                  </el-option>
+                </el-select>
+              </el-form-item>
+            </el-col>
+            <el-col :span="8">
+              <el-form-item label="方式：" prop="input1">
+                <el-select size="small" v-model="addFormDia4_1_1.mode">
+                  <el-option label="运费预付" value="prepaid"></el-option>
+                  <el-option label="运费到付" value="collect"></el-option>
+                </el-select>
+              </el-form-item>
+            </el-col>
+          </el-row>
+          <el-row :gutter="10">
+            <el-col :span="5">
+              <el-form-item label="单位：" prop="input1">
+                <el-select size="small" v-model="addFormDia4_1_1.unit_id">
+                  <el-option v-for="item in bzList" :key="item.id" :label="item.name" :value="item.id"></el-option>
+                </el-select>
+              </el-form-item>
+            </el-col>
+            <el-col :span="6">
+              <el-form-item label="币种：" prop="input1">
+                <el-select @change='changeBizhong2' size="small" v-model="addFormDia4_1_1.currency_id">
+                  <el-option v-for="item in bizhongList" :key='item.id' :label="item.code" :value="item.id"></el-option>
+                </el-select>
+              </el-form-item>
+            </el-col>
+            <el-col :span="6">
+              <el-form-item label="数量：" prop="input1">
+                <el-input size="small" v-model="addFormDia4_1_1.quantity" placeholder="请输入内容"></el-input>
+              </el-form-item>
+            </el-col>
+            <el-col :span="6">
+              <el-form-item label="单价：" prop="input1">
+                <el-input size="small" v-model="addFormDia4_1_1.price" placeholder="请输入内容"></el-input>
+              </el-form-item>
+            </el-col>
+          </el-row>
+          <el-row :gutter="10">
+            <el-col :span="5">
+              <el-form-item label="应收金额：" prop="input1">
+                <el-input size="small" v-model="addFormDia4_1_1.amount_receivable" placeholder="请输入内容"></el-input>
+              </el-form-item>
+            </el-col>
+            <el-col :span="6">
+              <el-form-item label="税价类型：" prop="input1">
+                <el-select size="small" v-model="addFormDia4_1_1.taxprice_type">
+                  <el-option label="价内税" value="1"></el-option>
+                  <el-option label="价外税" value="2"></el-option>
+                </el-select>
+              </el-form-item>
+            </el-col>
+            <el-col :span="6">
+              <el-form-item label="税率：" prop="input1">
+                <el-select size="small" v-model="addFormDia4_1_1.taxrate_id">
+                  <el-option v-for="item in shuilvList" :key="item.id" :label="item.name" :value="item.id"></el-option>
+                </el-select>
+              </el-form-item>
+            </el-col>
+            <el-col :span="6">
+              <el-form-item label="税价：" prop="input1">
+                <el-input size="small" v-model="addFormDia4_1_1.taxprice" placeholder="请输入内容"></el-input>
+              </el-form-item>
+            </el-col>
+          </el-row>
+          <el-row :gutter="10">
+            <el-col :span="8">
+              <el-form-item label="金额(不含税)：" prop="input1">
+                <el-input size="small" v-model="addFormDia4_1_1.amount_money" placeholder="请输入内容"></el-input>
+              </el-form-item>
+            </el-col>
+            <el-col :span="8">
+              <el-form-item label="帐单号：" prop="input1">
+                <el-input size="small" v-model="addFormDia4_1_1.bill_no" placeholder="请输入内容"></el-input>
+              </el-form-item>
+            </el-col>
+            <el-col :span="8">
+              <el-form-item label="应收日期：" prop="input1">
+                <el-date-picker size="small" value-format="yyyy-MM-dd" v-model="addFormDia4_1_1.receivable_date"
+                  type="date" placeholder="选择日期">
+                </el-date-picker>
+              </el-form-item>
+            </el-col>
+          </el-row>
+          <el-row :gutter="10">
+            <el-col :span="5">
+              <el-form-item label="实收金额：" prop="input1">
+                <el-input size="small" v-model="addFormDia4_1_1.paid_amount" placeholder="请输入内容"></el-input>
+              </el-form-item>
+            </el-col>
+            <el-col :span="6">
+              <el-form-item label="发票号：" prop="input1">
+                <el-input size="small" v-model="addFormDia4_1_1.invoice_no" placeholder="请输入内容"></el-input>
+              </el-form-item>
+            </el-col>
+            <el-col :span="6">
+              <el-form-item label="发票抬头：" prop="input1">
+                <el-input size="small" v-model="addFormDia4_1_1.invoice_title" placeholder="请输入内容"></el-input>
+              </el-form-item>
+            </el-col>
+            <el-col :span="6">
+              <el-form-item label="录入人：" prop="input1">
+                <el-input size="small" v-model="addFormDia4_1_1.entered_by" placeholder="请输入内容"></el-input>
+              </el-form-item>
+            </el-col>
+          </el-row>
+          <el-row :gutter="10">
+            <el-col :span="8">
+              <el-form-item label="审核人：" prop="input1">
+                <el-input size="small" v-model="addFormDia4_1_1.reviewed_by" placeholder="请输入内容"></el-input>
+              </el-form-item>
+            </el-col>
+            <el-col :span="8">
+              <el-form-item label="单号：" prop="input1">
+                <el-input size="small" v-model="addFormDia4_1_1.odd_numbers" placeholder="请输入内容"></el-input>
+              </el-form-item>
+            </el-col>
+            <el-col :span="8">
+              <el-form-item label="汇率：" prop="input1">
+                <el-input size="small" disabled v-model="addFormDia4_1_1.exchange_rate" placeholder="请输入内容"></el-input>
+              </el-form-item>
+            </el-col>
+          </el-row>
+          <div class="footer-btn">
+            <el-button style="width: 140px" @click="addDialogVisible4_1_1 = false">取消</el-button>
+            <el-button style="margin-left: 20px; width: 140px" type="primary" @click="onSubmitDia4_1_1">确认</el-button>
+          </div>
+        </el-form>
+      </div>
+    </el-dialog>
     <!-- 查看利润 -->
     <el-dialog title="查看利润" :visible.sync="addDialogVisible4_2" width="600px" :before-close="addHandleClose4_2">
       <div class="dia3_1">
         <div class="myTable">
           <vxe-table align="center" :data="tableData4_2">
-            <vxe-table-column field="input7" title="币种" show-overflow></vxe-table-column>
-            <vxe-table-column field="input8" title="应收金额" show-overflow></vxe-table-column>
-            <vxe-table-column field="input9" title="应付金额" show-overflow></vxe-table-column>
-            <vxe-table-column field="time1" title="利润金额" show-overflow></vxe-table-column>
-            <vxe-table-column field="input10" title="汇率" show-overflow></vxe-table-column>
+            <vxe-table-column field="code" title="币种" show-overflow></vxe-table-column>
+            <vxe-table-column field="receivable_amount" title="应收金额" show-overflow></vxe-table-column>
+            <vxe-table-column field="payable_amount" title="应付金额" show-overflow></vxe-table-column>
+            <vxe-table-column field="profit_amount" title="利润金额" show-overflow></vxe-table-column>
+            <vxe-table-column field="exchange_rate" title="汇率" show-overflow></vxe-table-column>
           </vxe-table>
         </div>
         <el-form style="margin-top: 16px" :model="addFormDia4_2" ref="addFormDia4_2" label-width="100px"
@@ -1588,28 +1782,29 @@
           <el-row :gutter="10">
             <el-col :span="11">
               <el-form-item label="折合：" prop="input1">
-                <el-select size="small" v-model="addFormDia4_2.sel1" placeholder="请选择">
-                  <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value">
+                <el-select @change="changeZhehe" size="small" v-model="addFormDia4_2.currency_id" placeholder="请选择">
+                  <el-option v-for="item in bizhongList" :key="item.id" :label="item.code" :value="item.id">
                   </el-option>
                 </el-select>
               </el-form-item>
             </el-col>
             <el-col :span="11">
               <el-form-item label="应收合计：">
-                <el-input size="small" v-model="addFormDia4_2.input1" placeholder="请输入内容" :rows="4"></el-input>
+                <el-input size="small" v-model="addFormDia4_2.receivable_amount" placeholder="请输入内容" :rows="4">
+                </el-input>
               </el-form-item>
               <el-form-item label="应付合计：">
-                <el-input size="small" v-model="addFormDia4_2.input2" placeholder="请输入内容" :rows="4"></el-input>
+                <el-input size="small" v-model="addFormDia4_2.payable_amount" placeholder="请输入内容" :rows="4"></el-input>
               </el-form-item>
               <el-form-item label="利润合计：">
-                <el-input size="small" v-model="addFormDia4_2.input3" placeholder="请输入内容" :rows="4"></el-input>
+                <el-input size="small" v-model="addFormDia4_2.profit_amount" placeholder="请输入内容" :rows="4"></el-input>
               </el-form-item>
             </el-col>
           </el-row>
-          <div class="footer-btn">
+          <!-- <div class="footer-btn">
             <el-button style="width: 140px" @click="addDialogVisible4_2 = false">取消</el-button>
             <el-button style="margin-left: 20px; width: 140px" type="primary" @click="onSubmitDia4_2">确认</el-button>
-          </div>
+          </div> -->
         </el-form>
       </div>
     </el-dialog>
@@ -1632,33 +1827,38 @@
       </div>
     </el-dialog>
     <!-- 核算卡 -->
-    <el-dialog title="核算卡" :visible.sync="addDialogVisible4_4" width="600px" :before-close="addHandleClose4_4">
-      <div class="dia3_1"></div>
+    <el-dialog title="核算卡" :visible.sync="addDialogVisible4_4" width="496px" :before-close="addHandleClose4_4">
+      <div class="dia3_1">
+        <el-image style="width: 456px;" :src="hesuanImages_url" :preview-src-list="[hesuanImages_url]">
+        </el-image>
+        <el-button style="margin-top:10px;width:120px" @click="xiazaiImg" type="primary">下载</el-button>
+      </div>
     </el-dialog>
     <!-- 黑名单解锁 -->
-    <el-dialog title="黑名单解锁" :visible.sync="addDialogVisible4_5" width="900px" :before-close="addHandleClose4_5">
+    <el-dialog title="黑名单解锁" :visible.sync="addDialogVisible4_5" width="990px" :before-close="addHandleClose4_5">
       <div class="dia3_1">
         <div class="myTable">
-          <vxe-table align="center" :data="tableData4_5">
-            <vxe-table-column field="myReceivable" title="选择" width="60">
+          <vxe-table ref="changeTable1" align="center" :data="tableData4_5">
+            <!-- <vxe-table-column field="myReceivable" title="选择" width="60">
               <template slot-scope="scope">
-                <el-checkbox @change="change4_5(scope.row)" v-model="scope.row.myReceivable"></el-checkbox>
+                <el-checkbox v-model="scope.row.myReceivable"></el-checkbox>
               </template>
-            </vxe-table-column>
-            <vxe-table-column field="input7" title="客户名称" show-overflow></vxe-table-column>
-            <vxe-table-column field="input8" title="超期天数" show-overflow></vxe-table-column>
-            <vxe-table-column field="input9" title="超期金额" show-overflow></vxe-table-column>
-            <vxe-table-column field="time1" title="状态" show-overflow></vxe-table-column>
-            <vxe-table-column field="input10" title="加入黑名单日期" show-overflow></vxe-table-column>
-            <vxe-table-column field="input10" title="临时延时天数" show-overflow></vxe-table-column>
-            <vxe-table-column field="input10" title="临时延时额度" show-overflow></vxe-table-column>
-            <vxe-table-column title="操作" width="80">
+            </vxe-table-column> -->
+            <vxe-table-column type="checkbox" width="60"></vxe-table-column>
+            <vxe-table-column field="customer_chinesename" title="客户名称" show-overflow></vxe-table-column>
+            <vxe-table-column field="overdue_days" title="超期天数" show-overflow></vxe-table-column>
+            <vxe-table-column field="overdue_amount" title="超期金额" show-overflow></vxe-table-column>
+            <vxe-table-column field="myUnlock_status" title="状态" show-overflow></vxe-table-column>
+            <vxe-table-column field="create_time" title="加入黑名单日期" show-overflow></vxe-table-column>
+            <vxe-table-column field="temporary_days" title="临时延时天数" show-overflow></vxe-table-column>
+            <vxe-table-column field="temporary_amount" title="临时延时额度" show-overflow></vxe-table-column>
+            <!-- <vxe-table-column title="操作" width="80">
               <template slot-scope="scope">
                 <div class="flex">
                   <el-button size="small" @click="toEdit4_5(scope.row)" type="text">明细</el-button>
                 </div>
               </template>
-            </vxe-table-column>
+            </vxe-table-column> -->
           </vxe-table>
         </div>
         <el-form style="margin-top: 16px" :model="addFormDia4_5" ref="addFormDia4_5" label-width="140px"
@@ -1666,12 +1866,13 @@
           <el-row :gutter="10">
             <el-col :span="10">
               <el-form-item label="临时增加金额：">
-                <el-input size="small" v-model="addFormDia4_5.input1" placeholder="请输入内容" :rows="4"></el-input>
+                <el-input size="small" v-model="addFormDia4_5.temporary_amount" placeholder="请输入内容" :rows="4">
+                </el-input>
               </el-form-item>
             </el-col>
             <el-col :span="10">
               <el-form-item label="临时增加天数：">
-                <el-input size="small" v-model="addFormDia4_5.input1" placeholder="请输入内容" :rows="4"></el-input>
+                <el-input size="small" v-model="addFormDia4_5.temporary_days" placeholder="请输入内容" :rows="4"></el-input>
               </el-form-item>
             </el-col>
           </el-row>
@@ -1683,16 +1884,39 @@
         </el-form>
       </div>
     </el-dialog>
-    <div v-if="activeName == 4" class="footer_float">
-      <div class="txt1">应收已审核</div>
-      <div class="txt2">应付已审核</div>
-      <div class="txt3">
-        <div class="txt3-1">费用状态</div>
-        <el-select v-model="value" placeholder="请选择">
-          <el-option v-for="item in options1" :key="item.value" :label="item.label" :value="item.value">
-          </el-option>
-        </el-select>
+    <!-- 上传附件 -->
+    <el-dialog title="上传附件" :visible.sync="addDialogVisible6_1" width="496px" :before-close="addHandleClose6_1">
+      <div class="dia6_1">
+        <el-form ref="addFormDia6_1" :model="addFormDia6_1" label-width="80px">
+          <el-form-item>
+            <el-row>
+              <el-col :span="20">
+                <el-button size="small" style="width:100%" type="primary" @click="companyList">选择文件</el-button>
+              </el-col>
+            </el-row>
+            <el-row>
+              <el-col :span="20" style="font-size:12px;line-height: 14px;margin-top: 10px;">{{addFormDia6_1.file_url}}
+              </el-col>
+            </el-row>
+          </el-form-item>
+          <el-form-item label="备注：">
+            <el-row>
+              <el-col :span="20">
+                <el-input size="small" v-model="addFormDia6_1.remark"></el-input>
+              </el-col>
+            </el-row>
+          </el-form-item>
+          <el-form-item>
+            <el-button size="small" type="primary" @click="onSubmitDia6_1">立即创建</el-button>
+            <el-button size="small" @click="addDialogVisible6_1 = false">取消</el-button>
+          </el-form-item>
+        </el-form>
       </div>
+    </el-dialog>
+    <div v-if="activeName == 4" class="footer_float">
+      <el-button @click="ys_wanjie" type="primary">应收费用完结</el-button>
+      <el-button @click="yf_wanjie" type="primary">应付费用完结</el-button>
+      <el-tag style="margin-left:20px" v-if="ys_audit == 1 && yf_audit == 1" type="success">费用完成</el-tag>
     </div>
     <input type="file" name="companyLogo" id="file0" class="displayN" multiple="multiple" @change="companyLogo($event)"
       ref="fileInputList" />
@@ -1703,7 +1927,17 @@
 import { mapState } from "vuex";
 export default {
   computed: {
-    ...mapState(["chukouObj"]),
+    ...mapState(["chukouObj", "fujianPageSize", "fujianPage"]),
+  },
+  watch: {
+    fujianPage: function (page) {
+      this.$store.commit("fujianPage", page);
+      this.getFujian();
+    },
+    fujianPageSize: function (pageSize) {
+      this.$store.commit("fujianPageSize", pageSize);
+      this.getFujian();
+    },
   },
   directives: {
     'el-select-loadmore': {
@@ -1926,6 +2160,7 @@ export default {
         maker_volume: "",
         maker_cw: "",
         maker_density: "",
+        receivable_weight: "",
       },
       rules2_2: {
         production_units: [{ required: true, message: "请输入制单件数", trigger: "blur" }],
@@ -2002,9 +2237,9 @@ export default {
         transshipment_remark: "",
       },
       addDialogVisible3_4: false,
-      addFormDia3_4:{
-        modify_time:"",
-        realname:"",
+      addFormDia3_4: {
+        modify_time: "",
+        realname: "",
       },
       tableData4_1: [],
       loading4_1: true,
@@ -2032,9 +2267,60 @@ export default {
       ],
       value: "",
       addDialogVisible4_1: false,
-      addFormDia4_1: {},
+      addDialogVisible4_1_1: false,
+      addFormDia4_1: {
+        costtypes_id: "",
+        settleaccounts_id: "",
+        mode: '',
+        unit_id: "",
+        currency_id: "",
+        quantity: '',
+        price: '',
+        amount_receivable: "",
+        taxprice_type: "",
+        taxrate_id: '',
+        taxprice: "",
+        amount_money: "",
+        bill_no: '',
+        receivable_date: "",
+        paid_amount: "",
+        invoice_no: "",
+        invoice_title: "",
+        entered_by: "",
+        reviewed_by: "",
+        odd_numbers: "",
+        exchange_rate: "",
+      },
+      addFormDia4_1_1: {
+        costtypes_id: "",
+        settleaccounts_id: "",
+        mode: '',
+        unit_id: "",
+        currency_id: "",
+        quantity: '',
+        price: '',
+        amount_receivable: "",
+        taxprice_type: "",
+        taxrate_id: '',
+        taxprice: "",
+        amount_money: "",
+        bill_no: '',
+        receivable_date: "",
+        paid_amount: "",
+        invoice_no: "",
+        invoice_title: "",
+        entered_by: "",
+        reviewed_by: "",
+        odd_numbers: "",
+        exchange_rate: "",
+      },
       addDialogVisible4_2: false,
-      addFormDia4_2: {},
+      addFormDia4_2: {
+        currency_id: "",
+        receivable_amount: '',
+        payable_amount: '',
+        profit_amount: '',
+      },
       tableData4_2: [],
       addDialogVisible4_3: false,
       addFormDia4_3: {},
@@ -2072,7 +2358,30 @@ export default {
       zhuanyunQRObj: null,
       daogangQRObj: null,
       qrIndex: 1,
-      tab3_formDis:false,
+      tab3_formDis: false,
+      fylxList: [],
+      bizhongList: [],
+      shuilvList: [],
+      ys_isAdd: false,
+      yf_isAdd: false,
+      ys_id: '',
+      yf_id: '',
+      myIsOk2: false,
+      myIsOk1: false,
+      hesuanImages_url: "",
+      hesuanPdf_url: "",
+      ys_audit: '',
+      yf_audit: '',
+      gjList: [],
+      fujianList: [],
+      fujianTotal: 0,
+      isSC_add: false,
+      addDialogVisible6_1: false,
+      addFormDia6_1: {
+        remark: '',
+        file_url: "",
+        attachments_id: "",
+      }
     };
   },
   mounted() {
@@ -2080,7 +2389,7 @@ export default {
       this.loading4_1 = false;
     }, 1000);
   },
-  created() {
+  async created() {
     console.log(this.chukouObj)
     this.getData()
     this.getKHList()
@@ -2097,6 +2406,35 @@ export default {
     this.getUserData()
     this.getJiaGeQR()
     this.getQiFeiQR()
+    this.getFYLXList()
+    this.getBiZhongList()
+    this.getShuiLvList()
+    this.getYS_MXList()
+    this.getYF_MXList()
+    this.getFujian()
+    // if (this.chukouObj.traffic_type == undefined) {
+    //   console.log('1111111111111111')
+    //   this.chukouObj.traffic_type = res.traffic_type.toString()
+    //   const res = await this.$api.update_userorder({
+    //     ...this.addForm1_1,
+    //     ...this.addForm1_2,
+    //     ...this.addForm1_3,
+    //     order_id: this.chukouObj.order_id,
+    //   })
+    //   this.$message(res.msg);
+    //   if (res.result == 1) {
+    //     console.log(res)
+    //     setTimeout(() => {
+    //       this.getData()
+    //       this.addForm1_1.customerservice_id = res.customer_serviceid;
+    //       this.addForm1_1.client_id = res.client_id;
+    //       this.addForm1_1.airlinepersonnel_id = res.airlinepersonnel_id;
+    //       this.addForm2_1.port_consignedid = this.addForm1_2.portdeparture_id;
+    //       this.addForm2_1.port_destinationid = this.addForm1_2.portdestination_id;
+    //       this.addForm2_1.carrier_id = this.addForm1_3.carrier_id;
+    //     }, 500)
+    //   }
+    // }
   },
   methods: {
     async getData() {
@@ -2119,6 +2457,28 @@ export default {
           this.addForm1_3[key] = res[key]
         }
       }
+      if (this.chukouObj.traffic_type == undefined) {
+        this.chukouObj.traffic_type = res.traffic_type.toString()
+        for (const key in res) {
+          if (key in this.addForm2_1) {
+            this.addForm2_1[key] = res[key]
+          }
+          if (key in this.addForm2_2) {
+            this.addForm2_2[key] = res[key]
+          }
+          if (key in this.addForm1_2) {
+            this.addForm1_2[key] = res[key]
+          }
+        }
+        // console.log(res)
+        // console.log(this.addForm2_1)
+        this.addForm2_1.remarks = res.flight_remarks
+        this.addForm1_2.receivingaddress_id = res.receiving_addressid
+        this.addForm1_2.portdeparture_id = res.port_consignedid
+        this.addForm1_2.finalcountry_id = res.finaldestination_countryid
+        this.addForm1_2.portdestination_id = res.receiving_addressid
+      }
+
       this.addForm1_2.allin = 'ALLIN'
       this.addForm1_3.business_type = res.business_typeid
       this.addForm1_2.delivery_method = res.delivery_methodid
@@ -2140,6 +2500,56 @@ export default {
     //     this.khList2 = this.khList2.concat(res.list);
     //   }
     // },
+    async getYS_MXList() {
+      const res = await this.$api.receivable_list({
+        page: 1,
+        pagesize: 1000,
+        order_id: this.chukouObj.order_id,
+        types: 1,
+      })
+      this.ys_audit = res.is_audit;
+      this.tableData4_1 = res.list;
+      this.tableData4_1.forEach(ele => {
+        ele.myMode = ele.mode == 'prepaid' ? '运费预付' : '运费到付';
+        ele.myTaxprice_type = ele.taxprice_type == 1 ? '价内税' : '价外税';
+        ele.myShen = ele.is_examine == 1 || ele.is_examine == 3 ? true : false;
+        ele.myPiao = ele.is_examine == 2 || ele.is_examine == 3 ? true : false;
+      })
+      var list = this.tableData4_1.filter(ele => {
+        return ele.is_examine != 3
+      })
+      if (list.length == 0) {
+        this.myIsOk1 = true
+      } else {
+        this.myIsOk1 = false
+      }
+    },
+    async getYF_MXList() {
+      const res = await this.$api.receivable_list({
+        page: 1,
+        pagesize: 1000,
+        order_id: this.chukouObj.order_id,
+        types: 2,
+      })
+      this.yf_audit = res.is_audit;
+      this.tableData4_1_1 = res.list;
+      // this.$set(this,'tableData4_1_1',res.list)
+      this.tableData4_1_1.forEach(ele => {
+        ele.myMode = ele.mode == 'prepaid' ? '运费预付' : '运费到付';
+        ele.myTaxprice_type = ele.taxprice_type == 1 ? '价内税' : '价外税';
+        ele.myShen = ele.is_examine == 1 || ele.is_examine == 3 ? true : false;
+        ele.myPiao = ele.is_examine == 2 || ele.is_examine == 3 ? true : false;
+      })
+      var list = this.tableData4_1_1.filter(ele => {
+        return ele.is_examine != 3
+      })
+      if (list.length == 0) {
+        this.myIsOk2 = true
+      } else {
+        this.myIsOk2 = false
+      }
+      this.$forceUpdate()
+    },
     async getKHList() {
       const res = await this.$api.customer_list({
         page: 1,
@@ -2148,12 +2558,26 @@ export default {
       })
       this.khList1 = res.list
     },
+    async getShuiLvList() {
+      const res = await this.$api.taxrate_list({
+        page: 1,
+        pagesize: 30000,
+      })
+      this.shuilvList = res.list
+    },
     async getGJList() {
       const res = await this.$api.country_list({
         page: 1,
         pagesize: 10000,
       })
       this.gjList = res.list;
+    },
+    async getBiZhongList() {
+      const res = await this.$api.currency_list({
+        page: 1,
+        pagesize: 10000,
+      })
+      this.bizhongList = res.list;
     },
     async getBZList() {
       const res = await this.$api.package()
@@ -2198,6 +2622,13 @@ export default {
       })
       this.xsList = res.list;
     },
+    async getFYLXList() {
+      const res = await this.$api.list_costtypes({
+        page: 1,
+        pagesize: 1000,
+      })
+      this.fylxList = res.list;
+    },
     async getUserData() {
       const res = await this.$api.read_userinfo()
       this.post_id = res.login_user.post_id
@@ -2225,6 +2656,15 @@ export default {
         order_id: this.chukouObj.order_id,
       })
       this.daogangQRObj = { ...res }
+    },
+    async getFujian() {
+      const res = await this.$api.order_attachmentslist({
+        page: this.fujianPage,
+        pagesize: this.fujianPageSize,
+        order_id: this.chukouObj.order_id,
+      })
+      this.fujianList = res.list
+      this.fujianTotal = res.total
     },
     checkOrder(e) {
       setTimeout(async () => {
@@ -2271,6 +2711,16 @@ export default {
       //   }, 200);
       // }
     },
+    shangchuan() {
+      this.isSC_add = true;
+      for (const key in this.addFormDia6_1) {
+        this.addFormDia6_1[key] = ''
+      }
+      this.addDialogVisible6_1 = true;
+    },
+    downFujian(row) {
+      window.open(row.file_url)
+    },
     // 上传
     companyList() {
       this.$refs.fileInputList.click();
@@ -2278,7 +2728,13 @@ export default {
     companyLogo(event) {
       var file = event.target.files[0];
       this.imgFile = file;
-      this.uploading(true);
+      console.log(file)
+      if (file.type == 'image/jpeg' || file.type == 'image/png' || file.type == 'application/pdf' || file.type == 'application/msword' || file.type == 'application/vnd.openxmlformats-officedocument.wordprocessingml.document') {
+        this.uploading(true);
+      } else {
+        this.$message('请上传正确格式的文件')
+      }
+
       this.$refs.fileInputList.value = "";
     },
     //将文件转为blob类型
@@ -2299,58 +2755,162 @@ export default {
       // console.log(document.getElementById("file0").value);
       if (flag) {
         var file_re = await this.readFileAsBuffer(this.imgFile);
-        const res = await this.$api.uploadToken();
-        let myData = res.data;
-        console.log(myData);
+        const res = await this.$api.alioss_ststoken();
         let client = new window.OSS.Wrapper({
-          region: myData.region, //oss地址
-          accessKeyId: myData.accessKeyId, //ak
-          accessKeySecret: myData.accessKeySecret, //secret
-          stsToken: myData.stsToken,
-          bucket: myData.bucket, //oss名字
+          region: res.region, //oss地址
+          accessKeyId: res.access_keyid, //ak
+          accessKeySecret: res.access_keysecret, //secret
+          stsToken: res.sts_token,
+          bucket: res.bucket, //oss名字
         });
-        var imgtype = this.imgFile.type.substr(6, 4);
+        var imgtype = ''
+        // var imgtype = this.imgFile.type.substr(6, 4);
+        console.log(this.imgFile.type)
+        if(this.imgFile.type == 'image/jpeg'){
+          imgtype = 'jpeg'
+        }
+        if(this.imgFile.type == 'image/png'){
+          imgtype = 'png'
+        }
+        if(this.imgFile.type == 'application/pdf'){
+          imgtype = 'pdf'
+        }
+        if(this.imgFile.type == 'application/msword'){
+          imgtype = 'doc'
+        }
+        if(this.imgFile.type == 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'){
+          imgtype = 'docx'
+        }
+        // if (imgtype == 'image/jpeg' || file.type == 'image/png' || file.type == 'application/pdf' || file.type == 'application/msword' || file.type == 'application/vnd.openxmlformats-officedocument.wordprocessingml.document') {
+        //   this.uploading(true);
+        // } else {
+        //   this.$message('请上传正确格式的文件')
+        // }
         var store = `${new Date().getTime()}.${imgtype}`;
-        client.put(store, file_re).then(() => {
+        client.put(store, file_re).then(async () => {
           //这个结果就是url
           console.log(store);
           // var oss_imgurl = client.signatureUrl(store);
-          var oss_imgurl = `https://${myData.bucket}.${myData.url}/${store}`;
-          this.$set(this.ruleForm, "image", oss_imgurl);
-          console.log(oss_imgurl);
+          var oss_imgurl = `https://${res.bucket}.${res.url}/${store}`;
+          this.$set(this.addFormDia6_1, "file_url", oss_imgurl);
+          // console.log(oss_imgurl);
         });
       }
     },
-    change4_1(row) {
-      console.log(row);
-      // const res = await this.$api.update_costtypes({
-      //   ...row,
-      //   receivable: row.myReceivable == true ? "1" : "2",
-      //   commission: row.myCommission == true ? "1" : "0",
-      //   id: row.id,
-      // });
-      // this.$message(res.msg);
-      // if (res.result == 1) {
-      //   this.getData();
-      // }
+    rowClassName1({ row }) {
+      console.log(row.is_examine)
+      if (row.is_examine == 0) {
+        return 'row1_1class'
+      } else if (row.is_examine == 2 || row.is_examine == 1) {
+        return 'row1_2class'
+      } else {
+        return 'row1_3class'
+      }
     },
-    change4_2(row) {
+    async change4_1(row) {
       console.log(row);
+      var data = [{
+        id: row.id,
+        audit: 1,
+        ticket_audit: row.myPiao ? 1 : 0
+      }]
+      const res = await this.$api.receivable_singleaudit({
+        data: JSON.stringify(data)
+      });
+      this.$message(res.msg);
+      if (res.result == 1) {
+        this.getYS_MXList();
+      }
     },
-    change4_3(row) {
+    async change4_2(row) {
       console.log(row);
+      var data = [{
+        id: row.id,
+        audit: row.myShen ? 1 : 0,
+        ticket_audit: 1
+      }]
+      const res = await this.$api.receivable_singleaudit({
+        data: JSON.stringify(data)
+      });
+      this.$message(res.msg);
+      if (res.result == 1) {
+        this.getYS_MXList();
+      }
     },
-    change4_4(row) {
+    async change4_3(row) {
       console.log(row);
+      var data = [{
+        id: row.id,
+        audit: 1,
+        ticket_audit: row.myPiao ? 1 : 0
+      }]
+      const res = await this.$api.receivable_singleaudit({
+        data: JSON.stringify(data)
+      });
+      this.$message(res.msg);
+      if (res.result == 1) {
+        this.getYF_MXList();
+      }
+    },
+    async change4_4(row) {
+      console.log(row);
+      var data = [{
+        id: row.id,
+        audit: row.myShen ? 1 : 0,
+        ticket_audit: 1
+      }]
+      const res = await this.$api.receivable_singleaudit({
+        data: JSON.stringify(data)
+      });
+      this.$message(res.msg);
+      if (res.result == 1) {
+        this.getYF_MXList();
+      }
     },
     change4_5(row) {
-      console.log(row);
+      console.log(row.id);
     },
     toEdit4_1(row) {
       console.log(row);
+      this.ys_isAdd = false;
+      this.ys_id = row.id;
+      this.addFormDia4_1 = { ...row }
+      this.addFormDia4_1.costtypes_id = row.costtypes.id;
+      this.addFormDia4_1.currency_id = row.currency.id;
+      this.addFormDia4_1.taxprice_type = row.taxprice_type.toString();
+      this.addFormDia4_1.taxrate_id = row.taxrate.id;
+      this.addDialogVisible4_1 = true;
     },
-    toDel4_1(row) {
+    async toDel4_1(row) {
       console.log(row);
+      const res = await this.$api.del_receivable({
+        id: row.id
+      })
+      this.$message(res.msg);
+      if (res.result == 1) {
+        this.getYS_MXList()
+      }
+    },
+    toEdit4_1_1(row) {
+      console.log(row);
+      this.yf_isAdd = false;
+      this.yf_id = row.id;
+      this.addFormDia4_1_1 = { ...row }
+      this.addFormDia4_1_1.costtypes_id = row.costtypes.id;
+      this.addFormDia4_1_1.currency_id = row.currency.id;
+      this.addFormDia4_1_1.taxprice_type = row.taxprice_type.toString();
+      this.addFormDia4_1_1.taxrate_id = row.taxrate.id;
+      this.addDialogVisible4_1_1 = true;
+    },
+    async toDel4_1_1(row) {
+      console.log(row);
+      const res = await this.$api.del_receivable({
+        id: row.id
+      })
+      this.$message(res.msg);
+      if (res.result == 1) {
+        this.getYF_MXList()
+      }
     },
     toEdit5_1(row) {
       console.log(row);
@@ -2366,9 +2926,21 @@ export default {
     },
     toEdit6_1(row) {
       console.log(row);
+      this.isSC_add = false;
+      this.addFormDia6_1.attachments_id = row.id
+      this.addFormDia6_1.remark = row.remark
+      this.addFormDia6_1.file_url = row.file_url
+      this.addDialogVisible6_1 = true;
     },
-    toDel6_1(row) {
+    async toDel6_1(row) {
       console.log(row);
+      const res = await this.$api.order_attachmentsdel({
+        attachments_id:row.id
+      })
+      this.$message(res.msg)
+      if(res.result == 1){
+        this.getFujian()
+      }
     },
     async AddDiaOnSubmit1() {
       let i = 0
@@ -2404,7 +2976,7 @@ export default {
             this.activeName = '2'
             this.addForm2_1.port_consignedid = this.addForm1_2.portdeparture_id
             this.addForm2_1.port_destinationid = this.addForm1_2.portdestination_id
-            this.addForm2_1.carrier_id = this.addForm1_3.carrier_id
+            this.addForm2_1.carrier_id = this.addForm1_3.port_destinationid
           }, 500)
         }
       }
@@ -2517,7 +3089,7 @@ export default {
         this.getZhuanYunQR()
         this.qrIndex++
         this.addDialogVisible3_3 = false
-        console.log(this.zhuanyunQRObj,this.daogangQRObj,1111111)
+        console.log(this.zhuanyunQRObj, this.daogangQRObj, 1111111)
       }
     },
     async onSubmitDia3_4() {
@@ -2531,19 +3103,140 @@ export default {
         this.addDialogVisible3_4 = false
       }
     },
-    onSubmitDia4_1() {
-      console.log(this.addFormDia4_1);
+    async onSubmitDia4_1() {
+      console.log(this.addFormDia4_1, this.ys_isAdd, 'ys_idadd');
+      if (this.ys_isAdd) {
+        const res = await this.$api.create_receivable({
+          types: 1,
+          order_id: this.chukouObj.order_id,
+          ...this.addFormDia4_1,
+        })
+        this.$message(res.msg)
+        if (res.result == 1) {
+          this.getYS_MXList()
+          this.addDialogVisible4_1 = false
+        }
+      } else {
+        const res = await this.$api.update_receivable({
+          id: this.ys_id,
+          types: 1,
+          order_id: this.chukouObj.order_id,
+          ...this.addFormDia4_1,
+        })
+        this.$message(res.msg)
+        if (res.result == 1) {
+          this.getYS_MXList()
+          this.addDialogVisible4_1 = false
+        }
+      }
+    },
+    async onSubmitDia4_1_1() {
+      console.log(this.addFormDia4_1_1);
+      if (this.yf_isAdd) {
+        const res = await this.$api.create_receivable({
+          types: 2,
+          order_id: this.chukouObj.order_id,
+          ...this.addFormDia4_1_1,
+        })
+        this.$message(res.msg)
+        if (res.result == 1) {
+          this.getYF_MXList()
+          this.addDialogVisible4_1_1 = false
+        }
+      } else {
+        const res = await this.$api.update_receivable({
+          id: this.yf_id,
+          types: 2,
+          order_id: this.chukouObj.order_id,
+          ...this.addFormDia4_1_1,
+        })
+        this.$message(res.msg)
+        if (res.result == 1) {
+          this.getYF_MXList()
+          this.addDialogVisible4_1_1 = false
+        }
+      }
     },
     onSubmitDia4_2() {
       console.log(this.addFormDia4_2);
     },
-    onSubmitDia4_5_1() { },
-    onSubmitDia4_5_2() { },
+    async onSubmitDia4_5_1() {
+      let selectRecords = this.$refs.changeTable1.getCheckboxRecords()
+      // console.log(selectRecords)
+      var arr = []
+      selectRecords.forEach(ele => {
+        arr.push(ele.id)
+      })
+      console.log(arr.toString())
+      const res = await this.$api.operation_orderblack({
+        status: 1,
+        id: arr.toString(),
+        temporary_days: 0,
+        temporary_amount: 0
+      })
+      this.$message(res.msg)
+      if (res.result == 1) {
+        this.heimingdanjiesuo()
+      }
+    },
+    async onSubmitDia4_5_2() {
+      let selectRecords = this.$refs.changeTable1.getCheckboxRecords()
+      // console.log(selectRecords)
+      var arr = []
+      selectRecords.forEach(ele => {
+        arr.push(ele.id)
+      })
+      const res = await this.$api.operation_orderblack({
+        status: 2,
+        id: arr.toString(),
+        temporary_days: this.addFormDia4_5.temporary_days,
+        temporary_amount: this.addFormDia4_5.temporary_amount
+      })
+      this.$message(res.msg)
+      if (res.result == 1) {
+        this.heimingdanjiesuo()
+        this.addFormDia4_5.temporary_days = ''
+        this.addFormDia4_5.temporary_amount = ''
+      }
+    },
     tableData4_1_c1() {
       this.addDialogVisible4_1 = true;
+      this.ys_isAdd = true;
+      this.yf_isAdd = false;
+      for (const key in this.addFormDia4_1) {
+        this.addFormDia4_1[key] = ''
+      }
     },
     tableData4_1_c2() { },
-    tableData4_1_c3() { },
+    async tableData4_1_c3() {
+      const res = await this.$api.receivable_allaudit({
+        order_id: this.chukouObj.order_id,
+        order_types: 1
+      })
+      this.$message(res.msg)
+      if (res.result == 1) {
+        this.getYS_MXList()
+      }
+    },
+    tableData4_2_c1() {
+      this.addDialogVisible4_1_1 = true;
+      this.yf_isAdd = true;
+      this.ys_isAdd = false;
+      for (const key in this.addFormDia4_1_1) {
+        this.addFormDia4_1_1[key] = ''
+      }
+    },
+    tableData4_2_c2() { },
+    async tableData4_2_c3() {
+      const res = await this.$api.receivable_allaudit({
+        order_id: this.chukouObj.order_id,
+        order_types: 2
+      })
+      this.$message(res.msg)
+      if (res.result == 1) {
+        this.getYF_MXList()
+      }
+    },
     handleClick(tab, event) {
       console.log(tab, event);
     },
@@ -2565,6 +3258,9 @@ export default {
     addHandleClose4_1() {
       this.addDialogVisible4_1 = false;
     },
+    addHandleClose4_1_1() {
+      this.addDialogVisible4_1_1 = false;
+    },
     addHandleClose4_2() {
       this.addDialogVisible4_2 = false;
     },
@@ -2576,6 +3272,108 @@ export default {
     },
     addHandleClose4_5() {
       this.addDialogVisible4_5 = false;
+    },
+    async chakanlirun() {
+      const res = await this.$api.order_profit({
+        order_id: this.chukouObj.order_id,
+      })
+      this.tableData4_2 = res.list
+      this.addDialogVisible4_2 = true
+      this.$forceUpdate()
+    },
+    async heimingdanjiesuo() {
+      this.addDialogVisible4_5 = true
+      const res = await this.$api.order_black({
+        order_id: this.chukouObj.order_id,
+        page: 1,
+        pagesize: 1000
+      })
+      this.tableData4_5 = res.list;
+      this.tableData4_5.forEach(ele => {
+        ele.myUnlock_status = ele.unlock_status == 0 ? '锁定' : '解锁'
+      })
+      this.$forceUpdate()
+    },
+    async changeZhehe(e) {
+      const res = await this.$api.order_changecurrency({
+        currency_id: e,
+        order_id: this.chukouObj.order_id,
+      })
+      this.addFormDia4_2.receivable_amount = res.receivable_amount;
+      this.addFormDia4_2.payable_amount = res.payable_amount;
+      this.addFormDia4_2.profit_amount = res.profit_amount;
+    },
+    async hesuanka() {
+      const res = await this.$api.order_accountingcard({
+        order_id: this.chukouObj.order_id
+      })
+      this.$message(res.msg)
+      if (res.result == 1) {
+        this.hesuanImages_url = res.images_url
+        this.hesuanPdf_url = res.pdf_url
+        this.addDialogVisible4_4 = true
+      }
+    },
+    async ys_wanjie() {
+      const res = await this.$api.order_copewith({
+        types: 1,
+        order_id: this.chukouObj.order_id,
+      })
+      this.$message(res.msg)
+      this.getYS_MXList()
+      this.getYF_MXList()
+    },
+    async yf_wanjie() {
+      const res = await this.$api.order_copewith({
+        types: 2,
+        order_id: this.chukouObj.order_id,
+      })
+      this.$message(res.msg)
+      this.getYS_MXList()
+      this.getYF_MXList()
+    },
+    xiazaiImg() {
+      window.open(this.hesuanPdf_url)
+    },
+    async changeBizhong1(e) {
+      const res = await this.$api.get_rate({
+        currency_id: e
+      })
+      if (res.result == 1) {
+        this.addFormDia4_1.exchange_rate = res.change_rate
+      }
+    },
+    async changeBizhong2(e) {
+      const res = await this.$api.get_rate({
+        currency_id: e
+      })
+      if (res.result == 1) {
+        this.addFormDia4_1_1.exchange_rate = res.change_rate
+      }
+    },
+    fujianHandleSizeChange(val) {
+      console.log(`每页 ${val} 条`);
+      this.$store.commit("fujianPageSize", val);
+    },
+    fujianHandleCurrentChange(val) {
+      console.log(`当前页: ${val}`);
+      this.$store.commit("fujianPage", val);
+    },
+    addHandleClose6_1() {
+      this.addDialogVisible6_1 = false
+    },
+    async onSubmitDia6_1() {
+      const ress = await this.$api.order_upattachments({
+        order_id: this.chukouObj.order_id,
+        file_url: this.addFormDia6_1.file_url,
+        remark: this.addFormDia6_1.remark,
+        attachments_id: !this.isSC_add ? this.addFormDia6_1.attachments_id : ''
+      })
+      this.$message(ress.msg)
+      if (ress.result == 1) {
+        this.getFujian()
+        this.addDialogVisible6_1 = false;
+      }
     },
   },
 };
@@ -2604,6 +3402,7 @@ export default {
   display: flex;
   align-items: center;
   padding: 0 30px;
+  z-index: 999;
 
   .txt1 {
     color: #67c23a;
@@ -2708,6 +3507,25 @@ export default {
       background: #fff;
       border-radius: 10px;
       margin-top: 20px;
+      position: relative;
+
+      .float_tit1 {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        color: #67c23a;
+        font-size: 16px;
+        font-weight: 300;
+      }
+
+      .float_tit2 {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        color: #f56c6c;
+        font-size: 16px;
+        font-weight: 300;
+      }
 
       /deep/ .vxe-table--render-default .vxe-cell {
         // padding-left: 0px !important;
@@ -2783,6 +3601,14 @@ export default {
 }
 
 .dia3_1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .myTable {
+    width: 100%;
+  }
+
   .footer-btn {
     margin-top: 20px;
     width: 100%;
@@ -2817,5 +3643,68 @@ export default {
 
 .displayN {
   display: none;
+}
+
+.myTable /deep/.row1_1class {
+  // background-color: red !important;
+  // color: #fff !important;
+}
+
+.myTable /deep/.row1_2class {
+  // background-color: red !important;
+  color: #909399 !important;
+}
+
+.myTable /deep/.row1_3class {
+  // background-color: red !important;
+  color: #409EFF !important;
+}
+
+/deep/ .vxe-table--render-default .vxe-body--column.col--ellipsis:not(.col--actived)>.vxe-cell {
+  line-height: 48px;
+}
+
+/*滚动条整体部分*/
+/deep/ .mytable-scrollbar ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/*滚动条的轨道*/
+/deep/ .mytable-scrollbar ::-webkit-scrollbar-track {
+  background-color: #FFFFFF;
+}
+
+/*滚动条里面的小方块，能向上向下移动*/
+/deep/ .mytable-scrollbar ::-webkit-scrollbar-thumb {
+  background-color: #bfbfbf;
+  border-radius: 5px;
+  border: 1px solid #F1F1F1;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+}
+
+/deep/ .mytable-scrollbar ::-webkit-scrollbar-thumb:hover {
+  background-color: #A8A8A8;
+}
+
+/deep/ .mytable-scrollbar ::-webkit-scrollbar-thumb:active {
+  background-color: #787878;
+}
+
+/*边角，即两个滚动条的交汇处*/
+/deep/ .mytable-scrollbar ::-webkit-scrollbar-corner {
+  background-color: #FFFFFF;
+}
+
+.fenye {
+  margin-top: 10px;
+}
+
+.myTable {
+  /deep/ .vxe-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 </style>

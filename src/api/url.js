@@ -108,4 +108,25 @@ export default {
     transshipment_confirmation:"/transshipment_confirmation",//转运确认
     goods_arrivalconfirmationview:"/goods_arrivalconfirmationview",//到港确认详情
     goods_arrivalconfirmation:'/goods_arrivalconfirmation',//到港确认
+    create_receivable:"/create_receivable",//创建费用明细
+    receivable_list:"/receivable_list",//费用明细列表
+    update_receivable:"/update_receivable",//修改费用明细
+    del_receivable:"/del_receivable",//删除费用明细
+    receivable_singleaudit:"/receivable_singleaudit",//单审/票审操作
+    receivable_allaudit:"/receivable_allaudit",//全部审核操作
+    order_profit:"/order_profit",//查看利润
+    order_changecurrency:"/order_changecurrency",//查看利润（折合）不同币种
+    order_accountingcard:"/order_accountingcard",//核算卡
+    order_copewith:"/order_copewith",//费用明细完结操作
+    get_rate:'/get_rate',//根据币种ID转换汇率
+    order_black:"/order_black",//黑名单列表
+    operation_orderblack:"/operation_orderblack",//操作黑名单解锁/锁定
+    alioss_ststoken:"/alioss_ststoken",//阿里云oss获取ststoken
+    order_list:"/order_list",//订单列表
+    order_columnlist:"/order_columnlist",//订单列名
+    order_columnset:"/order_columnset",//订单列名序号的调整
+    order_del:'/order_del',//删除订单
+    order_attachmentslist:"/order_attachmentslist",//附件列表
+    order_upattachments:"/order_upattachments",//添加/更新附件
+    order_attachmentsdel:"/order_attachmentsdel",//删除附件
 }

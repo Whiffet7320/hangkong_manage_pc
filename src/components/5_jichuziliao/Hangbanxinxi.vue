@@ -9,7 +9,7 @@
             v-model="keyword"
             class="input-with-select"
           >
-            <el-button slot="append" icon="el-icon-search">搜索</el-button>
+            <el-button @click="search" slot="append" icon="el-icon-search">搜索</el-button>
           </el-input>
           <!-- <el-select style="margin-left:50px;width:200px" v-model="sele2" placeholder="请选择">
             <el-option label="新订单" value="1"> </el-option>
@@ -324,6 +324,9 @@ export default {
       if (res.result == 1) {
         this.getData();
       }
+    },
+    search() {
+      this.getData();
     },
     async changeKG2(row) {
       console.log(row);

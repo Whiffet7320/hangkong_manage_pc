@@ -55,9 +55,10 @@
             </el-col>
           </el-row>
           <el-row>
-            <el-col :span="10">
+            <el-col :span="5">
               <el-form-item label="起运港：">
                 <el-row>
+                  <el-col :span="10">
                   <el-select
                     filterable
                     size="small"
@@ -87,15 +88,47 @@
                       </div>
                     </el-option>
                   </el-select>
-                  <el-input
+                  </el-col>
+                  <el-col :span="14">
+                  <el-select
+                    filterable
+                    size="small"
+                    v-model="addForm.sele2"
+                    placeholder="请选择"
+                  >
+                    <el-option label="中国-CN-China" value="China">
+                      <div
+                        style="display: flex; justify-content: space-between"
+                      >
+                        <span>中国</span>
+                        <span style="color: #8492a6; font-size: 12px;margin:0 12px">CN</span>
+                        <span style="color: #8492a6; font-size: 13px"
+                          >China</span
+                        >
+                      </div>
+                    </el-option>
+                    <el-option label="美国-USA-America" value="America">
+                      <div
+                        style="display: flex; justify-content: space-between"
+                      >
+                        <span>美国</span>
+                        <span style="color: #8492a6; font-size: 12px;margin:0 12px">USA</span>
+                        <span style="color: #8492a6; font-size: 13px"
+                          >America</span
+                        >
+                      </div>
+                    </el-option>
+                  </el-select>
+                  </el-col>
+                  <!-- <el-input
                     style="width: inherit; margin-left: 10px"
                     size="small"
                     v-model="addForm.input2"
-                  ></el-input>
+                  ></el-input> -->
                 </el-row>
               </el-form-item>
             </el-col>
-            <el-col :span="6">
+            <el-col :span="5">
               <el-form-item label="航空公司：">
                 <el-select
                   filterable
@@ -124,6 +157,33 @@
             </el-col>
             <el-col :span="6">
               <el-form-item label="目的港：">
+                <el-select
+                  filterable
+                  size="small"
+                  v-model="addForm.sele2"
+                  placeholder="请选择"
+                >
+                  <el-option label="中国-CN-China" value="China">
+                    <div style="display: flex; justify-content: space-between">
+                      <span>中国</span>
+                      <span style="color: #8492a6; font-size: 12px;margin:0 12px">CN</span>
+                      <span style="color: #8492a6; font-size: 12px;margin:0 12px">China</span>
+                    </div>
+                  </el-option>
+                  <el-option label="美国-USA-America" value="America">
+                    <div style="display: flex; justify-content: space-between">
+                      <span>美国</span>
+                      <span style="color: #8492a6; font-size: 12px;margin:0 12px">USA</span>
+                      <span style="color: #8492a6; font-size: 13px"
+                        >America</span
+                      >
+                    </div>
+                  </el-option>
+                </el-select>
+              </el-form-item>
+            </el-col>
+            <el-col :span="6">
+              <el-form-item label="操作状态：">
                 <el-select
                   filterable
                   size="small"
@@ -228,7 +288,7 @@
             </el-col>
           </el-row>
           <div class="heng"></div>
-          <el-row>
+          <!-- <el-row>
             <el-col :span="10">
               <el-form-item label="货到日期：">
                 <el-date-picker
@@ -259,14 +319,14 @@
                 </el-select>
               </el-form-item>
             </el-col>
-          </el-row>
+          </el-row> -->
           <el-row>
-            <el-col :span="6">
+            <el-col :span="24">
               <el-form-item>
-                <el-button size="small" type="primary" @click="AddOnSubmit"
+                <el-button style="width:120px" size="small" type="primary" @click="AddOnSubmit"
                   >搜索</el-button
                 >
-                <el-button size="small" @click="reset">重置</el-button>
+                <el-button style="width:120px" size="small" @click="reset">重置</el-button>
               </el-form-item>
             </el-col>
           </el-row>

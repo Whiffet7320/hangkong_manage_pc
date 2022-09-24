@@ -508,8 +508,8 @@ export default {
                 ...new Set([...this.checkList1, ...radioList]),
               ].toString(),
             });
+            this.$message(res.msg);
             if (res.result == 1) {
-              this.$message(res.msg);
               this.getData();
               this.addDialogVisible = false;
             }
@@ -523,8 +523,8 @@ export default {
                 ...new Set([...this.checkList1, ...radioList]),
               ].toString(),
             });
+            this.$message(res.msg);
             if (res.result == 1) {
-              this.$message(res.msg);
               this.getData();
               this.addDialogVisible = false;
             }

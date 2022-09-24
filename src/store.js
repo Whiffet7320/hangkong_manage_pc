@@ -9,6 +9,8 @@ export default new Vuex.Store({
     aside_left:[],
     xindingdanPage: 1,
     xindingdanPageSize: 10,
+    fujianPage: 1,
+    fujianPageSize: 10,
     kehuObj:null,
     hangbanObj:null,
     chukouObj:null,
@@ -57,6 +59,12 @@ export default new Vuex.Store({
     },
     xindingdanPageSize(state, str) {
       state.xindingdanPageSize = str;
+    },
+    fujianPage(state, str) {
+      state.fujianPage = str;
+    },
+    fujianPageSize(state, str) {
+      state.fujianPageSize = str;
     },
     aside_left(state, str) {
       state.aside_left = str;

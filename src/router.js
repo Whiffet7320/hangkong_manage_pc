@@ -13,6 +13,10 @@ const routes = [{
             path: 'Xindingdan',
             name: 'Xindingdan',
             component: () => import('./components/1_yewucaozuo/Xindingdan.vue'),
+        },{
+            path: 'Chukoudingdan',
+            name: 'Chukoudingdan',
+            component: () => import('./components/1_yewucaozuo/Chukoudingdan.vue'),
         }, {
             path: 'Addxindingdan',
             name: 'Addxindingdan',

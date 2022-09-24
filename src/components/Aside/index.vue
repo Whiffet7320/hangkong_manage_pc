@@ -56,12 +56,12 @@
           >
             <span slot="title">{{ item.name }}</span>
           </el-menu-item>
-          <el-menu-item
+          <!-- <el-menu-item
             index="6-5"
             :route="{ name: 'Xitongdaima' }"
           >
             <span slot="title">系统代码</span>
-          </el-menu-item>
+          </el-menu-item> -->
         </template>
       </el-menu>
     </div>
@@ -81,7 +81,7 @@ export default {
         this.$router.push({path:'/1_yewucaozuo/Xindingdan'})
       }
       if(to.path == "/5_jichuziliao"){
-        this.$router.push({path:'/5_jichuziliao/Kehuziliao'})
+        this.$router.push({path:'/5_jichuziliao/Bengongsiziliao'})
       }
       if(to.path == "/6_xitongguanli"){
         this.$router.push({path:'/6_xitongguanli/Zhanghaoguanli'})
@@ -90,10 +90,10 @@ export default {
         this.menuActiveIndex = "1-1";
         this.$store.commit("headerTit", `空运操作 / <span style="color: #515a61;
         font-weight: 700;">新订单</span>`);
-      } else if (to.path == "/5_jichuziliao/Kehuziliao") {
-        this.menuActiveIndex = "5-1";
+      } else if (to.path == "/5_jichuziliao/Bengongsiziliao") {
+        this.menuActiveIndex = "5-8";
         this.$store.commit("headerTit", `基础资料 / <span style="color: #515a61;
-        font-weight: 700;">客户资料</span>`);
+        font-weight: 700;">本公司资料</span>`);
       } else if (to.path == "/5_jichuziliao/AddKehu") {
         this.menuActiveIndex = "5-1";
         this.$store.commit("headerTit", `基础资料 / <span style="color: #515a61;

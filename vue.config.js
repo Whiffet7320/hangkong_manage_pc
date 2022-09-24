@@ -2,7 +2,7 @@ module.exports = {
   // devServer: {
   //   proxy: {
   //     "/admin": {
-  //       target: "http://water.5laoye.com/admin",
+  //       target: "https://crmdl.api.5laoye.com/service/web",
   //       secure: false,
   //       changeOrigin: true,
   //       pathRewrite: {

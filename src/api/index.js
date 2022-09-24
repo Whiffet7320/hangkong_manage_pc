@@ -1014,6 +1014,174 @@ export default {
             }
         })
     },
+    create_receivable(obj) {
+        return myPost({
+            url: urls.create_receivable,
+            data: {
+                ...obj
+            }
+        })
+    },
+    receivable_list(obj) {
+        return myPost({
+            url: urls.receivable_list,
+            data: {
+                ...obj
+            }
+        })
+    },
+    update_receivable(obj) {
+        return myPost({
+            url: urls.update_receivable,
+            data: {
+                ...obj
+            }
+        })
+    },
+    del_receivable(obj) {
+        return myPost({
+            url: urls.del_receivable,
+            data: {
+                ...obj
+            }
+        })
+    },
+    receivable_singleaudit(obj) {
+        return myPost({
+            url: urls.receivable_singleaudit,
+            data: {
+                ...obj
+            }
+        })
+    },
+    receivable_allaudit(obj) {
+        return myPost({
+            url: urls.receivable_allaudit,
+            data: {
+                ...obj
+            }
+        })
+    },
+    order_profit(obj) {
+        return myPost({
+            url: urls.order_profit,
+            data: {
+                ...obj
+            }
+        })
+    },
+    order_changecurrency(obj) {
+        return myPost({
+            url: urls.order_changecurrency,
+            data: {
+                ...obj
+            }
+        })
+    },
+    order_accountingcard(obj) {
+        return myPost({
+            url: urls.order_accountingcard,
+            data: {
+                ...obj
+            }
+        })
+    },
+    order_copewith(obj) {
+        return myPost({
+            url: urls.order_copewith,
+            data: {
+                ...obj
+            }
+        })
+    },
+    get_rate(obj) {
+        return myPost({
+            url: urls.get_rate,
+            data: {
+                ...obj
+            }
+        })
+    },
+    order_black(obj) {
+        return myPost({
+            url: urls.order_black,
+            data: {
+                ...obj
+            }
+        })
+    },
+    operation_orderblack(obj) {
+        return myPost({
+            url: urls.operation_orderblack,
+            data: {
+                ...obj
+            }
+        })
+    },
+    alioss_ststoken(obj) {
+        return myPost({
+            url: urls.alioss_ststoken,
+            data: {
+                ...obj
+            }
+        })
+    },
+    order_list(obj) {
+        return myPost({
+            url: urls.order_list,
+            data: {
+                ...obj
+            }
+        })
+    },
+    order_columnset(obj) {
+        return myPost({
+            url: urls.order_columnset,
+            data: {
+                ...obj
+            }
+        })
+    },
+    order_columnlist(obj) {
+        return myPost({
+            url: urls.order_columnlist,
+            data: {
+                ...obj
+            }
+        })
+    },
+    order_del(obj) {
+        return myPost({
+            url: urls.order_del,
+            data: {
+                ...obj
+            }
+        })
+    },
+    order_attachmentslist(obj) {
+        return myPost({
+            url: urls.order_attachmentslist,
+            data: {
+                ...obj
+            }
+        })
+    },
+    order_upattachments(obj) {
+        return myPost({
+            url: urls.order_upattachments,
+            data: {
+                ...obj
+            }
+        })
+    },
+    order_attachmentsdel(obj) {
+        return myPost({
+            url: urls.order_attachmentsdel,
+            data: {
+                ...obj
+            }
+        })
+    },
     async upload_pic(image) {
         var configs = {
             headers: {
