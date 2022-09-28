@@ -8,20 +8,9 @@
           <div class="left-txt">飞捷腾达</div>
         </div>
         <!-- <img class="l-img" src="../../assets/img/zu102.png" alt="" /> -->
-        <el-menu
-          :default-active="activeIndex"
-          class="el-menu-demo"
-          mode="horizontal"
-          router
-          @select="changeSelect"
-        >
-          <el-menu-item
-            v-for="item in menu"
-            :key="item.id"
-            :index="item.menu_index"
-            :route="{ name: item.url }"
-            ><i class="el-icon-s-home"></i>{{ item.name }}</el-menu-item
-          >
+        <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" router @select="changeSelect">
+          <el-menu-item v-for="item in menu" :key="item.id" :index="item.menu_index" :route="{ name: item.url }"><i
+              class="el-icon-s-home"></i>{{ item.name }}</el-menu-item>
           <!-- <el-menu-item index="1" :route="{ name: '1_yewucaozuo' }"
             ><i class="el-icon-s-home"></i>业务操作</el-menu-item
           >
@@ -45,7 +34,7 @@
       <div class="tit2">
         <el-dropdown @command="handleCommand">
           <span class="el-dropdown-link">
-            admin<i class="el-icon-arrow-down el-icon--right"></i>
+            {{login_user.realname}}<i class="el-icon-arrow-down el-icon--right"></i>
           </span>
           <el-dropdown-menu slot="dropdown">
             <!-- <el-dropdown-item command="1">个人中心</el-dropdown-item> -->
@@ -134,11 +123,20 @@ export default {
       activeIndex: "",
       aside_left: null,
       menu: [],
+      login_user: {},
     };
   },
-  // created() {
-  //   this.getmenu();
-  // },
+  async created() {
+    // this.login_user = JSON.parse(
+    //   decodeURIComponent(sessionStorage.getItem("login_user"))
+    // );
+    const res = await this.$api.read_userinfo()
+    this.login_user = res.login_user
+    // sessionStorage.setItem(
+    //   "login_user",
+    //   encodeURIComponent(JSON.stringify(res.login_user))
+    // );
+  },
   methods: {
     getmenu(val) {
       console.log(val)
@@ -146,30 +144,30 @@ export default {
         decodeURIComponent(sessionStorage.getItem("menu"))
       );
       console.log(this.menu)
-      this.menu.forEach(ele=>{
+      this.menu.forEach(ele => {
         console.log(ele.name)
-        if(ele.name == '业务操作'){
-          this.$store.commit('_1_qx',ele.button)
+        if (ele.name == '业务操作') {
+          this.$store.commit('_1_qx', ele.button)
         }
-        if(ele.name == '财务结算'){
-          this.$store.commit('_2_qx',ele.button)
+        if (ele.name == '财务结算') {
+          this.$store.commit('_2_qx', ele.button)
         }
-        if(ele.name == '空运报表'){
-          this.$store.commit('_3_qx',ele.button)
+        if (ele.name == '空运报表') {
+          this.$store.commit('_3_qx', ele.button)
         }
-        if(ele.name == '统计分析'){
-          this.$store.commit('_4_qx',ele.button)
+        if (ele.name == '统计分析') {
+          this.$store.commit('_4_qx', ele.button)
         }
-        if(ele.name == '基础资料'){
-          this.$store.commit('_5_qx',ele.button)
+        if (ele.name == '基础资料') {
+          this.$store.commit('_5_qx', ele.button)
         }
-        if(ele.name == '系统管理'){
-          this.$store.commit('_6_qx',ele.button)
+        if (ele.name == '系统管理') {
+          this.$store.commit('_6_qx', ele.button)
         }
       })
       // this.userName = sessionStorage.getItem("username");
-      this.menu.forEach(ele=>{
-        if(ele.menu_index == val){
+      this.menu.forEach(ele => {
+        if (ele.menu_index == val) {
           this.aside_left = ele.sub_menu
         }
       })
@@ -199,18 +197,22 @@ export default {
   background-color: #fff;
   height: 100%;
   box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.1);
+
   .left {
     display: flex;
     align-items: center;
+
     .left-l {
       width: 280px;
       display: flex;
       align-items: center;
       justify-content: center;
+
       .ll-img {
         width: 119px;
         height: 78px;
       }
+
       .left-txt {
         font-size: 30px;
         font-family: ZoomlaCuHei-A003, ZoomlaCuHei-A003-Regular;
@@ -218,15 +220,18 @@ export default {
         color: #3258a1;
       }
     }
+
     .l-img {
       width: 280px;
       height: 86px;
     }
-    /deep/ .el-menu--horizontal > .el-menu-item.is-active {
+
+    /deep/ .el-menu--horizontal>.el-menu-item.is-active {
       background: #409eff;
       color: #fff;
     }
   }
+
   .nav1 {
     height: 100%;
     width: 100%;
@@ -235,25 +240,31 @@ export default {
     align-items: center;
     padding: 0 50px 0 0;
     font-size: 14px;
+
     /deep/ .el-menu {
       height: 86px !important;
     }
-    /deep/ .el-menu--horizontal > .el-menu-item {
+
+    /deep/ .el-menu--horizontal>.el-menu-item {
       height: 86px;
       line-height: 86px;
     }
+
     .tit1 {
       color: #999;
+
       .active {
         color: #515a61;
         font-weight: 700;
       }
     }
+
     .tit2 {
       .el-dropdown-link {
         cursor: pointer;
         color: #409eff;
       }
+
       .el-icon-arrow-down {
         font-size: 12px;
       }

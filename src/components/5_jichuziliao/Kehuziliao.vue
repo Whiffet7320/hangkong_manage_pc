@@ -120,15 +120,15 @@
             title="业务类型"
           ></vxe-table-column>
           <vxe-table-column
-            field="invoice_receiving"
+            field="myInvoice_receiving"
             title="发票收寄联系人"
           ></vxe-table-column>
           <vxe-table-column
-            field="reconciliation_contact"
+            field="myReconciliation_contact"
             title="对账联系人"
           ></vxe-table-column>
           <vxe-table-column
-            field="fixed_contact"
+            field="myFixed_contact"
             title="固定联系人"
           ></vxe-table-column>
           <vxe-table-column
@@ -299,6 +299,21 @@ export default {
           ele.mybusiness_type.push(name1);
         });
         ele.mybusiness_type = ele.mybusiness_type.toString();
+        ele.myReconciliation_contact = []
+        ele.reconciliation_contact.forEach(ele2=>{
+          ele.myReconciliation_contact.push(ele2.input1)
+        })
+        ele.myInvoice_receiving = []
+        ele.invoice_receiving.forEach(ele2=>{
+          ele.myInvoice_receiving.push(ele2.input1)
+        })
+        ele.myFixed_contact = []
+        ele.fixed_contact.forEach(ele2=>{
+          ele.myFixed_contact.push(ele2.input1)
+        })
+        ele.myReconciliation_contact = ele.myReconciliation_contact.toString();
+        ele.myInvoice_receiving = ele.myInvoice_receiving.toString();
+        ele.myFixed_contact = ele.myFixed_contact.toString();
       });
     },
     async getSXData() {

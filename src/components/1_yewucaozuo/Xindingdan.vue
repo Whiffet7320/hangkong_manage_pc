@@ -172,7 +172,7 @@ export default {
           },
           { field: "sale", title: "业务员", width: '120', className: '' },
           { field: "customer_service", title: "客服", width: '120', className: '' },
-          { field: "distribution_status", title: "配货状态", width: '160', className: '' },
+          { field: "myDistribution_status", title: "配货状态", width: '160', className: '' },
           { field: "myAirport", title: "三子代码/中文全称", width: '200', className: '' },
           { field: "chinese_productname", title: "货物中文名称", width: '180', className: '' },
           { field: "myOrder_status", title: "工作号状态", width: '180', className: '' },
@@ -268,6 +268,9 @@ export default {
         if (ele.field == 'airtransportation_status') {
           ele.field = 'myAirtransportation_status'
         }
+        if (ele.field == 'distribution_status') {
+          ele.field = 'myDistribution_status'
+        }
         if (ele.field == 'airport') {
           ele.field = 'myAirport'
         }
@@ -299,6 +302,7 @@ export default {
       res.list.forEach(ele => {
         ele.myOrder_status = ele.order_status == 1 ? '新订单' : ele.order_status == 2 ? '应付已制作' : ele.order_status == 3 ? '应收已制作' : ele.order_status == 4 ? '应付已审核' : ele.order_status == 5 ? '应收已审核' : "费用已完成";
         ele.myAirtransportation_status = ele.airtransportation_status == 0 ? '未起飞' : ele.airtransportation_status == 1 ? '起飞已确认' : ele.airtransportation_status == 2 ? '转运已确认' : '已到港';
+        ele.myDistribution_status = ele.distribution_status == 0 ? '未入仓' : ele.distribution_status == 1 ? '建立委托' : ele.distribution_status == 2 ? '已提货' : ele.distribution_status == 3 ? '已到货' : ele.distribution_status == 4 ? '已出重' : ele.distribution_status == 5 ? '已运抵' : ele.distribution_status == 6 ? '已报关' : '已交单';
         ele.myAirport = `${ele.airport.three_charcode}/${ele.airport.chinese_name}`
       })
       this.gridOptions2.data = res.list

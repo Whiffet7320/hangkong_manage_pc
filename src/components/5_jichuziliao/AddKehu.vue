@@ -62,22 +62,10 @@
               </el-col>
               <el-col :span="8">
                 <el-form-item label="业务类型：">
-                  <!-- <el-select
-                    filterable
-                    size="small"
-                    v-model="addForm.sele2"
-                    placeholder="请选择"
-                  >
-                    <el-option label="中国-CN-China" value="China"></el-option>
-                    <el-option
-                      label="美国-USA-America"
-                      value="America"
-                    ></el-option>
-                  </el-select> -->
-                  <el-checkbox-group v-model="addForm.business_type">
-                    <el-checkbox label="1">海运操作</el-checkbox>
-                    <el-checkbox label="2">空运操作</el-checkbox>
-                  </el-checkbox-group>
+                  <el-radio-group v-model="addForm.business_type">
+                    <el-radio label="1">海运操作</el-radio>
+                    <el-radio label="2">空运操作</el-radio>
+                  </el-radio-group>
                 </el-form-item>
               </el-col>
             </el-row>
@@ -182,18 +170,19 @@
               <el-col :span="8">
                 <el-form-item label="指定财务月：">
                   <el-col style="padding:0" :span="10">
-                    <el-select @change="timeChange1" size="small" v-model="addForm2.financial_monthtype" placeholder="请选择">
+                    <el-select @change="timeChange1" size="small" v-model="addForm2.financial_monthtype"
+                      placeholder="请选择">
                       <el-option label="自然月" :value="1"></el-option>
                       <el-option label="自定义" :value="2"></el-option>
                     </el-select>
                   </el-col>
                   <el-col style="padding:0;padding-left: 4px;margin-top: 1px;" :span="14">
-                    <el-date-picker size="small"
-                      value-format="yyyy-MM-dd" v-show="addForm2.financial_monthtype == 2" v-model="addForm2.time" type="daterange" range-separator="-"
-                      start-placeholder="开始日期" end-placeholder="结束日期">
+                    <el-date-picker size="small" value-format="yyyy-MM-dd" v-show="addForm2.financial_monthtype == 2"
+                      v-model="addForm2.time" type="daterange" range-separator="-" start-placeholder="开始日期"
+                      end-placeholder="结束日期">
                     </el-date-picker>
-                    <el-date-picker @change="timeChange2" size="small" v-show="addForm2.financial_monthtype == 1" v-model="addForm2.time2"
-                      value-format="yyyy-MM" type="month" placeholder="选择月">
+                    <el-date-picker @change="timeChange2" size="small" v-show="addForm2.financial_monthtype == 1"
+                      v-model="addForm2.time2" value-format="yyyy-MM" type="month" placeholder="选择月">
                     </el-date-picker>
                   </el-col>
                 </el-form-item>
@@ -993,7 +982,7 @@ export default {
         abbreviation: "",
         attribute_codeid: "",
         settlement_currencyid: "",
-        business_type: [],
+        business_type: '',
       },
       addForm2: {
         country_name: "",
@@ -1137,24 +1126,37 @@ export default {
     this.getSXData();
     this.getKHData();
     this.getBZData();
-    this.addForm = { ...this.kehuObj };
-    this.addForm2 = { ...this.kehuObj };
-    this.addForm3 = { ...this.kehuObj };
-    this.addForm.business_type = this.kehuObj.business_type.split(",");
-    this.customer_typeid = this.kehuObj.customer_typeid.split(",");
-    this.customer_typeid = this.customer_typeid.map(ele => {
-      return Number(ele)
-    })
-    this.tableData1 = this.kehuObj.contacts;
-    this.tableData2 = this.kehuObj.packing_places;
-    this.tableData3 = this.kehuObj.invoice_header;
-    this.tableData7 = this.kehuObj.fixed_contact;
-    this.tableData8 = this.kehuObj.reconciliation_contact;
-    this.tableData9 = this.kehuObj.invoice_receiving;
     if (this.kehuObj) {
-      this.$set(this.addForm2,'time',[this.kehuObj.financial_startday, this.kehuObj.financial_endday])
-      this.$set(this.addForm2,'time2',this.kehuObj.financial_startday.substring(0,7))
+      // this.$router.push({ name: 'Kehuziliao' })
+      for (const key in this.kehuObj) {
+        if (key in this.addForm) {
+          this.addForm[key] = this.kehuObj[key];
+        }
+        if (key in this.addForm2) {
+          this.addForm2[key] = this.kehuObj[key];
+        }
+        if (key in this.addForm3) {
+          this.addForm3[key] = this.kehuObj[key];
+        }
+      }
+      // this.addForm = { ...this.kehuObj };
+      // this.addForm2 = { ...this.kehuObj };
+      // this.addForm3 = { ...this.kehuObj };
+      this.addForm.business_type = this.kehuObj.business_type.split(",");
+      this.customer_typeid = this.kehuObj.customer_typeid.split(",");
+      this.customer_typeid = this.customer_typeid.map(ele => {
+        return Number(ele)
+      })
+      this.tableData1 = this.kehuObj.contacts;
+      this.tableData2 = this.kehuObj.packing_places;
+      this.tableData3 = this.kehuObj.invoice_header;
+      this.tableData7 = this.kehuObj.fixed_contact;
+      this.tableData8 = this.kehuObj.reconciliation_contact;
+      this.tableData9 = this.kehuObj.invoice_receiving;
+      this.$set(this.addForm2, 'time', [this.kehuObj.financial_startday, this.kehuObj.financial_endday])
+      this.$set(this.addForm2, 'time2', this.kehuObj.financial_startday.substring(0, 7))
     }
+
   },
   methods: {
     async getYWYData() {
@@ -1191,24 +1193,18 @@ export default {
       this.khList = res.list;
     },
     async onSubmit() {
-      // console.log(
-      //   this.customer_typeid,
-      //   this.addForm,
-      //   this.addForm2,
-      //   this.tableData1,
-      //   this.addForm3,
-      //   this.tableData2,
-      //   this.tableData3,
-      // this.tableData7
-      // this.tableData8
-      // this.tableData9
-      // );
-      console.log(this.addForm2)
+      console.log(
+        this.customer_typeid,
+        this.addForm,
+        this.addForm2,
+        this.addForm3,
+      );
       if (this.kehuObj) {
         const res = await this.$api.update_customer({
           ...this.addForm3,
           ...this.addForm2,
           ...this.addForm,
+          id:this.kehuObj.id,
           financial_monthtype: this.addForm2.financial_monthtype,
           payment_termtypes: this.addForm2.payment_termtypes,
           financial_startday: this.addForm2.time[0],
@@ -1257,15 +1253,15 @@ export default {
       }
     },
     timeChange1() {
-      this.$set(this.addForm2,'time',[])
-      this.$set(this.addForm2,'time2','')
+      this.$set(this.addForm2, 'time', [])
+      this.$set(this.addForm2, 'time2', '')
     },
     timeChange2(e) {
       console.log(e)
       var y = e.split('-')[0]
       var m = e.split('-')[1]
       var d = new Date(y, m, 0).getDate(); //获取当月最后一日
-      this.$set(this.addForm2,'time',[`${y}-${m}-01`,`${y}-${m}-${d}`])
+      this.$set(this.addForm2, 'time', [`${y}-${m}-01`, `${y}-${m}-${d}`])
       console.log(this.addForm2.time)
     },
     AddDiaOnSubmit1() {

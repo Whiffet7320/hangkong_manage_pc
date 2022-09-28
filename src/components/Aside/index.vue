@@ -98,6 +98,10 @@ export default {
         this.menuActiveIndex = "5-1";
         this.$store.commit("headerTit", `基础资料 / <span style="color: #515a61;
         font-weight: 700;">创建客户</span>`);
+      } else if (to.path == "/5_jichuziliao/Kehuziliao") {
+        this.menuActiveIndex = "5-1";
+        this.$store.commit("headerTit", `基础资料 / <span style="color: #515a61;
+        font-weight: 700;">客户资料</span>`);
       } else if (to.path == "/5_jichuziliao/Feiyongleixin") {
         this.menuActiveIndex = "5-2";
         this.$store.commit("headerTit", `基础资料 / <span style="color: #515a61;

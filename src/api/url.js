@@ -1,6 +1,7 @@
 export default {
     // 航空-系统管理
-    baseUrl: 'https://crmdl.api.5laoye.com/service/web',
+    // https://crmdl.api.5laoye.com
+    baseUrl: '/service/web',
     login: '/login', //用户登录
     user_list: "/user_list", //账号列表
     add_users: "/add_users", //添加账号

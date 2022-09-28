@@ -766,7 +766,8 @@
                   </el-col>
                   <el-col :span="6">
                     <el-form-item label="制单体积：" prop="maker_volume">
-                      <el-input size="small" v-model="addForm2_2.maker_volume" placeholder="请输入内容"></el-input>
+                      <el-input @input="changeZDTJ" size="small" v-model="addForm2_2.maker_volume" placeholder="请输入内容">
+                      </el-input>
                     </el-form-item>
                   </el-col>
                   <el-col :span="6">
@@ -849,7 +850,8 @@
                   </el-col>
                   <el-col :span="5">
                     <el-form-item label="制单体积：">
-                      <el-input size="small" v-model="ddObj.maker_volume" placeholder="请输入内容"></el-input>
+                      <el-input @input="changeZDTJ" size="small" v-model="ddObj.maker_volume" placeholder="请输入内容">
+                      </el-input>
                     </el-form-item>
                   </el-col>
                   <el-col :span="5">
@@ -2391,6 +2393,9 @@ export default {
   },
   async created() {
     console.log(this.chukouObj)
+    if (!this.chukouObj) {
+      this.$router.push({ name: 'Xindingdan' })
+    }
     this.getData()
     this.getKHList()
     this.khList2 = [...this.khList1]
@@ -2477,6 +2482,10 @@ export default {
         this.addForm1_2.portdeparture_id = res.port_consignedid
         this.addForm1_2.finalcountry_id = res.finaldestination_countryid
         this.addForm1_2.portdestination_id = res.receiving_addressid
+        this.addForm1_1.airlinepersonnel_id = res.airline_personnelid
+        this.addForm1_1.customerservice_id = res.customer_serviceid
+        this.addForm2_1.carrier_id = res.carrier_id
+        this.addForm1_3.carrier_id = res.carrier_id
       }
 
       this.addForm1_2.allin = 'ALLIN'
@@ -2500,6 +2509,32 @@ export default {
     //     this.khList2 = this.khList2.concat(res.list);
     //   }
     // },
+    getnum(num) {
+      num = num.toString()
+      console.log(num)
+      var aNew;
+      var re = /([0-9]+\.[0-9]{1})[0-9]*/;
+      aNew = num.replace(re, "$1");
+      return aNew;
+    },
+    changeZDTJ(e) {
+      var n = e * 166.6666666667
+      var num = this.getnum(n)
+      if (Number(num.substr(num.length - 1, 1)) == 0) {
+        n = `${Math.trunc(n)}.0`
+      } else if (Number(num.substr(num.length - 1, 1)) <= 4) {
+        n = `${Math.trunc(n)}.5`
+      } else if (Number(num.substr(num.length - 1, 1)) <= 9) {
+        n = `${Math.trunc(n) + 1}.0`
+      }
+      if (this.addForm2_2.maker_gw > n) {
+        n = this.addForm2_2.maker_gw
+      }
+      this.addForm2_2.maker_cw = n
+      // 
+      this.addForm2_2.maker_density = this.addForm2_2.maker_gw / this.addForm2_2.maker_volume
+      this.addForm2_2.receivable_weight = this.addForm2_2.maker_cw
+    },
     async getYS_MXList() {
       const res = await this.$api.receivable_list({
         page: 1,
@@ -2743,10 +2778,12 @@ export default {
       return new Promise((resolve) => {
         reader.readAsDataURL(file);
         reader.onload = function () {
-          const base64File = reader.result.replace(
-            /^data:\w+\/\w+;base64,/,
-            ""
-          );
+          // const base64File = reader.result.replace(
+          //   /^data:\w+\/\w+;base64,/,
+          //   ""
+          // );
+          var base64File_sp = reader.result.split(";base64,");
+          var base64File = base64File_sp[1];
           resolve(new window.OSS.Buffer(base64File, "base64"));
         };
       });
@@ -2762,23 +2799,24 @@ export default {
           accessKeySecret: res.access_keysecret, //secret
           stsToken: res.sts_token,
           bucket: res.bucket, //oss名字
+          secure: true,
         });
         var imgtype = ''
         // var imgtype = this.imgFile.type.substr(6, 4);
         console.log(this.imgFile.type)
-        if(this.imgFile.type == 'image/jpeg'){
+        if (this.imgFile.type == 'image/jpeg') {
           imgtype = 'jpeg'
         }
-        if(this.imgFile.type == 'image/png'){
+        if (this.imgFile.type == 'image/png') {
           imgtype = 'png'
         }
-        if(this.imgFile.type == 'application/pdf'){
+        if (this.imgFile.type == 'application/pdf') {
           imgtype = 'pdf'
         }
-        if(this.imgFile.type == 'application/msword'){
+        if (this.imgFile.type == 'application/msword') {
           imgtype = 'doc'
         }
-        if(this.imgFile.type == 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'){
+        if (this.imgFile.type == 'application/vnd.openxmlformats-officedocument.wordprocessingml.document') {
           imgtype = 'docx'
         }
         // if (imgtype == 'image/jpeg' || file.type == 'image/png' || file.type == 'application/pdf' || file.type == 'application/msword' || file.type == 'application/vnd.openxmlformats-officedocument.wordprocessingml.document') {
@@ -2787,7 +2825,10 @@ export default {
         //   this.$message('请上传正确格式的文件')
         // }
         var store = `${new Date().getTime()}.${imgtype}`;
-        client.put(store, file_re).then(async () => {
+        var header = {
+          // 'Content-Encoding': 'gzip',
+        }
+        client.put(store, file_re, header).then(async () => {
           //这个结果就是url
           console.log(store);
           // var oss_imgurl = client.signatureUrl(store);
@@ -2935,10 +2976,10 @@ export default {
     async toDel6_1(row) {
       console.log(row);
       const res = await this.$api.order_attachmentsdel({
-        attachments_id:row.id
+        attachments_id: row.id
       })
       this.$message(res.msg)
-      if(res.result == 1){
+      if (res.result == 1) {
         this.getFujian()
       }
     },
@@ -2976,7 +3017,7 @@ export default {
             this.activeName = '2'
             this.addForm2_1.port_consignedid = this.addForm1_2.portdeparture_id
             this.addForm2_1.port_destinationid = this.addForm1_2.portdestination_id
-            this.addForm2_1.carrier_id = this.addForm1_3.port_destinationid
+            this.addForm2_1.carrier_id = this.addForm1_3.carrier_id
           }, 500)
         }
       }
@@ -3017,6 +3058,9 @@ export default {
             this.activeName = '2'
             this.tab3_formDis = true;
             this.addDialogVisible2_1 = false;
+            if (is_sign != '0') {
+              this.activeName = '3'
+            }
           }, 500)
         }
       }
@@ -3307,11 +3351,12 @@ export default {
       const res = await this.$api.order_accountingcard({
         order_id: this.chukouObj.order_id
       })
-      this.$message(res.msg)
       if (res.result == 1) {
         this.hesuanImages_url = res.images_url
         this.hesuanPdf_url = res.pdf_url
         this.addDialogVisible4_4 = true
+      } else {
+        this.$message(res.msg)
       }
     },
     async ys_wanjie() {

@@ -181,11 +181,11 @@ export default {
   watch: {
     _6_2Page: function (page) {
       this.$store.commit("_6_2Page", page);
-      //   this.getData();
+        this.getData();
     },
     _6_2PageSize: function (pageSize) {
       this.$store.commit("_6_2PageSize", pageSize);
-      //   this.getData();
+        this.getData();
     },
   },
   data() {
@@ -256,8 +256,8 @@ export default {
         ele.newQxArr = [...new Set(ele.limits_ids.split(","))];
         if (ele.newQxArr.indexOf("1") != -1) {
           if (
-            ele.newQxArr.indexOf("2") != -1 &&
-            ele.newQxArr.indexOf("23") != -1
+            ele.newQxArr.indexOf("2") != -1 
+            // && ele.newQxArr.indexOf("23") != -1
           ) {
             console.log("have 1");
             if (
@@ -269,6 +269,7 @@ export default {
               ele.newQxArr.indexOf("8") != -1
             ) {
               console.log("have 2");
+              ele.newQxArr.remove("2");
             } else {
               ele.newQxArr.remove("2");
               ele.newQxArr.remove("1");
@@ -357,6 +358,10 @@ export default {
       this.addForm.name = "";
       this.addForm.is_sys = '';
       this.checkList1 = [];
+      this.checkList2 = [];
+      if(this.$refs.tree){
+        this.$refs.tree.setCheckedKeys([]);
+      }
       this.addDialogVisible = true;
     },
     // addDingdan() {
@@ -461,7 +466,6 @@ export default {
         this.checkList1.toString().indexOf("1_") != -1 &&
         radioList.toString().indexOf("1_") != -1
       ) {
-        console.log();
         this.checkList1.forEach((ele, i) => {
           if (ele.indexOf("1_") != -1) {
             this.checkList1.splice(i, 1);
@@ -469,12 +473,11 @@ export default {
         });
       }
       if (
-        this.checkList1.toString().indexOf("9_") != -1 &&
+        this.checkList1.toString().indexOf(",9_") != -1 &&
         radioList.toString().indexOf("9_") != -1
       ) {
-        console.log();
         this.checkList1.forEach((ele, i) => {
-          if (ele.indexOf("9_") != -1) {
+          if (ele.indexOf("9_") != -1 && ele.indexOf("19_") == -1) {
             this.checkList1.splice(i, 1);
           }
         });
@@ -483,14 +486,13 @@ export default {
         this.checkList1.toString().indexOf("18_") != -1 &&
         radioList.toString().indexOf("18_") != -1
       ) {
-        console.log();
         this.checkList1.forEach((ele, i) => {
           if (ele.indexOf("18_") != -1) {
             this.checkList1.splice(i, 1);
           }
         });
       }
-      console.log(radioList);
+      console.log(radioList,this.checkList1);
       var arr = [];
       arr = [
         ...this.$refs.tree.getCheckedKeys(false),

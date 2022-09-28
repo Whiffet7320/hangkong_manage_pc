@@ -1,69 +1,31 @@
 <template>
   <div id="login">
     <div class="container">
-      <vue-particles
-        color="#fff"
-        :particleOpacity="0.6"
-        :particlesNumber="30"
-        shapeType="circle"
-        :particleSize="6"
-        linesColor="#fff"
-        :linesWidth="1"
-        :lineLinked="true"
-        :lineOpacity="0.4"
-        :linesDistance="10"
-        :moveSpeed="2"
-        :hoverEffect="true"
-        hoverMode="grab"
-        :clickEffect="true"
-        clickMode="push"
-        class="lizi"
-      >
+      <vue-particles color="#fff" :particleOpacity="0.6" :particlesNumber="30" shapeType="circle" :particleSize="6"
+        linesColor="#fff" :linesWidth="1" :lineLinked="true" :lineOpacity="0.4" :linesDistance="10" :moveSpeed="2"
+        :hoverEffect="true" hoverMode="grab" :clickEffect="true" clickMode="push" class="lizi">
       </vue-particles>
       <div class="loginBox">
         <img class="logoo-img" src="../../assets/newImage/logo.png" alt="" />
         <!-- <div class="tit1">后台管理系统</div> -->
         <div class="tit2">飞捷腾达货运代理空运管理系统</div>
         <div class="loginBox2">
-          <el-form
-            :model="loginForm"
-            ref="loginForm"
-            status-icon
-            label-width="100px"
-            :rules="rules"
-            class="demo-ruleForm"
-          >
+          <el-form :model="loginForm" ref="loginForm" status-icon label-width="100px" :rules="rules"
+            class="demo-ruleForm">
             <el-form-item prop="username">
               <!-- <div class="userInp">账号</div> -->
-              <el-input
-                type="text"
-                v-model="loginForm.username"
-                auto-complete="off"
-                placeholder="请输入账号"
-                class="el-inp"
-              ></el-input>
+              <el-input type="text" v-model="loginForm.username" auto-complete="off" placeholder="请输入账号" class="el-inp">
+              </el-input>
             </el-form-item>
             <el-form-item prop="password">
               <!-- <div class="pasInp">密码</div> -->
-              <el-input
-                type="password"
-                v-model="loginForm.password"
-                auto-complete="off"
-                placeholder="请输入密码"
-                class="el-inp"
-                @keyup.enter.native="onLogin"
-              ></el-input>
+              <el-input type="password" v-model="loginForm.password" auto-complete="off" placeholder="请输入密码"
+                class="el-inp" @keyup.enter.native="onLogin"></el-input>
             </el-form-item>
             <el-form-item prop="checkPass" v-if="!this.isRegister">
               <i class="el-icon-unlock"></i>
-              <el-input
-                type="password"
-                v-model="loginForm.checkPass"
-                auto-complete="off"
-                placeholder="请确认密码"
-                class="el-inp"
-                @keyup.enter.native="onLogin"
-              ></el-input>
+              <el-input type="password" v-model="loginForm.checkPass" auto-complete="off" placeholder="请确认密码"
+                class="el-inp" @keyup.enter.native="onLogin"></el-input>
             </el-form-item>
             <!-- <el-form-item>
               <div class="footer">
@@ -72,11 +34,7 @@
               </div>
             </el-form-item> -->
           </el-form>
-          <el-button
-            @click="onLogin"
-            class="loginBtn"
-            type="primary"
-          >登录</el-button>
+          <el-button @click="onLogin" class="loginBtn" type="primary">登录</el-button>
         </div>
       </div>
     </div>
@@ -143,8 +101,21 @@ export default {
           message: res.msg,
           type: "success",
         });
+        // const res = await this.$api.read_userinfo()
+        // sessionStorage.setItem(
+        //   "login_user",
+        //   encodeURIComponent(JSON.stringify(res.login_user))
+        // );
         setTimeout(() => {
           this.$router.push({ path: "/" });
+          var url = document.URL,   //获取当前页面的网址信息
+            URL;
+          var num = url.indexOf('#');  //获取＃在的位置信息
+          if (num) {
+            URL = url.substring(0, num);  //截取网址信息
+            console.log(URL)
+            history.pushState(null, null, URL);  //将网址设置
+          }
           this.$router.go(0);
         }, 500);
       } else {
@@ -155,24 +126,28 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-#particles-js{
+#particles-js {
   height: 98%;
 }
+
 #login {
   width: 100%;
   height: 100vh;
   background-color: #000000;
+
   .container {
     background-image: url("../../assets/newImage/zu13054.png");
     background-size: 100% 100%;
     position: relative;
     width: 100%;
     height: 100%;
+
     .bacImage {
       width: 100%;
       height: 100%;
       opacity: 1;
     }
+
     .leftImg {
       position: absolute;
       top: 27%;
@@ -180,6 +155,7 @@ export default {
       width: 37%;
       height: 46%;
     }
+
     .loginBox {
       position: absolute;
       top: 0;
@@ -187,6 +163,7 @@ export default {
       // border: 1px solid red;
       width: 31%;
       height: 100%;
+
       .logoo-img {
         position: absolute;
         height: 120px;
@@ -195,6 +172,7 @@ export default {
         left: 50%;
         transform: translateX(-50%);
       }
+
       .tit2 {
         width: 422px;
         position: absolute;
@@ -206,6 +184,7 @@ export default {
         font-weight: 500;
         color: #418bfb;
       }
+
       .loginBox2 {
         position: absolute;
         width: 460px;
@@ -217,17 +196,21 @@ export default {
         opacity: 1;
         // background: #ffffff;
         border-radius: 20px;
+
         // box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
         .demo-ruleForm {
           /deep/ .el-form-item__content {
             margin-left: 0 !important;
           }
+
           /deep/ .el-input {
             width: 100%;
           }
-          /deep/ .el-input__inner{
+
+          /deep/ .el-input__inner {
             background: #F0F2F5;
           }
+
           .userInp {
             opacity: 1;
             font-size: 20px;
@@ -235,6 +218,7 @@ export default {
             font-weight: 400;
             color: #ebbfcc;
           }
+
           .pasInp {
             opacity: 1;
             font-size: 20px;
@@ -242,11 +226,13 @@ export default {
             font-weight: 400;
             color: #c2c2c2;
           }
+
           .footer {
             width: 80%;
             display: flex;
             justify-content: space-between;
           }
+
           .wjmm {
             opacity: 1;
             font-size: 16px;
@@ -255,6 +241,7 @@ export default {
             text-align: center;
             color: #ebbfcc;
           }
+
           .zczh {
             opacity: 1;
             font-size: 16px;
@@ -264,6 +251,7 @@ export default {
             color: #808080;
           }
         }
+
         .loginBtn {
           position: absolute;
           left: 50%;
