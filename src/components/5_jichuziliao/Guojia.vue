@@ -183,11 +183,11 @@ export default {
   watch: {
     xindingdanPage: function (page) {
       this.$store.commit("xindingdanPage", page);
-      //   this.getData();
+        this.getData();
     },
     xindingdanPageSize: function (pageSize) {
       this.$store.commit("xindingdanPageSize", pageSize);
-      //   this.getData();
+        this.getData();
     },
   },
   data() {

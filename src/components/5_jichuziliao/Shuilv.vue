@@ -132,11 +132,11 @@ export default {
   watch: {
     _5_10Page: function (page) {
       this.$store.commit("_5_10Page", page);
-      //   this.getData();
+        this.getData();
     },
     _5_10PageSize: function (pageSize) {
       this.$store.commit("_5_10PageSize", pageSize);
-      //   this.getData();
+        this.getData();
     },
   },
   data() {

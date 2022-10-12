@@ -201,9 +201,11 @@ export default {
   watch: {
     _6_1Page: function (page) {
       this.$store.commit("_6_1Page", page);
+      this.getData()
     },
     _6_1PageSize: function (pageSize) {
       this.$store.commit("_6_1PageSize", pageSize);
+      this.getData()
     },
   },
   data() {
@@ -480,8 +482,8 @@ export default {
               groups_id: this.addForm.groups_id,
               mail: this.addForm.mail,
             });
+            this.$message(res.msg);
             if (res.result == 1) {
-              this.$message(res.msg);
               this.getData();
               this.addDialogVisible = false;
             }
@@ -496,8 +498,8 @@ export default {
               groups_id: this.addForm.groups_id,
               mail: this.addForm.mail,
             });
+            this.$message(res.msg);
             if (res.result == 1) {
-              this.$message(res.msg);
               this.getData();
               this.addDialogVisible = false;
             }

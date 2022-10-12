@@ -117,11 +117,11 @@ export default {
   watch: {
     _6_3Page: function (page) {
       this.$store.commit("_6_3Page", page);
-      //   this.getData();
+        this.getFZData();
     },
     _6_3PageSize: function (pageSize) {
       this.$store.commit("_6_3PageSize", pageSize);
-      //   this.getData();
+        this.getFZData();
     },
   },
   data() {

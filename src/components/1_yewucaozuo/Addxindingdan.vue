@@ -1502,14 +1502,15 @@
             </el-col>
             <el-col :span="6">
               <el-form-item label="币种：" prop="input1">
-                <el-select @change='changeBizhong1' size="small" v-model="addFormDia4_1.currency_id">
+                <el-select size="small" v-model="addFormDia4_1.currency_id">
                   <el-option v-for="item in bizhongList" :key='item.id' :label="item.code" :value="item.id"></el-option>
                 </el-select>
               </el-form-item>
             </el-col>
             <el-col :span="6">
               <el-form-item label="数量：" prop="input1">
-                <el-input size="small" v-model="addFormDia4_1.quantity" placeholder="请输入内容"></el-input>
+                <el-input size="small" v-model="addFormDia4_1.quantity" placeholder="请输入内容">
+                </el-input>
               </el-form-item>
             </el-col>
             <el-col :span="6">
@@ -1567,7 +1568,7 @@
           <el-row :gutter="10">
             <el-col :span="5">
               <el-form-item label="实收金额：" prop="input1">
-                <el-input size="small" v-model="addFormDia4_1.paid_amount" placeholder="请输入内容"></el-input>
+                <el-input disabled size="small" v-model="addFormDia4_1.paid_amount" placeholder="请输入内容"></el-input>
               </el-form-item>
             </el-col>
             <el-col :span="6">
@@ -1659,14 +1660,15 @@
             </el-col>
             <el-col :span="6">
               <el-form-item label="币种：" prop="input1">
-                <el-select @change='changeBizhong2' size="small" v-model="addFormDia4_1_1.currency_id">
+                <el-select size="small" v-model="addFormDia4_1_1.currency_id">
                   <el-option v-for="item in bizhongList" :key='item.id' :label="item.code" :value="item.id"></el-option>
                 </el-select>
               </el-form-item>
             </el-col>
             <el-col :span="6">
               <el-form-item label="数量：" prop="input1">
-                <el-input size="small" v-model="addFormDia4_1_1.quantity" placeholder="请输入内容"></el-input>
+                <el-input size="small" v-model="addFormDia4_1_1.quantity" placeholder="请输入内容">
+                </el-input>
               </el-form-item>
             </el-col>
             <el-col :span="6">
@@ -1724,7 +1726,7 @@
           <el-row :gutter="10">
             <el-col :span="5">
               <el-form-item label="实收金额：" prop="input1">
-                <el-input size="small" v-model="addFormDia4_1_1.paid_amount" placeholder="请输入内容"></el-input>
+                <el-input disabled size="small" v-model="addFormDia4_1_1.paid_amount" placeholder="请输入内容"></el-input>
               </el-form-item>
             </el-col>
             <el-col :span="6">
@@ -1940,6 +1942,56 @@ export default {
       this.$store.commit("fujianPageSize", pageSize);
       this.getFujian();
     },
+    addFormDia4_1: {
+      async handler() {
+        const res = await this.$api.get_rate({
+          currency_id: this.addFormDia4_1.currency_id
+        })
+        if (res.result == 1) {
+          this.addFormDia4_1.exchange_rate = res.change_rate
+        }
+        if (this.addFormDia4_1.quantity != '' && this.addFormDia4_1.price != '') {
+          this.addFormDia4_1.amount_receivable = Number(this.addFormDia4_1.quantity) * Number(this.addFormDia4_1.price)
+        }
+        var obj = this.shuilvList.filter(ele => {
+          return ele.id == this.addFormDia4_1.taxrate_id
+        })[0]
+        if (this.addFormDia4_1.amount_receivable != '') {
+          this.addFormDia4_1.taxprice = Number(obj.tax_rate) * Number(this.addFormDia4_1.amount_receivable)
+        }
+        if (this.addFormDia4_1.taxprice_type == 1) {
+          this.addFormDia4_1.amount_money = Number(this.addFormDia4_1.amount_receivable) - Number(this.addFormDia4_1.taxprice)
+        } else {
+          this.addFormDia4_1.amount_money = Number(this.addFormDia4_1.amount_receivable)
+        }
+      },
+      deep: true
+    },
+    addFormDia4_1_1: {
+      async handler() {
+        const res = await this.$api.get_rate({
+          currency_id: this.addFormDia4_1_1.currency_id
+        })
+        if (res.result == 1) {
+          this.addFormDia4_1_1.exchange_rate = res.change_rate
+        }
+        if (this.addFormDia4_1_1.quantity != '' && this.addFormDia4_1_1.price != '') {
+          this.addFormDia4_1_1.amount_receivable = Number(this.addFormDia4_1_1.quantity) * Number(this.addFormDia4_1_1.price)
+        }
+        var obj = this.shuilvList.filter(ele => {
+          return ele.id == this.addFormDia4_1_1.taxrate_id
+        })[0]
+        if (this.addFormDia4_1_1.amount_receivable != '') {
+          this.addFormDia4_1_1.taxprice = Number(obj.tax_rate) * Number(this.addFormDia4_1_1.amount_receivable)
+        }
+        if (this.addFormDia4_1_1.taxprice_type == 1) {
+          this.addFormDia4_1_1.amount_money = Number(this.addFormDia4_1_1.amount_receivable) - Number(this.addFormDia4_1_1.taxprice)
+        } else {
+          this.addFormDia4_1_1.amount_money = Number(this.addFormDia4_1_1.amount_receivable)
+        }
+      },
+      deep: true
+    }
   },
   directives: {
     'el-select-loadmore': {
@@ -2587,6 +2639,7 @@ export default {
     },
     async getKHList() {
       const res = await this.$api.customer_list({
+        is_status: 2,
         page: 1,
         pagesize: 300,
         keyword: this.khKeyword
@@ -3250,6 +3303,7 @@ export default {
       for (const key in this.addFormDia4_1) {
         this.addFormDia4_1[key] = ''
       }
+      this.addFormDia4_1.settleaccounts_id = this.addForm1_1.client_id
     },
     tableData4_1_c2() { },
     async tableData4_1_c3() {
@@ -3269,6 +3323,7 @@ export default {
       for (const key in this.addFormDia4_1_1) {
         this.addFormDia4_1_1[key] = ''
       }
+      this.addFormDia4_1_1.settleaccounts_id = this.addForm1_1.client_id
     },
     tableData4_2_c2() { },
     async tableData4_2_c3() {
@@ -3380,6 +3435,26 @@ export default {
     xiazaiImg() {
       window.open(this.hesuanPdf_url)
     },
+    // inp_yssl() {
+    //   if (this.addFormDia4_1.quantity != '' && this.addFormDia4_1.price != '') {
+    //     this.addFormDia4_1.amount_receivable = Number(this.addFormDia4_1.quantity) * Number(this.addFormDia4_1.price)
+    //   }
+    // },
+    // inp_ysdj() {
+    //   if (this.addFormDia4_1.quantity != '' && this.addFormDia4_1.price != '') {
+    //     this.addFormDia4_1.amount_receivable = Number(this.addFormDia4_1.quantity) * Number(this.addFormDia4_1.price)
+    //   }
+    // },
+    inp_yfsl() {
+      if (this.addFormDia4_1_1.quantity != '' && this.addFormDia4_1_1.price != '') {
+        this.addFormDia4_1_1.amount_receivable = Number(this.addFormDia4_1_1.quantity) * Number(this.addFormDia4_1_1.price)
+      }
+    },
+    inp_yfdj() {
+      if (this.addFormDia4_1_1.quantity != '' && this.addFormDia4_1_1.price != '') {
+        this.addFormDia4_1_1.amount_receivable = Number(this.addFormDia4_1_1.quantity) * Number(this.addFormDia4_1_1.price)
+      }
+    },
     async changeBizhong1(e) {
       const res = await this.$api.get_rate({
         currency_id: e
@@ -3394,6 +3469,38 @@ export default {
       })
       if (res.result == 1) {
         this.addFormDia4_1_1.exchange_rate = res.change_rate
+      }
+    },
+    // changeShuilv1(e) {
+    //   var obj = this.shuilvList.filter(ele => {
+    //     return ele.id == e
+    //   })[0]
+    //   if (this.addFormDia4_1.amount_receivable != '') {
+    //     this.addFormDia4_1.taxprice = Number(obj.tax_rate) * Number(this.addFormDia4_1.amount_receivable)
+    //     this.changeShuijia1()
+    //   }
+    // },
+    changeShuilv2(e) {
+      var obj = this.shuilvList.filter(ele => {
+        return ele.id == e
+      })[0]
+      if (this.addFormDia4_1_1.amount_receivable != '') {
+        this.addFormDia4_1_1.taxprice = Number(obj.tax_rate) * Number(this.addFormDia4_1_1.amount_receivable)
+        this.changeShuijia2()
+      }
+    },
+    changeShuijia1() {
+      if (this.addFormDia4_1.taxprice_type == 1) {
+        this.addFormDia4_1.amount_money = Number(this.addFormDia4_1.amount_receivable) - Number(this.addFormDia4_1.taxprice)
+      } else {
+        this.addFormDia4_1.amount_money = Number(this.addFormDia4_1.amount_receivable)
+      }
+    },
+    changeShuijia2() {
+      if (this.addFormDia4_1_1.taxprice_type == 1) {
+        this.addFormDia4_1_1.amount_money = Number(this.addFormDia4_1_1.amount_receivable) - Number(this.addFormDia4_1_1.taxprice)
+      } else {
+        this.addFormDia4_1_1.amount_money = Number(this.addFormDia4_1_1.amount_receivable)
       }
     },
     fujianHandleSizeChange(val) {

@@ -206,11 +206,11 @@ export default {
   watch: {
     _5_4Page: function (page) {
       this.$store.commit("_5_4Page", page);
-      //   this.getData();
+        this.getData();
     },
     _5_4PageSize: function (pageSize) {
       this.$store.commit("_5_4PageSize", pageSize);
-      //   this.getData();
+        this.getData();
     },
   },
   data() {

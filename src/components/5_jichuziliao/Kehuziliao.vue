@@ -243,11 +243,11 @@ export default {
   watch: {
     _5_1Page: function (page) {
       this.$store.commit("_5_1Page", page);
-      //   this.getData();
+        this.getData();
     },
     _5_1PageSize: function (pageSize) {
       this.$store.commit("_5_1PageSize", pageSize);
-      //   this.getData();
+        this.getData();
     },
   },
   data() {
@@ -290,6 +290,7 @@ export default {
       });
       console.log(res);
       this.tableData = res.list;
+      this.total = res.total
       this.tableData.forEach((ele) => {
         ele.myCountry_name = `${ele.country_name}-${ele.province_name}-${ele.city_name}`;
         ele.myStatus = ele.is_status == 1 ? true : false;

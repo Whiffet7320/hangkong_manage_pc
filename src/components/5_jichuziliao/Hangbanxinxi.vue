@@ -76,7 +76,7 @@
             </template>
           </vxe-table-column>
           <vxe-table-column
-            field="sensitive_goods.name"
+            field="mysensitive_goods"
             title="敏感货物"
           ></vxe-table-column>
           <vxe-table-column
@@ -252,11 +252,11 @@ export default {
   watch: {
     _5_5Page: function (page) {
       this.$store.commit("_5_5Page", page);
-      //   this.getData();
+        this.getData();
     },
     _5_5PageSize: function (pageSize) {
       this.$store.commit("_5_5PageSize", pageSize);
-      //   this.getData();
+        this.getData();
     },
   },
   data() {
@@ -292,11 +292,16 @@ export default {
         keyword: this.keyword,
       });
       this.tableData = res.list;
+      var arr = []
       this.tableData.forEach((ele) => {
         ele.myReceiving_bulkcargo = ele.receiving_bulkcargo == 1 ? true : false;
         ele.myReceive_tray = ele.receive_tray == 1 ? true : false;
         ele.mySchedule = ele.schedule == 1 ? '每周固定' : ele.schedule == 2 ? '每月固定' : ele.schedule == 3 ? '指定日期' : '每日';
          ele.myPattern = ele.pattern == 1 ? '直飞' : '中转';
+         ele.sensitive_goods.forEach(ele2=>{
+          arr.push(ele2.name)
+         })
+         ele.mysensitive_goods = arr.toString()
       });
       this.total = res.total;
     },
